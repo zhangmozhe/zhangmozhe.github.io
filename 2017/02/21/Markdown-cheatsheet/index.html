@@ -90,7 +90,7 @@
 
                         
                         <li>
-                            <a href="/about/">About ME</a>
+                            <a href="/about/">About me</a>
                         </li>
                         
                     
@@ -155,7 +155,7 @@
 <!-- Post Header -->
 <style type="text/css">
     header.intro-header{
-        background-image: url('/img/home-bg.jpg')
+        background-image: url('post-bg-js-module.jpg')
     }
 </style>
 <header class="intro-header" >
@@ -165,9 +165,11 @@
                 <div class="post-heading">
                     <div class="tags">
                         
+                          <a class="tag" href="/tags/#tutorial" title="tutorial">tutorial</a>
+                        
                     </div>
                     <h1>Markdown cheatsheet</h1>
-                    <h2 class="subheading"></h2>
+                    <h2 class="subheading">Some syntax for markdown</h2>
                     <span class="meta">
                         Posted by Tony on
                         2017-02-21
@@ -189,7 +191,18 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h1 id="Markdown-Cheat-Sheet"><a href="#Markdown-Cheat-Sheet" class="headerlink" title="Markdown Cheat Sheet"></a>Markdown Cheat Sheet</h1><p>=========================== </p>
+                <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="Markdown-Cheat-Sheet"><a href="#Markdown-Cheat-Sheet" class="headerlink" title="Markdown Cheat Sheet"></a>Markdown Cheat Sheet</h1><ol>
+<li><a href="#Text-basics">Text basics</a></li>
+<li><a href="#Indentation">Indentation</a></li>
+<li><a href="#Example-lists">Example lists</a></li>
+<li><a href="#Links">Links</a></li>
+<li><a href="#Images">Images</a></li>
+<li><a href="#Code">Code</a></li>
+<li><a href="#Math">Math</a></li>
+<li><a href="#Tables">Tables</a></li>
+<li><a href="#Footnotes">Footnotes</a></li>
+</ol>
+<hr>
 <h2 id="Text-basics"><a href="#Text-basics" class="headerlink" title="Text basics"></a>Text basics</h2><p>this is <em>italic</em> and this is <strong>bold</strong> .  another <em>italic</em> and another <strong>bold</strong></p>
 <p>this is <code>important</code> text. and percentage signs : % and <code>%</code></p>
 <h2 id="Indentation"><a href="#Indentation" class="headerlink" title="Indentation"></a>Indentation</h2><blockquote>
@@ -198,7 +211,7 @@
 <p>even more indented</p>
 </blockquote>
 </blockquote>
-<h2 id="Example-lists-1"><a href="#Example-lists-1" class="headerlink" title="Example lists (1)"></a>Example lists (1)</h2><ul>
+<h2 id="Example-lists"><a href="#Example-lists" class="headerlink" title="Example lists"></a>Example lists</h2><ul>
 <li>bullets can be <code>-</code>, <code>+</code>, or <code>*</code></li>
 <li>bullet list 1</li>
 <li>bullet list 2<ul>
@@ -208,11 +221,11 @@
 </li>
 </ul>
 <h2 id="Links"><a href="#Links" class="headerlink" title="Links"></a>Links</h2><p>This is an <a href="http://lmgtfy.com/" target="_blank" rel="external">example inline link</a> and <a href="http://lmgtfy.com/" title="Hello, world" target="_blank" rel="external">another one with a title</a>.</p>
-<p>Links can also be reference based : [reference 1][ref1] or [reference 2 with title][ref2].</p>
 <h2 id="Images"><a href="#Images" class="headerlink" title="Images"></a>Images</h2><p>A sample image :</p>
 <p><img src="http://www.revolunet.com/static/parisjs8/img/logo-revolunet-carre.jpg" alt="revolunet logo" title="revolunet logo"></p>
 <p>Local images can be added this way:<br><img src="/2017/02/21/Markdown-cheatsheet/local_image.png" alt="local image"></p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><p>Backticks can be used to <code>highlight</code> some words.<br>    <script><br>        document.location = ‘<a href="http://lmgtfy.com/q=markdown+cheat+sheet">http://lmgtfy.com/q=markdown+cheat+sheet</a>‘;<br>    </script></p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><p>Backticks can be used to <code>highlight</code> some words.    </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (isAwesome)&#123;</div><div class="line">  <span class="keyword">return</span> <span class="literal">true</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h2><p>When <code>enable_mathjax</code> is <code>true</code>, inline math can be included \(\frac{\pi}{2}\) $\pi$</p>
 <p>Alternatively, math can be written on its own line:</p>
 <p>$$F(\omega) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} f(t) \, e^{ - i \omega t}dt$$</p>
@@ -244,7 +257,11 @@
 </tr>
 </tbody>
 </table>
-
+<h3 id="Footnotes"><a href="#Footnotes" class="headerlink" title="Footnotes"></a>Footnotes</h3><p>basic footnote<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="basic footnote content
+">[1]</span></a></sup><br>here is an inline footnote<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="inline footnote">[2]</span></a></sup><br>and another one<sup id="fnref:3"><a href="#fn:3" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="paragraph
+">[3]</span></a></sup><br>and another one<sup id="fnref:4"><a href="#fn:4" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="footnote content with some [markdown](https://en.wikipedia.org/wiki/Markdown)
+">[4]</span></a></sup></p>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">basic footnote content<a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">inline footnote<a href="#fnref:2" rev="footnote"> ↩</a></span></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">3.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">paragraph<a href="#fnref:3" rev="footnote"> ↩</a></span></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">4.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">footnote content with some <a href="https://en.wikipedia.org/wiki/Markdown" target="_blank" rel="external">markdown</a><a href="#fnref:4" rev="footnote"> ↩</a></span></li></ol></div></div>
 
                 <hr>
 
@@ -253,13 +270,9 @@
                 <ul class="pager">
                     
                         <li class="previous">
-                            <a href="/2017/02/21/hello-world/" data-toggle="tooltip" data-placement="top" title="Fundamental of Hexo">&larr; Previous Post</a>
+                            <a href="/2017/02/21/hello-world/" data-toggle="tooltip" data-placement="top" title="Quick Start of Hexo">&larr; Previous Post</a>
                         </li>
                     
-                    
-                        <li class="next">
-                            <a href="/2015/04/14/Example Post With Default Header Image/" data-toggle="tooltip" data-placement="top" title="Example Post With Default Header Image">Next Post &rarr;</a>
-                        </li>
                     
                 </ul>
 
@@ -285,6 +298,8 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
+                          <a class="tag" href="/tags/#tutorial" title="tutorial">tutorial</a>
+                        
                     </div>
                 </section>
                 
