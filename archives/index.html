@@ -3,7 +3,7 @@
 
 <!-- Head tag -->
 <head>
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -49,14 +49,14 @@
     <![endif]-->
 
     <!-- ga & ba script hoook -->
-    <script></script>
+    <script></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
 <!-- hack iOS CSS :active style -->
 <body ontouchstart="">
 
-    <!-- Navigation -->
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- Navigation -->
 <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -186,11 +186,11 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
                  <li >
-                    02-20
+                    02-21
                     <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2017/02/20/hello-world/" style="color: #0085a1">
+                    <a href="/2017/02/21/hello-world/" style="color: #0085a1">
                         <span>
-                            Hello World
+                            Fundamental of Hexo
                         </span>
                     </a>
                     <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
@@ -201,11 +201,11 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
                  <li >
-                    02-20
+                    02-21
                     <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2017/02/20/first-blog/" style="color: #0085a1">
+                    <a href="/2017/02/21/Markdown-cheatsheet/" style="color: #0085a1">
                         <span>
-                            My First Blog
+                            Markdown cheatsheet
                         </span>
                     </a>
                     <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
@@ -228,7 +228,7 @@
                  <li >
                     04-14
                     <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2015/04/14/unix-linux-note/" style="color: #0085a1">
+                    <a href="/2015/04/14/Example Post With Default Header Image/" style="color: #0085a1">
                         <span>
                             Example Post With Default Header Image
                         </span>
@@ -253,7 +253,7 @@
                  <li >
                     05-25
                     <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2013/05/25/js-module-loader/" style="color: #0085a1">
+                    <a href="/2013/05/25/Example Post with Code Highlight/" style="color: #0085a1">
                         <span>
                             Example Post with Code Highlight
                         </span>
@@ -411,12 +411,20 @@
 <!-- Side Catalog -->
 
 
+<script type="text/x-mathjax-config"> 
+MathJax.Hub.Config({ 
+tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]} 
+}); 
+</script>
+<script type="text/javascript"
+src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
 
 
 <!-- Image to hack wechat -->
 <img src="https://zhangmozhe.github.io/img/icon_wechat.png" width="0" height="0" />
-<!-- Migrate from head to bottom, no longer block render and still work -->
+<!-- Migrate from head to bottom, no longer block render and still work --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 
