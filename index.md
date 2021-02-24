@@ -22,7 +22,7 @@ cover: true
 </style>
 
 <h2 class="h1" style="color: rgb(1,92,171)" id="about">Short Bio </h2>
-5:38
+5:40
 I am currently a researcher at [Visual Computing Group](https://www.microsoft.com/en-us/research/group/visual-computing/) of [Microsoft research asia](https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/) (MSRA).
 
 I received my Ph.D. degree with the Department of Electronic and Computer Engineering at Hong Kong University of Science and Technology ([HKUST](https://hkust.edu.hk/)) in 2019, under the supervision of [Amine Bermak](https://scholar.google.com/citations?user=uiKoUMQAAAAJ&hl=en) and [Pedro V. Sander](https://www.cse.ust.hk/~psander/). Prior to that, I received my Bachelor degree of Engineering at Zhejiang University in 2013. I joined the Microsoft Research Asia in May 2019.
