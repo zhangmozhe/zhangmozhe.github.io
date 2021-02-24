@@ -1,20 +1,48 @@
-# Hydejack Starter Kit
+---
+layout: page
+title: Documentation
+description: >
+  Here you should be able to find everything you need to know to accomplish the most common tasks when blogging with Hydejack.
+hide_description: true
+sitemap: false
+---
 
-A quicker, cleaner way to get started blogging with [Hydejack](https://hydejack.com/).
+Here you should be able to find everything you need to know to accomplish the most common tasks when blogging with Hydejack.
+Should you think something is missing, [please let me know](mailto:mail@qwtel.com).
+Should you discover a mistake in the docs (or a bug in general) feel free to [open an issue](https://github.com/hydecorp/hydejack/issues) on GitHub.
 
-## Quick Start
-### Running locally
-1. Clone repository (git users), or [download] and unzip.
-2. Open terminal, `cd` into root directory (where `_config.yml` is located)
-3. Run `bundle install` [^1]
-4. Run `bundle exec jekyll serve`
-5. Open <http://localhost:4000/hydejack-starter-kit/>
+While this manual tries to be beginner-friendly, as a user of Jekyll it is assumed that you are comfortable running shell commands and editing text files.
+{:.note}
 
-## What's next?
-* Open files and read the comments
-* Read the [docs](https://hydejack.com/docs/)
-* Buy the [PRO version](https://hydejack.com/download/) to get the project and resume layout, newsletter subscription box, custom forms, and more.
 
-[^1]: Requires Bundler. Install with `gem install bundler`.
+## Getting started
+* [Install]{:.heading.flip-title} --- How to install and run Hydejack.
+* [Upgrade]{:.heading.flip-title} --- You can skip this if you haven't used Hydejack before.
+* [Config]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
+{:.related-posts.faded}
 
-[download]: https://github.com/hydecorp/hydejack-starter-kit/archive/master.zip
+## Using Hydejack
+* [Basics]{:.heading.flip-title} --- How to add different types of content.
+* [Writing]{:.heading.flip-title} --- Producing markdown content for Hydejack.
+* [Scripts]{:.heading.flip-title} --- How to include 3rd party scripts on your site.
+* [Build]{:.heading.flip-title} --- How to build the static files for deployment.
+* [Advanced]{:.heading.flip-title} --- Guides for more advanced tasks.
+{:.related-posts.faded}
+
+## Other
+* [LICENSE]{:.heading.flip-title} --- The license of this project.
+* [NOTICE]{:.heading.flip-title} --- Parts of this program are provided under separate licenses.
+* [CHANGELOG]{:.heading.flip-title} --- Version history of Hydejack.
+{:.related-posts.faded}
+
+[install]: install.md
+[upgrade]: upgrade.md
+[config]: config.md
+[basics]: basics.md
+[writing]: writing.md
+[scripts]: scripts.md
+[build]: build.md
+[advanced]: advanced.md
+[LICENSE]: ../LICENSE.md
+[NOTICE]: ../NOTICE.md
+[CHANGELOG]: ../CHANGELOG.md
