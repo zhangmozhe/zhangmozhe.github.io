@@ -1,0 +1,82 @@
+I"<p>There are two ways of adding third party scripts.
+<a href="#embedding">Embedding</a> is ideal for one-off scripts, e.g. <code class="language-plaintext highlighter-rouge">widgets.js</code> that is part of embedded tweets (see below).
+Adding <a href="#global-scripts">global scripts</a> is for scripts that should be loaded on every page.</p>
+
+<ol id="markdown-toc">
+  <li><a href="#embedding" id="markdown-toc-embedding">Embedding</a></li>
+  <li><a href="#global-scripts" id="markdown-toc-global-scripts">Global scripts</a></li>
+  <li><a href="#registering-push-state-event-listeners" id="markdown-toc-registering-push-state-event-listeners">Registering push state event listeners</a></li>
+  <li><a href="#if-everything-else-fails" id="markdown-toc-if-everything-else-fails">If everything else fails</a></li>
+</ol>
+
+<h2 id="embedding">Embedding</h2>
+<p>Hydejack supports embedding third party scripts directly inside markdown content. This will work in most cases, except when a script can not be loaded on a page more than once (this will occur when a user navigates to the same page twice).</p>
+
+<p>Example:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">async</span> <span class="na">src=</span><span class="s">"//platform.twitter.com/widgets.js"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"twitter-tweet"</span> <span class="na">data-lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">lang=</span><span class="s">"en"</span> <span class="na">dir=</span><span class="s">"ltr"</span><span class="nt">&gt;</span>
+    The next version of Hydejack (v6.3.0) will allow embedding 3rd party scripts,
+    like the one that comes with this tweet for example.
+  <span class="nt">&lt;/p&gt;</span>
+  <span class="ni">&amp;mdash;</span> Florian Klampfer (@qwtel)
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://twitter.com/qwtel/status/871098943505039362"</span><span class="nt">&gt;</span>June 3, 2017<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/blockquote&gt;</span>
+</code></pre></div></div>
+
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">The next version of Hydejack (v6.3.0) will allow embedding 3rd party scripts, like the one that comes with this tweet for example.</p>&mdash; Florian Klampfer (@qwtel) <a href="https://twitter.com/qwtel/status/871098943505039362">June 3, 2017</a></blockquote>
+
+<h2 id="global-scripts">Global scripts</h2>
+<p>If you have scripts that should be included on every page you can add them globally by
+opening (or creating) <code class="language-plaintext highlighter-rouge">_includes/my-scripts.html</code> and adding them like you normally would:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- file: `_includes/my-scripts.html` --&gt;</span>
+<span class="nt">&lt;script
+  </span><span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-3.2.1.slim.min.js"</span>
+  <span class="na">integrity=</span><span class="s">"sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="</span>
+  <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">my-scripts.html</code> will be included at the end of the <code class="language-plaintext highlighter-rouge">body</code> tag.</p>
+
+<h2 id="registering-push-state-event-listeners">Registering push state event listeners</h2>
+<p>When embedding scripts globally you might want to run some init code after each page load. However, the problem with push state-based page loads is that the <code class="language-plaintext highlighter-rouge">load</code> event won’t fire again. Luckily, Hydejack’s push state component exposes an event that you can listen to instead.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- file: `_includes/my-scripts.html` --&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">_pushState</span><span class="dl">'</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">hy-push-state-load</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// </span><span class="o">&lt;</span><span class="nx">your</span> <span class="nx">init</span> <span class="nx">code</span><span class="o">&gt;</span>
+  <span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<p>Note that the above code must only run once, so include it in your <code class="language-plaintext highlighter-rouge">my-scripts.html</code>.</p>
+
+<dl>
+  <dt><code class="language-plaintext highlighter-rouge">hy-push-state-start</code></dt>
+  <dd>Occurs after clicking a link.</dd>
+  <dt><code class="language-plaintext highlighter-rouge">hy-push-state-ready</code></dt>
+  <dd>Animation fished and response has been parsed, ready to swap out the content.</dd>
+  <dt><code class="language-plaintext highlighter-rouge">hy-push-state-after</code></dt>
+  <dd>The old content has been replaced with the new content.</dd>
+  <dt><code class="language-plaintext highlighter-rouge">hy-push-state-progress</code></dt>
+  <dd>Special case when animation is finished, but no response from server has arrived yet.
+This is when the loading spinner will appear.</dd>
+  <dt><code class="language-plaintext highlighter-rouge">hy-push-state-load</code></dt>
+  <dd>All embedded script tags have been inserted into the document and have finished loading.</dd>
+</dl>
+
+<h2 id="if-everything-else-fails">If everything else fails</h2>
+<p>If you can’t make an external script work with Hydejack’s push state approach to page loading,
+you can disable push state by adding to your config file:</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># file: `_config.yml`</span>
+<span class="na">hydejack</span><span class="pi">:</span>
+  <span class="na">no_push_state</span><span class="pi">:</span> <span class="no">true</span>
+</code></pre></div></div>
+
+<p class="read-more">Continue with <a href="/docs/build/" class="heading flip-title">Build</a></p>
+:ET

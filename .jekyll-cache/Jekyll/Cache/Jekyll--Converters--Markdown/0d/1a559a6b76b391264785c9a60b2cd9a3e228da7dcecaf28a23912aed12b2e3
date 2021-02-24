@@ -1,0 +1,116 @@
+I"Y <p>How you install Hydejack depends on whether you <a href="#new-sites">start a new site</a>, 
+or change the theme of <a href="#existing-sites">an existing site</a>.</p>
+
+<ol id="markdown-toc">
+  <li><a href="#new-sites" id="markdown-toc-new-sites">New sites</a></li>
+  <li><a href="#existing-sites" id="markdown-toc-existing-sites">Existing sites</a>    <ol>
+      <li><a href="#troubleshooting" id="markdown-toc-troubleshooting">Troubleshooting</a></li>
+    </ol>
+  </li>
+  <li><a href="#github-pages" id="markdown-toc-github-pages">GitHub Pages</a></li>
+  <li><a href="#running-locally" id="markdown-toc-running-locally">Running locally</a></li>
+</ol>
+
+<h2 id="new-sites">New sites</h2>
+<p>For new sites, the best way to get started with Hydejack is via the Starter Kit. 
+It comes with a documented config file and example content that gets you started quickly.</p>
+
+<p>If you have a GitHub account, fork the <a href="https://github.com/hydecorp/hydejack-starter-kit">Hydejack Starter Kit</a> repository. 
+Otherwise <a href="https://github.com/hydecorp/hydejack-starter-kit/archive/v9.1.2.zip">download the Starter Kit</a> and unzip them somewhere on your machine.</p>
+
+<p>If you bought the <strong>PRO Version</strong> of Hydejack, use the contents of the <code class="language-plaintext highlighter-rouge">starter-kit</code> folder instead.</p>
+
+<p class="note">In addition to the docs here, you can follow the quick start guide in the Starter Kit.</p>
+
+<p>You can now jump to <a href="#running-locally">running locally</a>.</p>
+
+<p class="note">You can now also <a href="https://app.netlify.com/start/deploy?repository=https://github.com/hydecorp/hydejack-starter-kit" class="no-mark-external"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" /></a> directly.</p>
+
+<h2 id="existing-sites">Existing sites</h2>
+<p>If you have an existing site that you’d like to upgrade to Hydejack you can install the theme via bundler.
+Add the following to your <code class="language-plaintext highlighter-rouge">Gemfile</code>:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># file: `Gemfile`</span>
+<span class="n">gem</span> <span class="s2">"jekyll-theme-hydejack"</span>
+</code></pre></div></div>
+
+<p>If you bought the <strong>PRO Version</strong> of Hydejack, copy the <code class="language-plaintext highlighter-rouge">#jekyll-theme-hydejack</code> folder into the root folder of your site,
+and add the following to your <code class="language-plaintext highlighter-rouge">Gemfile</code> instead:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># file: `Gemfile`</span>
+<span class="n">gem</span> <span class="s2">"jekyll-theme-hydejack"</span><span class="p">,</span> <span class="ss">path: </span><span class="s2">"./#jekyll-theme-hydejack"</span>
+</code></pre></div></div>
+
+<p class="note">The folder is prefixed with a <code class="language-plaintext highlighter-rouge">#</code> to indicate that this folder is different from regular Jekyll content. 
+The <code class="language-plaintext highlighter-rouge">#</code> char was choosen specifically because it is on of the four characters ignored by Jekyll by default (<code class="language-plaintext highlighter-rouge">.</code>, <code class="language-plaintext highlighter-rouge">_</code> , <code class="language-plaintext highlighter-rouge">#</code>, <code class="language-plaintext highlighter-rouge">~</code>).</p>
+
+<p>In your config file, change the <code class="language-plaintext highlighter-rouge">theme</code> to Hydejack:</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># file: `_config.yml`</span>
+<span class="na">theme</span><span class="pi">:</span> <span class="s">jekyll-theme-hydejack</span>
+</code></pre></div></div>
+
+<p>Hydejack comes with a default configuration file that takes care most of the configuration,
+but it pays off to check out the example config file in the Starter Kit to see what’s available.</p>
+
+<p>You can now jump to <a href="#running-locally">running locally</a>.</p>
+
+<h3 id="troubleshooting">Troubleshooting</h3>
+<p>If your existing site combines theme files with your content (as did previous verisons of Hydejack/PRO),
+make sure to delete the following folders:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">_layouts</code></li>
+  <li><code class="language-plaintext highlighter-rouge">_includes</code></li>
+  <li><code class="language-plaintext highlighter-rouge">_sass</code></li>
+  <li><code class="language-plaintext highlighter-rouge">assets</code></li>
+</ul>
+
+<p>The <code class="language-plaintext highlighter-rouge">assets</code> folder most likely includes theme files as well as your personal/content files. 
+Make sure to only delete files that belong to the old theme!</p>
+
+<h2 id="github-pages">GitHub Pages</h2>
+<p>If you want to build your site on <a href="https://jekyllrb.com/docs/github-pages/">GitHub Pages</a>, check out the <a href="https://github.com/hydecorp/hydejack-starter-kit/tree/gh-pages"><code class="language-plaintext highlighter-rouge">gh-pages</code> branch</a> in the Hydejack Starter Kit repo.</p>
+
+<p>For existing sites, you can instead set the <code class="language-plaintext highlighter-rouge">remote_theme</code> key as follows:</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># file: `_config.yml`</span>
+<span class="na">remote_theme</span><span class="pi">:</span> <span class="s">hydecorp/hydejack@v9.1.2</span>
+</code></pre></div></div>
+
+<p class="note" title="Important">Make sure the <code class="language-plaintext highlighter-rouge">plugins</code> list contains <code class="language-plaintext highlighter-rouge">jekyll-include-cache</code> (create if it doesn’t exist):</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># file: `_config.yml`</span>
+<span class="na">plugins</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">jekyll-include-cache</span>
+</code></pre></div></div>
+
+<p>To run this configuration locally, make sure the following is part of your <code class="language-plaintext highlighter-rouge">Gemfile</code>:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># file: `Gemfile`</span>
+<span class="n">gem</span> <span class="s2">"github-pages"</span><span class="p">,</span> <span class="ss">group: :jekyll_plugins</span>
+<span class="n">gem</span> <span class="s2">"jekyll-include-cache"</span><span class="p">,</span> <span class="ss">group: :jekyll_plugins</span>
+</code></pre></div></div>
+
+<p class="note">Note that Hydejack has a reduced feature set when built on GitHub Pages. 
+Specifically, using KaTeX math formulas doesn’t work when built in this way.</p>
+
+<h2 id="running-locally">Running locally</h2>
+<p>Make sure you’ve <code class="language-plaintext highlighter-rouge">cd</code>ed into the directory where <code class="language-plaintext highlighter-rouge">_config.yml</code> is located.
+Before running for the first time, dependencies need to be fetched from <a href="https://rubygems.org/">RubyGems</a>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>bundle <span class="nb">install</span>
+</code></pre></div></div>
+
+<p class="note">If you are missing the <code class="language-plaintext highlighter-rouge">bundle</code> command, you can install Bundler by running <code class="language-plaintext highlighter-rouge">gem install bundler</code>.</p>
+
+<p>Now you can run Jekyll on your local machine:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>bundle <span class="nb">exec </span>jekyll serve
+</code></pre></div></div>
+
+<p>and point your browser to <a href="http://localhost:4000">http://localhost:4000</a> to see Hydejack in action.</p>
+
+<p class="read-more">Continue with <a href="/docs/config/" class="heading flip-title">Config</a></p>
+
+:ET

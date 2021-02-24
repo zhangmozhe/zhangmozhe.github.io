@@ -1,0 +1,353 @@
+I"�C<ul class="large-only" id="markdown-toc">
+  <li><a href="#attributions" id="markdown-toc-attributions">Attributions</a></li>
+  <li><a href="#licenses" id="markdown-toc-licenses">Licenses</a>    <ul>
+      <li><a href="#hyde" id="markdown-toc-hyde">Hyde</a></li>
+      <li><a href="#hy-drawer" id="markdown-toc-hy-drawer">hy-drawer</a></li>
+      <li><a href="#hy-push-state" id="markdown-toc-hy-push-state">hy-push-state</a></li>
+      <li><a href="#rxjs" id="markdown-toc-rxjs">RxJS</a></li>
+      <li><a href="#katex" id="markdown-toc-katex">KaTeX</a></li>
+      <li><a href="#core-js" id="markdown-toc-core-js">core-js</a></li>
+      <li><a href="#web-animations" id="markdown-toc-web-animations">Web Animations</a></li>
+      <li><a href="#modernizr" id="markdown-toc-modernizr">Modernizr</a></li>
+      <li><a href="#compress-html-in-jekyll" id="markdown-toc-compress-html-in-jekyll">Compress HTML in Jekyll</a></li>
+      <li><a href="#the-html5-shiv" id="markdown-toc-the-html5-shiv">The HTML5 Shiv</a></li>
+      <li><a href="#dom4" id="markdown-toc-dom4">DOM4</a></li>
+      <li><a href="#loadcss" id="markdown-toc-loadcss">loadCSS</a></li>
+      <li><a href="#ratchet" id="markdown-toc-ratchet">Ratchet</a></li>
+      <li><a href="#swipe" id="markdown-toc-swipe">Swipe</a></li>
+      <li><a href="#smoothstate" id="markdown-toc-smoothstate">smoothState</a></li>
+      <li><a href="#bootstrap" id="markdown-toc-bootstrap">Bootstrap</a></li>
+      <li><a href="#atom-one-light-syntax" id="markdown-toc-atom-one-light-syntax">Atom One Light Syntax</a></li>
+      <li><a href="#atom-one-dark-syntax" id="markdown-toc-atom-one-dark-syntax">Atom One Dark Syntax</a></li>
+      <li><a href="#minisearch" id="markdown-toc-minisearch">MiniSearch</a></li>
+      <li><a href="#windowfetch-polyfill" id="markdown-toc-windowfetch-polyfill">window.fetch polyfill</a></li>
+      <li><a href="#abortcontroller-polyfill-for-abortable-fetch" id="markdown-toc-abortcontroller-polyfill-for-abortable-fetch">AbortController polyfill for abortable fetch()</a></li>
+      <li><a href="#resizeobserver-polyfill" id="markdown-toc-resizeobserver-polyfill">ResizeObserver Polyfill</a></li>
+      <li><a href="#kv-storage-polyfill" id="markdown-toc-kv-storage-polyfill">kv-storage polyfill</a></li>
+      <li><a href="#intersectionobserver-polyfill" id="markdown-toc-intersectionobserver-polyfill">IntersectionObserver polyfill</a></li>
+      <li><a href="#web-components-polyfills" id="markdown-toc-web-components-polyfills">Web Components Polyfills</a></li>
+      <li><a href="#lit-html" id="markdown-toc-lit-html">lit-html</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>Copyright (c) 2020 Florian Klampfer <a href="https://qwtel.com/">https://qwtel.com/</a></p>
+
+<p>This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.</p>
+
+<p>This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.</p>
+
+<p>You should have received a copy of the GNU General Public License
+along with this program.  If not, see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>.</p>
+
+<h2 id="attributions">Attributions</h2>
+<p>Appropriate credit as per Creative Commons licenses.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Work</th>
+      <th style="text-align: left">License</th>
+      <th style="text-align: left">Changes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Photo by <a href="https://unsplash.com/photos/1braZySlEKA">Jeremy Bishop</a></td>
+      <td style="text-align: left"><a href="https://unsplash.com/license">Unsplash</a></td>
+      <td style="text-align: left">Liquify filter, blur</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Photo by <a href="https://unsplash.com/photos/AtvuPUenaeI">Caleb George</a></td>
+      <td style="text-align: left"><a href="https://unsplash.com/license">Unsplash</a></td>
+      <td style="text-align: left">Liquify filter, patch tool, blur</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://icomoon.io/#icons-icomoon">IcoMoon Icons Free Version</a> by <a href="http://keyamoon.com/">Keyamoon</a></td>
+      <td style="text-align: left"><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</a></td>
+      <td style="text-align: left">None</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://commons.wikimedia.org/wiki/File:Touch-161562.svg">Touch-161562.svg</a></td>
+      <td style="text-align: left"><a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0-1.0</a></td>
+      <td style="text-align: left">Composition</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="licenses">Licenses</h2>
+<p>Parts of this software are provided under separate licenses.</p>
+
+<h3 id="hyde">Hyde</h3>
+<p>This software also uses portions of the
+<code class="language-plaintext highlighter-rouge">poole/hyde</code>
+project, which is <a href="/licenses/MIT/">MIT</a> licensed with the following copyright:</p>
+
+<blockquote>
+  <p>Copyright (c) 2013 Mark Otto.</p>
+</blockquote>
+
+<h3 id="hy-drawer">hy-drawer</h3>
+<p>This software also uses portions of the
+<code class="language-plaintext highlighter-rouge">hydecorp/hy-drawer</code>
+project, which is <a href="/licenses/GPL-3.0/">GPL-3.0</a> licensed with the following copyright:</p>
+
+<blockquote>
+  <p>Copyright (c) 2018 Florian Klampfer <a href="https://qwtel.com/">https://qwtel.com/</a></p>
+</blockquote>
+
+<h3 id="hy-push-state">hy-push-state</h3>
+<p>This software also uses portions of the
+<code class="language-plaintext highlighter-rouge">hydecorp/hy-push-state</code>
+project, which is <a href="/licenses/GPL-3.0/">GPL-3.0</a> licensed with the following copyright:</p>
+
+<blockquote>
+  <p>Copyright (c) 2018 Florian Klampfer <a href="https://qwtel.com/">https://qwtel.com/</a></p>
+</blockquote>
+
+<h3 id="rxjs">RxJS</h3>
+<p>This software also uses portions of the
+<code class="language-plaintext highlighter-rouge">ReactiveX/rxjs</code>
+project, which is <a href="/licenses/Apache-2.0/">Apache-2.0</a> licensed with the following copyright:</p>
+
+<blockquote>
+  <p>Copyright (c) 2015-2017 Google, Inc., Netflix, Inc., Microsoft Corp. and contributors</p>
+</blockquote>
+
+<p>No substantial changes to the software were made.
+No <code class="language-plaintext highlighter-rouge">NOTICE</code> file was provided.</p>
+
+<h3 id="katex">KaTeX</h3>
+<p>This software also uses portions of the
+<code class="language-plaintext highlighter-rouge">Khan/KaTeX</code>
+project, which is <a href="/licenses/MIT/">MIT</a> licensed with the following copyright:</p>
+
+<blockquote>
+  <p>Copyright (c) 2015 Khan Academy</p>
+</blockquote>
+
+<h3 id="core-js">core-js</h3>
+<p>This software also uses portions of the
+<code class="language-plaintext highlighter-rouge">zloirock/core-js</code>
+project, which is <a href="/licenses/MIT/">MIT</a> licensed with the following copyright:</p>
+
+<blockquote>
+  <p>Copyright (c) 2014-2016 Denis Pushkarev</p>
+</blockquote>
+
+<h3 id="web-animations">Web Animations</h3>
+<p>This software also uses portions of the
+<code class="language-plaintext highlighter-rouge">web-animations/web-animations-js</code>
+project, which is <a href="/licenses/Apache-2.0/">Apache-2.0</a> licensed with the following copyright:</p>
+
+<blockquote>
+  <p>Copyright 2014 Google Inc. All rights reserved.</p>
+</blockquote>
+
+<p>No substantial changes to the software were made.
+No <code class="language-plaintext highlighter-rouge">NOTICE</code> file was provided.</p>
+
+<h3 id="modernizr">Modernizr</h3>
+<p>This software also uses portions of the
+<code class="language-plaintext highlighter-rouge">Modernizr/Modernizr</code>
+project, which is <a href="/licenses/MIT/">MIT</a> licensed with the following copyright:</p>
+
+<blockquote>
+  <p>Copyright (c)<br />
+ Faruk Ates<br />
+ Paul Irish<br />
+ Alex Sexton<br />
+ Ryan Seddon<br />
+ Patrick Kettner<br />
+ Stu Cox<br />
+ Richard Herrera</p>
+</blockquote>
+
+<h3 id="compress-html-in-jekyll">Compress HTML in Jekyll</h3>
+<p>This software also uses portions of the
+<code class="language-plaintext highlighter-rouge">penibelst/jekyll-compress-html</code>
+project, which is <a href="/licenses/MIT/">MIT</a> licensed with the following copyright:</p>
+
+<blockquote>
+  <p>Copyright (c) 2014 Anatol Broder</p>
+</blockquote>
+
+<h3 id="the-html5-shiv">The HTML5 Shiv</h3>
+<p>This software also uses portions of the
+<code class="language-plaintext highlighter-rouge">aFarkas/html5shiv</code>
+project, which is <a href="/licenses/MIT/">MIT</a> licensed with the following copyright:</p>
+
+<blockquote>
+  <p>Copyright (c) 2014 Alexander Farkas (aFarkas).</p>
+</blockquote>
+
+<h3 id="dom4">DOM4</h3>
+<p>This software also uses portions of the
+<code class="language-plaintext highlighter-rouge">WebReflection/dom4</code>
+project, which is <a href="/licenses/MIT/">MIT</a> licensed with the following copyright:</p>
+
+<blockquote>
+  <p>Copyright (C) 2013-2015 by Andrea Giammarchi - @WebReflection</p>
+</blockquote>
+
+<h3 id="loadcss">loadCSS</h3>
+<p>This software also uses portions of the
+<code class="language-plaintext highlighter-rouge">filamentgroup/loadCSS</code>
+project, which is <a href="/licenses/MIT/">MIT</a> licensed with the following copyright:</p>
+
+<blockquote>
+  <p>Copyright (c) @scottjehl, 2016 Filament Group</p>
+</blockquote>
+
+<h3 id="ratchet">Ratchet</h3>
+<p>This software also uses portions of the
+<code class="language-plaintext highlighter-rouge">twbs/ratchet</code>
+project, which is <a href="/licenses/MIT/">MIT</a> licensed with the following copyright:</p>
+
+<blockquote>
+  <p>Copyright (c) 2015 connors and other contributors</p>
+</blockquote>
+
+<h3 id="swipe">Swipe</h3>
+<p>This software also uses portions of the
+<code class="language-plaintext highlighter-rouge">thebird/Swipe</code>
+project, which is <a href="/licenses/MIT/">MIT</a> licensed with the following copyright:</p>
+
+<blockquote>
+  <p>Copyright (c) 2013 Brad Birdsall</p>
+</blockquote>
+
+<h3 id="smoothstate">smoothState</h3>
+<p>This software also uses portions of the
+<code class="language-plaintext highlighter-rouge">miguel-perez/smoothState.js</code>
+project, which is <a href="/licenses/MIT/">MIT</a> licensed with the following copyright:</p>
+
+<blockquote>
+  <p>Copyright (c) 2014 Miguel Angel Perez</p>
+</blockquote>
+
+<h3 id="bootstrap">Bootstrap</h3>
+<p>This software also uses portions of the
+<code class="language-plaintext highlighter-rouge">twbs/bootstrap</code>
+project, which is <a href="/licenses/MIT/">MIT</a> licensed with the following copyright:</p>
+
+<blockquote>
+  <p>Copyright (c) 2011-2018 Twitter, Inc.<br />
+Copyright (c) 2011-2018 The Bootstrap Authors</p>
+</blockquote>
+
+<h3 id="atom-one-light-syntax">Atom One Light Syntax</h3>
+<p>This software also uses portions of the
+<code class="language-plaintext highlighter-rouge">atom/one-light-syntax</code>
+project, which is <a href="/licenses/MIT/">MIT</a> licensed with the following copyright:</p>
+
+<blockquote>
+  <p>Copyright (c) 2016 GitHub Inc.</p>
+</blockquote>
+
+<h3 id="atom-one-dark-syntax">Atom One Dark Syntax</h3>
+<p>This software also uses portions of the
+<code class="language-plaintext highlighter-rouge">atom/one-dark-syntax</code>
+project, which is <a href="/licenses/MIT/">MIT</a> licensed with the following copyright:</p>
+
+<blockquote>
+  <p>Copyright (c) 2016 GitHub Inc.</p>
+</blockquote>
+
+<h3 id="minisearch">MiniSearch</h3>
+<p>This software also uses portions of the
+<code class="language-plaintext highlighter-rouge">lucaong/minisearch</code>
+project, which is <a href="/licenses/MIT/">MIT</a> licensed with the following copyright:</p>
+
+<blockquote>
+  <p>Copyright 2018 Luca Ongaro</p>
+</blockquote>
+
+<h3 id="windowfetch-polyfill">window.fetch polyfill</h3>
+<p>This software also uses portions of the
+<code class="language-plaintext highlighter-rouge">github/fetch</code>
+project, which is <a href="/licenses/MIT/">MIT</a> licensed with the following copyright:</p>
+
+<blockquote>
+  <p>Copyright (c) 2014-2016 GitHub, Inc.</p>
+</blockquote>
+
+<h3 id="abortcontroller-polyfill-for-abortable-fetch">AbortController polyfill for abortable fetch()</h3>
+<p>This software also uses portions of the
+<code class="language-plaintext highlighter-rouge">mo/abortcontroller-polyfill</code>
+project, which is <a href="/licenses/MIT/">MIT</a> licensed with the following copyright:</p>
+
+<blockquote>
+  <p>Copyright (c) 2017 molsson</p>
+</blockquote>
+
+<h3 id="resizeobserver-polyfill">ResizeObserver Polyfill</h3>
+<p>This software also uses portions of the
+<code class="language-plaintext highlighter-rouge">juggle/resize-observer</code>
+project, which is <a href="/licenses/Apache-2.0/">Apache-2.0</a> licensed with the following copyright:</p>
+
+<blockquote>
+  <p>Copyright 2019 JUGGLE LTD</p>
+</blockquote>
+
+<h3 id="kv-storage-polyfill">kv-storage polyfill</h3>
+<p>This software also uses portions of the
+<code class="language-plaintext highlighter-rouge">GoogleChromeLabs/kv-storage-polyfill</code>
+project, which is <a href="/licenses/Apache-2.0/">Apache-2.0</a> licensed with the following copyright:</p>
+
+<blockquote>
+  <p>Copyright 2019 Google Inc.</p>
+</blockquote>
+
+<h3 id="intersectionobserver-polyfill">IntersectionObserver polyfill</h3>
+<p>This software also uses portions of the
+<code class="language-plaintext highlighter-rouge">w3c/IntersectionObserver</code>
+project, which is <a href="/licenses/W3C-20150513/">W3C-20150513</a> licensed with the following copyright:</p>
+
+<blockquote>
+  <p>Copyright 2016 Google Inc. All Rights Reserved.</p>
+</blockquote>
+
+<p>No substantial changes to the software were made.</p>
+
+<h3 id="web-components-polyfills">Web Components Polyfills</h3>
+<p>This software also uses portions of the
+<code class="language-plaintext highlighter-rouge">webcomponents/webcomponentsjs</code>
+project, which is BSD-style licensed with the following copyright:</p>
+
+<blockquote>
+  <p>Copyright (c) 2019 The Polymer Authors. All rights reserved.</p>
+</blockquote>
+
+<p>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</p>
+
+<ul>
+  <li>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</li>
+  <li>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</li>
+  <li>Neither the name of Google Inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</li>
+</ul>
+
+<p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+
+<h3 id="lit-html">lit-html</h3>
+<p>This software also uses portions of the
+<code class="language-plaintext highlighter-rouge">Polymer/lit-html</code>
+project, which is BSD-style licensed with the following copyright:</p>
+
+<p>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</p>
+
+<ul>
+  <li>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</li>
+  <li>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</li>
+  <li>Neither the name of Google Inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</li>
+</ul>
+
+<p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+
+:ET

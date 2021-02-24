@@ -1,0 +1,194 @@
+I"
+<p>Hydejack offers a few additional features to markup your markdown.
+Don’t worry, these are merely CSS classes added with kramdown’s <code class="language-plaintext highlighter-rouge">{:...}</code> syntax,
+so that your content remains compatible with other Jekyll themes.</p>
+
+<h2 id="large-tables">Large Tables</h2>
+
+<table class="scroll-table">
+  <thead>
+    <tr>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+    </tr>
+    <tr>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center"><strong>strong</strong></td>
+      <td style="text-align: right">baz</td>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center"><strong>strong</strong></td>
+      <td style="text-align: right">baz</td>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center"><strong>strong</strong></td>
+      <td style="text-align: right">baz</td>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center"><strong>strong</strong></td>
+      <td style="text-align: right">baz</td>
+    </tr>
+    <tr>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+    </tr>
+    <tr>
+      <td>Second body</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Second body</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Second body</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Second body</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+    </tr>
+    <tr>
+      <td>2 line</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>2 line</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>2 line</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>2 line</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+    </tr>
+    <tr>
+      <td>Footer row</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Footer row</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Footer row</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Footer row</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="code-blocks">Code blocks</h2>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Example can be run directly in your JavaScript console</span>
+
+<span class="c1">// Create a function that takes two arguments and returns the sum of those</span>
+<span class="c1">// arguments</span>
+<span class="kd">var</span> <span class="nx">adder</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Function</span><span class="p">(</span><span class="dl">"</span><span class="s2">a</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">b</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">return a + b</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="c1">// Call the function</span>
+<span class="nx">adder</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
+<span class="c1">// &gt; 8</span>
+</code></pre></div></div>
+
+<h2 id="math">Math</h2>
+<p>Lorem ipsum \(f(x) = x^2\).</p>
+
+\[\begin{aligned}
+  \phi(x,y) &amp;= \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right) \\[2em]
+            &amp;= \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j)            \\[2em]
+            &amp;= (x_1, \ldots, x_n)
+               \left(\begin{array}{ccc}
+                 \phi(e_1, e_1)  &amp; \cdots &amp; \phi(e_1, e_n) \\
+                 \vdots          &amp; \ddots &amp; \vdots         \\
+                 \phi(e_n, e_1)  &amp; \cdots &amp; \phi(e_n, e_n)
+               \end{array}\right)
+               \left(\begin{array}{c}
+                 y_1    \\
+                 \vdots \\
+                 y_n
+               \end{array}\right)
+\end{aligned}\]
+
+<h2 id="message-boxes">Message boxes</h2>
+<p class="message"><strong>NOTE</strong>: You can add a message box.</p>
+
+<h2 id="large-text">Large text</h2>
+<p class="lead">You can add large text.</p>
+
+<h2 id="large-images">Large images</h2>
+<p><img src="https://placehold.it/800x100" alt="Full-width image" class="lead" data-width="800" data-height="100" /></p>
+
+<h2 id="captions-to-images">Captions to images</h2>
+<p class="figure"><img src="https://placehold.it/800x100" alt="Full-width image" class="lead" data-width="800" data-height="100" />
+A caption to an image.</p>
+
+<h2 id="large-quotes">Large quotes</h2>
+<blockquote class="lead">
+  <p>You can make a quote “pop out”.</p>
+</blockquote>
+
+<h2 id="faded-text">Faded text</h2>
+<p class="faded">I’m faded, faded, faded.</p>
+
+:ET

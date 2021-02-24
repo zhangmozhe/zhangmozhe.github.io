@@ -1,1 +1,1 @@
-Sitemap: https://zhangmozhe.github.io/sitemap.xml
+Sitemap: https://zhangmozhe.github.io//sitemap.xml

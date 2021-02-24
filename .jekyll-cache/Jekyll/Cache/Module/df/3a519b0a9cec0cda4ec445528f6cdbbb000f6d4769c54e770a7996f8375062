@@ -1,0 +1,226 @@
+I"ž<hy-drawer
+  id="_drawer"
+  class="cover"
+  side="left"
+  threshold="10"
+  noscroll
+  opened
+>
+  <header id="_sidebar" class="sidebar" role="banner">
+    
+
+
+
+
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/bg.jpg)"></div>
+
+    <div class="sidebar-sticky">
+  <div class="sidebar-about">
+    
+      <a class="no-hover" href="/" tabindex="-1">
+        <img src="/assets/img/profile.jpg" class="avatar" alt="Bo Zhang" width="120" height="120" loading="lazy" />
+      </a>
+    
+    <a class="sidebar-title" href="/"><h2 class="h1">Bo Zhang</h2></a>
+    
+    
+      <p class="">
+        Researcher at Microsoft Research Asia
+
+      </p>
+    
+  </div>
+
+  <nav class="sidebar-nav heading" role="navigation">
+    <span class="sr-only">Navigation:</span>
+<ul>
+  
+    
+      
+      <li>
+        <a
+          id="_drawer--opened"
+          href="/#about"
+          class="sidebar-nav-item "
+          
+        >
+          About
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/#publications"
+          class="sidebar-nav-item "
+          
+        >
+          Publications
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/#services"
+          class="sidebar-nav-item "
+          
+        >
+          Services
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/#honors"
+          class="sidebar-nav-item "
+          
+        >
+          Honors & Awards
+        </a>
+      </li>
+    
+  
+</ul>
+
+  </nav>
+
+  
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="mailto:zhanbo@microsoft.com" title="Email" class="no-mark-external">
+      <span class="icon-mail"></span>
+      <span class="sr-only">Email</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://scholar.google.com/citations?user=PefHCMUAAAAJ&hl" title="Google Scholar" class="no-mark-external">
+      <span class="icon-googlescholar"></span>
+      <span class="sr-only">Google Scholar</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/zhangmozhe" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://www.linkedin.com/in/bo-zhang-8b753792" title="LinkedIn" class="no-mark-external">
+      <span class="icon-linkedin2"></span>
+      <span class="sr-only">LinkedIn</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://twitter.com/zhangboknight" title="Twitter" class="no-mark-external">
+      <span class="icon-twitter"></span>
+      <span class="sr-only">Twitter</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
+</div>
+  </header>
+</hy-drawer>
+<hr class="sr-only" hidden />
+:ET

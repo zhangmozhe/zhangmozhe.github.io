@@ -1,0 +1,91 @@
+I"H<p class="lead">Version 9 is the most complete version of Hydejack yet.</p>
+
+<p><a href="#linking-in-style">Modernized</a> <a href="#whats-in-the-cards">design</a>, <a href="#ready-for-the-big-screen">big headlines</a>, big new features: <a href="#built-in-search">Built-In Search</a>, <a href="#sticky-table-of-contents">Sticky Table of Contents</a>, and <a href="#auto-hiding-navbar">Auto-Hiding Navbar</a>. That <a href="#and-much-more">and more</a> is Hydejack 9.</p>
+
+<ul class="large-only" id="markdown-toc">
+  <li><a href="#linking-in-style" id="markdown-toc-linking-in-style">Linking in Style</a></li>
+  <li><a href="#ready-for-the-big-screen" id="markdown-toc-ready-for-the-big-screen">Ready for the Big Screen</a></li>
+  <li><a href="#whats-in-the-cards" id="markdown-toc-whats-in-the-cards">What’s in the Cards?</a></li>
+  <li><a href="#built-in-search" id="markdown-toc-built-in-search">Built-In Search</a></li>
+  <li><a href="#auto-hiding-navbar" id="markdown-toc-auto-hiding-navbar">Auto-Hiding Navbar</a></li>
+  <li><a href="#sticky-table-of-contents" id="markdown-toc-sticky-table-of-contents">Sticky Table of Contents</a></li>
+  <li><a href="#and-much-more" id="markdown-toc-and-much-more">…and much more</a></li>
+  <li><a href="#even-more-to-come" id="markdown-toc-even-more-to-come">Even More to Come</a></li>
+  <li><a href="#get-it-now" id="markdown-toc-get-it-now">Get It Now</a></li>
+</ul>
+
+<h2 id="linking-in-style">Linking in Style</h2>
+
+<p>Ever since the introduction of Dark Mode, link styles have been a bit of an issue. Specifically, finding an accent color that worked on both light and dark backgrounds was the problem. With Hydejack 9, the <a href="#linking-in-style">link style</a> has been revamped so that legibility is no longer tied to the choice of accent_color, giving you much more freedom in creating a unique design flavor for your site.</p>
+
+<h2 id="ready-for-the-big-screen">Ready for the Big Screen</h2>
+
+<p>The theme on which Hydejack is based was designed for a different era of the web. Hydejack has inherited many of its limitations, but over time I’ve made adjustments, such as centering the content column for better reading ergonomics.</p>
+
+<p>With version 9, Hydejack takes full advantage of large displays. Whether it’s design indulgences such as oversized headlines, or quality of life improvements such as a floating table of contents, Hydejack now finds use for all that extra screen real estate<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup>.</p>
+
+<h2 id="whats-in-the-cards">What’s in the Cards?</h2>
+
+<p>Hydejack 9 now lets you use content cards for both projects and posts. 
+The cards have been redesigned with a new hover style and drop shadows and they retain their unique transition-to-next-page animations, which now also work on the <code class="language-plaintext highlighter-rouge">blog</code> layout. The new <code class="language-plaintext highlighter-rouge">grid</code> layout lets you do that.</p>
+
+<p>Good images are key to making the most out of content cards. For that reason, a <a href="/docs/basics/#adding-images">chapter on images</a> has been added to the documentation.</p>
+
+<h2 id="built-in-search">Built-In Search</h2>
+
+<p>Hydejack now has Built-In Search. It even works offline. I’ve been prototyping many approaches and eventually settled on a fully client-side, off-the-main thread solution that perfectly fits the use case of personal sites and shows surprisingly good results<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote">2</a></sup>.</p>
+
+<p>The new search UI is custom made for Hydejack and shows beautiful previews of your posts and pages, right on top of your regular content.</p>
+
+<p>Together with the Auto-Hiding Navbar, your entire content library is now only a couple of keystrokes away.</p>
+
+<h2 id="auto-hiding-navbar">Auto-Hiding Navbar</h2>
+
+<p>A navbar that’s there when you need it, and disappears when you don’t. Simple as that.</p>
+
+<h2 id="sticky-table-of-contents">Sticky Table of Contents</h2>
+
+<p>Already a staple on so many sites on the web, this pattern is now also available in Hydejack. 
+What’s unique about it is that it simply picks up the table of contents already created by kramdown’s <code class="language-plaintext highlighter-rouge">{:toc}</code> tag and transparently upgrades it to a fully dynamic version.</p>
+
+<h2 id="and-much-more">…and much more</h2>
+
+<p>Other noteworthy changes include:</p>
+<ul>
+  <li>Support for Jekyll 4</li>
+  <li>Choice between MathJax and KaTeX for math rendering</li>
+  <li>Use of <code class="language-plaintext highlighter-rouge">jekyll-include-cache</code> for drastically improved page building speeds</li>
+  <li>New variables configuration file — adjust content width, sidebar width, font size, etc…</li>
+  <li>…and the option to disable grouping projects by year.</li>
+</ul>
+
+<p>Read the the <a href="/CHANGELOG/" class="heading flip-title">CHANGELOG</a> for the full scope of features and improvements made in Hydejack 9.
+Maybe just glance at it to confirm that it is indeed a pretty long list.</p>
+
+<h2 id="even-more-to-come">Even More to Come</h2>
+
+<p>New features for 9.1 are already lined up. Code block headers and code line highlights for even better technical blogging, as well as download buttons on the resume page for PDF, vCard, and Resume JSON are just around the corner.</p>
+
+<h2 id="get-it-now">Get It Now</h2>
+<p>The Free Version of Hydejack is now availabe on <a href="https://rubygems.org/gems/jekyll-theme-hydejack">RubyGems</a>
+and for the first time also on <a href="https://github.com/hydecorp/hydejack/packages">GitHub Packages</a>. 
+The source code is available on <a href="https://github.com/hydecorp/hydejack">GitHub</a> as always.</p>
+
+<p>The PRO Version is scheduled to release on July 7th on Gumroad. Pre-Orders are open now:</p>
+
+<div class="gumroad-product-embed" data-gumroad-product-id="nuOluY"><a href="https://gumroad.com/l/nuOluY">Loading…</a></div>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>If you are a fan of the old two-column layout, or don’t like modern design tropes such as mega headlines, Hydejack lets you revert these changes on a case-by-case basis via configuration options. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+
+      <p>Search was mainly tested for English and German. Please let me know about issues in other languages. 
+  While I’ve tried to find a multi-language solution, most showed drastically worse  results for the English base case.
+  If you’re technically inclined, you can adopt the code located in <code class="language-plaintext highlighter-rouge">_includes/js/search-worker.js</code> to your needs. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+    </li>
+  </ol>
+</div>
+:ET

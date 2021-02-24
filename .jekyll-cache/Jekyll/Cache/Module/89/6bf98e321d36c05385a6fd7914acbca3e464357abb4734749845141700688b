@@ -1,0 +1,11 @@
+I"þ
+
+
+html {
+  --accent-color: rgb(68,78,83);
+  --accent-color-faded: #{fade-out(rgb(68,78,83), 0.5)};
+  --accent-color-highlight: #{fade-out(rgb(68,78,83), 0.9)};
+  --accent-color-darkened: #{darken(rgb(68,78,83), 7.5%)};
+  --theme-color: rgb(25,55,71);
+}
+:ET

@@ -1,0 +1,875 @@
+I"��<p>Hydejack offers a few additional features to markup your content.
+Don’t worry, these are merely CSS classes added with kramdown’s <code class="language-plaintext highlighter-rouge">{:...}</code> syntax,
+so that your content remains compatible with other Jekyll themes.</p>
+
+<ol id="markdown-toc">
+  <li><a href="#a-word-on-building-speeds" id="markdown-toc-a-word-on-building-speeds">A word on building speeds</a></li>
+  <li><a href="#adding-a-table-of-contents" id="markdown-toc-adding-a-table-of-contents">Adding a table of contents</a></li>
+  <li><a href="#adding-notes" id="markdown-toc-adding-notes">Adding notes</a></li>
+  <li><a href="#adding-large-text" id="markdown-toc-adding-large-text">Adding large text</a></li>
+  <li><a href="#adding-large-images" id="markdown-toc-adding-large-images">Adding large images</a></li>
+  <li><a href="#adding-image-captions" id="markdown-toc-adding-image-captions">Adding image captions</a></li>
+  <li><a href="#adding-large-quotes" id="markdown-toc-adding-large-quotes">Adding large quotes</a></li>
+  <li><a href="#adding-faded-text" id="markdown-toc-adding-faded-text">Adding faded text</a></li>
+  <li><a href="#adding-tables" id="markdown-toc-adding-tables">Adding tables</a>    <ol>
+      <li><a href="#scroll-table" id="markdown-toc-scroll-table">Scroll table</a></li>
+      <li><a href="#flip-table" id="markdown-toc-flip-table">Flip table</a></li>
+      <li><a href="#small-tables" id="markdown-toc-small-tables">Small tables</a></li>
+    </ol>
+  </li>
+  <li><a href="#adding-code-blocks" id="markdown-toc-adding-code-blocks">Adding code blocks</a></li>
+  <li><a href="#adding-math" id="markdown-toc-adding-math">Adding math</a>    <ol>
+      <li><a href="#inline" id="markdown-toc-inline">Inline</a></li>
+      <li><a href="#block" id="markdown-toc-block">Block</a></li>
+    </ol>
+  </li>
+</ol>
+
+<p class="note">For an introduction to markdown in general, see <a href="https://guides.github.com/features/mastering-markdown/">Mastering Markdown</a> and <a href="https://kramdown.gettalong.org/syntax.html">kramdown Syntax</a>.</p>
+
+<h2 id="a-word-on-building-speeds">A word on building speeds</h2>
+<p>If building speeds are a problem, try using the <code class="language-plaintext highlighter-rouge">--incremental</code> flag, e.g.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle exec jekyll serve --incremental
+</code></pre></div></div>
+
+<p>From the <a href="https://jekyllrb.com/docs/configuration/#build-command-options">Jekyll docs</a> (emphasis mine):</p>
+
+<blockquote>
+  <p>Enable the experimental incremental build feature. Incremental build only re-builds posts and pages that have changed, resulting in significant performance improvements for large sites, <em>but may also break site generation in certain cases</em>.</p>
+</blockquote>
+
+<p>The breakage occurs when you create new files or change filenames.
+Also, changing the title, category, tags, etc. of a page or post will not be reflected in pages
+other then the page or post itself.
+This makes it ideal for writing new posts and previewing changes, but not setting up new content.</p>
+
+<h2 id="adding-a-table-of-contents">Adding a table of contents</h2>
+<p>You can add a generated table of contents to any page by adding <code class="language-plaintext highlighter-rouge">{:toc}</code> below a list.</p>
+
+<p>Markdown:</p>
+<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">*</span> this unordered seed list will be replaced by the toc
+{:toc}
+</code></pre></div></div>
+
+<p>You can also create your table of contents as an ordered list (note the <code class="language-plaintext highlighter-rouge">1.</code> instead of <code class="language-plaintext highlighter-rouge">*</code>):</p>
+
+<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">1.</span> this ordered seed list will be replaced by the toc
+{:toc}
+</code></pre></div></div>
+
+<p>The width of the display has to be larger than 1665px for the ToC to become sticky.
+Otherwise, the ToC will appear where the seed list is placed in the document.
+To show the table of contents only on large displays (&gt; 1665px) use the following:</p>
+
+<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">*</span> this unordered seed list will be replaced by the toc 
+{:toc .large-only}
+</code></pre></div></div>
+
+<p class="note">A sticky table of contents will reduce the amount of space freed up by the <code class="language-plaintext highlighter-rouge">no_break_layout: false</code> setting.<br />
+This is necessary to ensure large code blocks or tables don’t overlap with the ToC.</p>
+
+<h2 id="adding-notes">Adding notes</h2>
+<p>You can add a note by adding the <code class="language-plaintext highlighter-rouge">note</code> class to a paragraph.</p>
+
+<p>Example:</p>
+
+<p class="note">You can add a note.</p>
+
+<p>Markdown:</p>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>You can add a note.
+{:.note}
+</code></pre></div></div>
+
+<p>Edit the <code class="language-plaintext highlighter-rouge">note</code> key in <code class="language-plaintext highlighter-rouge">_data/strings.yml</code> to change the wording of the default label.
+To add a note with a specific label, add a <code class="language-plaintext highlighter-rouge">title</code> attribute:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>A custom label.
+{:.note title="Attention"}
+</code></pre></div></div>
+
+<p class="note" title="Attention">A custom label.</p>
+
+<h2 id="adding-large-text">Adding large text</h2>
+<p>You can add large text by adding the <code class="language-plaintext highlighter-rouge">lead</code> class to the paragraph.</p>
+
+<p>Example:</p>
+
+<p class="lead">You can add large text.</p>
+
+<p>Markdown:</p>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>You can add large text.
+{:.lead}
+</code></pre></div></div>
+
+<h2 id="adding-large-images">Adding large images</h2>
+<p>You can make an image span the full width by adding the <code class="language-plaintext highlighter-rouge">lead</code> class.</p>
+
+<p>Example:</p>
+
+<p><img src="https://placehold.it/800x100" alt="Full-width image" class="lead" width="800" height="100" loading="lazy" /></p>
+
+<p>Markdown:</p>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">![</span><span class="nv">Full-width image</span><span class="p">](</span><span class="sx">https://placehold.it/800x100</span><span class="p">)</span>{:.lead width="800" height="100" loading="lazy"}
+</code></pre></div></div>
+
+<p>It is recommended to provide the dimension of the image via the <code class="language-plaintext highlighter-rouge">width</code> and <code class="language-plaintext highlighter-rouge">height</code> attributes, 
+so that browsers can calculate the layout before the images are loaded. Combining this with the <code class="language-plaintext highlighter-rouge">loading="lazy"</code> attribute
+allows modern browsers to load the images just-in-time as the users scrolls.</p>
+
+<p class="note">Previous versions of Hydejack shipped with a custom JavaScript-based lazy loading solution,
+but it has been removed in v9 in favor of this more standards-based approach.</p>
+
+<h2 id="adding-image-captions">Adding image captions</h2>
+<p>You can add captions to large images by adding the <code class="language-plaintext highlighter-rouge">figcaption</code> class to the paragraph after the image:</p>
+
+<p><img src="https://placehold.it/800x100" alt="Full-width image" class="lead" width="800" height="100" loading="lazy" /></p>
+
+<p class="figcaption">An optional caption for an image.</p>
+
+<p>Markdown:</p>
+<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">![</span><span class="nv">Full-width image</span><span class="p">](</span><span class="sx">https://placehold.it/800x100</span><span class="p">)</span>{:.lead width="800" height="100" loading="lazy"}
+
+A caption for an image.
+{:.figcaption}
+</code></pre></div></div>
+
+<h2 id="adding-large-quotes">Adding large quotes</h2>
+<p>You can make a quote “pop out” by adding the <code class="language-plaintext highlighter-rouge">lead</code> class.</p>
+
+<p>Example:</p>
+
+<blockquote class="lead">
+  <p>You can make a quote “pop out”.</p>
+</blockquote>
+
+<p>Markdown:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; You can make a quote "pop out".
+{:.lead}
+</code></pre></div></div>
+
+<h2 id="adding-faded-text">Adding faded text</h2>
+<p>You can gray out text by adding the <code class="language-plaintext highlighter-rouge">faded</code> class. Use this sparingly and for information that is not essential, as it is more difficult to read.</p>
+
+<p>Example:</p>
+
+<p class="faded">I’m faded, faded, faded.</p>
+
+<p>Markdown:</p>
+<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code>I'm faded, faded, faded.
+{:.faded}
+</code></pre></div></div>
+
+<h2 id="adding-tables">Adding tables</h2>
+<p>Adding tables is straightforward and works just as described in the <a href="https://kramdown.gettalong.org/syntax.html#tables">kramdown docs</a>, e.g.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Markdown:</p>
+<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code>| Default aligned |Left aligned| Center aligned  | Right aligned  |
+|-----------------|:-----------|:---------------:|---------------:|
+| First body part |Second cell | Third cell      | fourth cell    |
+</code></pre></div></div>
+
+<p>However, it gets tricker when adding large tables.
+In this case, Hydejack will break the layout and grant the table the entire available screen width to the right:</p>
+
+<table class="smaller">
+  <thead>
+    <tr>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+    </tr>
+    <tr>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center"><strong>strong</strong></td>
+      <td style="text-align: right">baz</td>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center"><strong>strong</strong></td>
+      <td style="text-align: right">baz</td>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center"><strong>strong</strong></td>
+      <td style="text-align: right">baz</td>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center"><strong>strong</strong></td>
+      <td style="text-align: right">baz</td>
+    </tr>
+    <tr>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+    </tr>
+    <tr>
+      <td>Second body</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Second body</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Second body</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Second body</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+    </tr>
+    <tr>
+      <td>2 line</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>2 line</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>2 line</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>2 line</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>Footer row</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Footer row</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Footer row</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Footer row</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+    </tr>
+  </tfoot>
+</table>
+
+<p class="note">Tables adopts to the font size! You can decrease the size of the table by adding the <code class="language-plaintext highlighter-rouge">smaller</code> CSS class. Put <code class="language-plaintext highlighter-rouge">{:.smaller}</code> below the Markdown table, or add <code class="language-plaintext highlighter-rouge">class="smaller"</code> to a HTML table.</p>
+
+<h3 id="scroll-table">Scroll table</h3>
+<p>If the extra space still isn’t enough, the table will receive a scrollbar.
+It is browser default behavior to break the lines inside table cells to fit the content on the screen.
+By adding the <code class="language-plaintext highlighter-rouge">scroll-table</code> class on a table, the behavior is changed to never break lines inside cells, e.g:</p>
+
+<table class="smaller scroll-table">
+  <thead>
+    <tr>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+    </tr>
+    <tr>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center"><strong>strong</strong></td>
+      <td style="text-align: right">baz</td>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center"><strong>strong</strong></td>
+      <td style="text-align: right">baz</td>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center"><strong>strong</strong></td>
+      <td style="text-align: right">baz</td>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center"><strong>strong</strong></td>
+      <td style="text-align: right">baz</td>
+    </tr>
+    <tr>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+    </tr>
+    <tr>
+      <td>Second body</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Second body</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Second body</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Second body</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+    </tr>
+    <tr>
+      <td>2 line</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>2 line</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>2 line</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>2 line</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>Footer row</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Footer row</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Footer row</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Footer row</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+    </tr>
+  </tfoot>
+</table>
+
+<p>You can add the <code class="language-plaintext highlighter-rouge">scroll-table</code> class to a markdown table by putting <code class="language-plaintext highlighter-rouge">{:.scroll-table}</code> in line directly below the table.
+To add the class to a HTML table, add the it to the <code class="language-plaintext highlighter-rouge">class</code> attribute of the <code class="language-plaintext highlighter-rouge">table</code> tag, e.g. <code class="language-plaintext highlighter-rouge">&lt;table class="scroll-table"&gt;</code>.</p>
+
+<h3 id="flip-table">Flip table</h3>
+<p>Alternatively, you can “flip” (transpose) the table.
+Unlike the other approach, this will keep the table head (now the first column) fixed in place.</p>
+
+<p>You can enable this behavior by adding <code class="language-plaintext highlighter-rouge">flip-table</code> or <code class="language-plaintext highlighter-rouge">flip-table-small</code> to the CSS classes of the table.
+The <code class="language-plaintext highlighter-rouge">-small</code> version will only enable scrolling on “small” screens (&lt; 1080px wide).</p>
+
+<p class="note">This approach only works on simple tables that have a single <code class="language-plaintext highlighter-rouge">tbody</code> and an optional <code class="language-plaintext highlighter-rouge">thead</code>.</p>
+
+<p>Example:</p>
+
+<table class="smaller flip-table">
+  <thead>
+    <tr>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+    </tr>
+    <tr>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center"><strong>strong</strong></td>
+      <td style="text-align: right">baz</td>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center"><strong>strong</strong></td>
+      <td style="text-align: right">baz</td>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center"><strong>strong</strong></td>
+      <td style="text-align: right">baz</td>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center"><strong>strong</strong></td>
+      <td style="text-align: right">baz</td>
+    </tr>
+    <tr>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+    </tr>
+    <tr>
+      <td>4th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>4th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>4th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>4th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+    </tr>
+    <tr>
+      <td>5th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>5th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>5th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>5th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+    </tr>
+    <tr>
+      <td>6th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>6th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>6th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>6th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+    </tr>
+    <tr>
+      <td>7th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>7th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>7th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>7th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+    </tr>
+    <tr>
+      <td>8th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>8th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>8th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>8th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+    </tr>
+    <tr>
+      <td>9th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>9th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>9th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>9th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+    </tr>
+    <tr>
+      <td>10th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>10th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>10th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>10th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+    </tr>
+    <tr>
+      <td>11th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>11th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>11th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>11th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+    </tr>
+    <tr>
+      <td>12th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>12th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>12th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>12th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>You can add the <code class="language-plaintext highlighter-rouge">flip-table</code> class to a markdown table by putting <code class="language-plaintext highlighter-rouge">{:.flip-table}</code> in line directly below the table.
+To add the class to a HTML table, add the it to the <code class="language-plaintext highlighter-rouge">class</code> attribute of the <code class="language-plaintext highlighter-rouge">table</code> tag, e.g. <code class="language-plaintext highlighter-rouge">&lt;table class="flip-table"&gt;</code>.</p>
+
+<h3 id="small-tables">Small tables</h3>
+<p>If a table is small enough to fit the screen even on small screens, you can add the <code class="language-plaintext highlighter-rouge">stretch-table</code> class
+to force a table to use the entire available content width. Note that stretched tables can no longer be scrolled.</p>
+
+<table class="stretch-table">
+  <thead>
+    <tr>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="figcaption">An optional caption for a table</p>
+
+<p>You can add the <code class="language-plaintext highlighter-rouge">stretch-table</code> class to a markdown table by putting <code class="language-plaintext highlighter-rouge">{:.stretch-table}</code> in line directly below the table.
+To add the class to a HTML table, add the it to the <code class="language-plaintext highlighter-rouge">class</code> attribute of the <code class="language-plaintext highlighter-rouge">table</code> tag, e.g. <code class="language-plaintext highlighter-rouge">&lt;table class="stretch-table"&gt;</code>.</p>
+
+<p>Just like images, you can add captions to tables by adding the <code class="language-plaintext highlighter-rouge">figcaption</code> class to the paragraph after the table.</p>
+
+<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code>An optional caption for a table
+{:.figcaption}
+</code></pre></div></div>
+
+<h2 id="adding-code-blocks">Adding code blocks</h2>
+<p>To add a code block without syntax highlighting, simply indent 4 spaces (regular markdown).
+For code blocks with code highlighting, use <code class="language-plaintext highlighter-rouge">~~~&lt;language&gt;</code>. This syntax is also supported by GitHub.
+For more information and a list of supported languages, see <a href="http://rouge.jneen.net/">Rouge</a>.</p>
+
+<p>You can give each code block a filename, by making the first line in the block a comment of the form <code class="language-plaintext highlighter-rouge">File: "dir/filename.ext"</code>. Use either single quotes <code class="language-plaintext highlighter-rouge">'</code>, double quotes <code class="language-plaintext highlighter-rouge">"</code>, or backticks <code>`</code> to surround the filename.</p>
+
+<p>Example:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// file: "code-block.js"</span>
+<span class="c1">// Example can be run directly in your JavaScript console</span>
+
+<span class="c1">// Create a function that takes two arguments and returns the sum of those</span>
+<span class="c1">// arguments</span>
+<span class="kd">var</span> <span class="nx">adder</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Function</span><span class="p">(</span><span class="dl">"</span><span class="s2">a</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">b</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">return a + b</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="c1">// Call the function</span>
+<span class="nx">adder</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
+<span class="c1">// &gt; 8</span>
+</code></pre></div></div>
+
+<p class="figcaption">An optional caption for a code block</p>
+
+<p>Markdown:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>~~~js
+// file: "code-block.js"
+// Example can be run directly in your JavaScript console
+
+// Create a function that takes two arguments and returns the sum of those
+// arguments
+var adder = new Function("a", "b", "return a + b");
+
+// Call the function
+adder(2, 6);
+// &gt; 8
+~~~
+
+An optional caption for a code block
+{:.figcaption}
+</code></pre></div></div>
+
+<p class="note">DO NOT use Jekyll’s <code class="language-plaintext highlighter-rouge">{ % highlight % } ... { % endhighlight % }</code> syntax, especially together with the <code class="language-plaintext highlighter-rouge">linenos</code> option.
+The generated <code class="language-plaintext highlighter-rouge">table</code> to render the line numbers does not have a CSS class or any other way of differentiating it from regular tables,
+so that the styles above apply, resulting in a broken page.
+What’s more, the output from <code class="language-plaintext highlighter-rouge">highlight</code> tags isn’t even valid HTML, nesting <code class="language-plaintext highlighter-rouge">pre</code> tags inside <code class="language-plaintext highlighter-rouge">pre</code> tags,
+which will in break the site during minification.
+You can read more about it <a href="https://github.com/penibelst/jekyll-compress-html/issues/71">here</a> and
+<a href="https://github.com/jekyll/jekyll/issues/4432">here</a>.</p>
+
+<h2 id="adding-math">Adding math</h2>
+<p>Before adding math blocks, make sure you’ve <a href="/docs/config/#enabling-math-blocks">set up math support</a>.</p>
+
+<h3 id="inline">Inline</h3>
+<p>Example:</p>
+
+<p>Lorem ipsum \(f(x) = x^2\).</p>
+
+<p>Markdown:</p>
+<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Lorem ipsum $$ f(x) = x^2 $$.
+</code></pre></div></div>
+
+<h3 id="block">Block</h3>
+<p>Example:</p>
+
+\[\begin{aligned}
+  \phi(x,y) &amp;= \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right) \\[2em]
+            &amp;= \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j)            \\[2em]
+            &amp;= (x_1, \ldots, x_n)
+               \left(\begin{array}{ccc}
+                 \phi(e_1, e_1)  &amp; \cdots &amp; \phi(e_1, e_n) \\
+                 \vdots          &amp; \ddots &amp; \vdots         \\
+                 \phi(e_n, e_1)  &amp; \cdots &amp; \phi(e_n, e_n)
+               \end{array}\right)
+               \left(\begin{array}{c}
+                 y_1    \\
+                 \vdots \\
+                 y_n
+               \end{array}\right)
+\end{aligned}\]
+
+<p class="figcaption">An optional caption for a math block</p>
+
+<p>Markdown:</p>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">$$</span><span class="nb">
+</span><span class="nv">\begin</span><span class="p">{</span><span class="nb">aligned</span><span class="p">}</span><span class="nb"> </span><span class="c">%!!15</span><span class="nb">
+  </span><span class="nv">\phi</span><span class="o">(</span><span class="nb">x,y</span><span class="o">)</span><span class="nb"> </span><span class="p">&amp;</span><span class="o">=</span><span class="nb"> </span><span class="nv">\phi</span><span class="nb"> </span><span class="nv">\left</span><span class="o">(</span><span class="nv">\sum</span><span class="p">_{</span><span class="nb">i</span><span class="o">=</span><span class="m">1</span><span class="p">}^</span><span class="nb">n x</span><span class="p">_</span><span class="nb">ie</span><span class="p">_</span><span class="nb">i, </span><span class="nv">\sum</span><span class="p">_{</span><span class="nb">j</span><span class="o">=</span><span class="m">1</span><span class="p">}^</span><span class="nb">n y</span><span class="p">_</span><span class="nb">je</span><span class="p">_</span><span class="nb">j </span><span class="nv">\right</span><span class="o">)</span><span class="nb"> </span><span class="nv">\\</span><span class="o">[</span><span class="m">2</span><span class="nb">em</span><span class="o">]</span><span class="nb">
+            </span><span class="p">&amp;</span><span class="o">=</span><span class="nb"> </span><span class="nv">\sum</span><span class="p">_{</span><span class="nb">i</span><span class="o">=</span><span class="m">1</span><span class="p">}^</span><span class="nb">n </span><span class="nv">\sum</span><span class="p">_{</span><span class="nb">j</span><span class="o">=</span><span class="m">1</span><span class="p">}^</span><span class="nb">n x</span><span class="p">_</span><span class="nb">i y</span><span class="p">_</span><span class="nb">j </span><span class="nv">\phi</span><span class="o">(</span><span class="nb">e</span><span class="p">_</span><span class="nb">i, e</span><span class="p">_</span><span class="nb">j</span><span class="o">)</span><span class="nb">            </span><span class="nv">\\</span><span class="o">[</span><span class="m">2</span><span class="nb">em</span><span class="o">]</span><span class="nb">
+            </span><span class="p">&amp;</span><span class="o">=</span><span class="nb"> </span><span class="o">(</span><span class="nb">x</span><span class="p">_</span><span class="m">1</span><span class="nb">, </span><span class="nv">\ldots</span><span class="nb">, x</span><span class="p">_</span><span class="nb">n</span><span class="o">)</span><span class="nb">
+               </span><span class="nv">\left</span><span class="o">(</span><span class="nv">\begin</span><span class="p">{</span><span class="nb">array</span><span class="p">}{</span><span class="nb">ccc</span><span class="p">}</span><span class="nb">
+                 </span><span class="nv">\phi</span><span class="o">(</span><span class="nb">e</span><span class="p">_</span><span class="m">1</span><span class="nb">, e</span><span class="p">_</span><span class="m">1</span><span class="o">)</span><span class="nb">  </span><span class="p">&amp;</span><span class="nb"> </span><span class="nv">\cdots</span><span class="nb"> </span><span class="p">&amp;</span><span class="nb"> </span><span class="nv">\phi</span><span class="o">(</span><span class="nb">e</span><span class="p">_</span><span class="m">1</span><span class="nb">, e</span><span class="p">_</span><span class="nb">n</span><span class="o">)</span><span class="nb"> </span><span class="nv">\\</span><span class="nb">
+                 </span><span class="nv">\vdots</span><span class="nb">          </span><span class="p">&amp;</span><span class="nb"> </span><span class="nv">\ddots</span><span class="nb"> </span><span class="p">&amp;</span><span class="nb"> </span><span class="nv">\vdots</span><span class="nb">         </span><span class="nv">\\</span><span class="nb">
+                 </span><span class="nv">\phi</span><span class="o">(</span><span class="nb">e</span><span class="p">_</span><span class="nb">n, e</span><span class="p">_</span><span class="m">1</span><span class="o">)</span><span class="nb">  </span><span class="p">&amp;</span><span class="nb"> </span><span class="nv">\cdots</span><span class="nb"> </span><span class="p">&amp;</span><span class="nb"> </span><span class="nv">\phi</span><span class="o">(</span><span class="nb">e</span><span class="p">_</span><span class="nb">n, e</span><span class="p">_</span><span class="nb">n</span><span class="o">)</span><span class="nb">
+               </span><span class="nv">\end</span><span class="p">{</span><span class="nb">array</span><span class="p">}</span><span class="nv">\right</span><span class="o">)</span><span class="nb">
+               </span><span class="nv">\left</span><span class="o">(</span><span class="nv">\begin</span><span class="p">{</span><span class="nb">array</span><span class="p">}{</span><span class="nb">c</span><span class="p">}</span><span class="nb">
+                 y</span><span class="p">_</span><span class="m">1</span><span class="nb">    </span><span class="nv">\\</span><span class="nb">
+                 </span><span class="nv">\vdots</span><span class="nb"> </span><span class="nv">\\</span><span class="nb">
+                 y</span><span class="p">_</span><span class="nb">n
+               </span><span class="nv">\end</span><span class="p">{</span><span class="nb">array</span><span class="p">}</span><span class="nv">\right</span><span class="o">)</span><span class="nb">
+</span><span class="nv">\end</span><span class="p">{</span><span class="nb">aligned</span><span class="p">}</span><span class="nb">
+</span><span class="p">$$</span>
+
+An optional caption for a math block
+<span class="p">{</span>:.figcaption<span class="p">}</span>
+</code></pre></div></div>
+
+<p class="note">KaTeX does not support the <code class="language-plaintext highlighter-rouge">align</code> and <code class="language-plaintext highlighter-rouge">align*</code> environments.
+Instead, <code class="language-plaintext highlighter-rouge">aligned</code> should be used, e.g. <code class="language-plaintext highlighter-rouge">\begin{aligned} ... \end{aligned}</code>.</p>
+
+<p class="read-more">Continue with <a href="/docs/scripts/" class="heading flip-title">Scripts</a></p>
+
+:ET

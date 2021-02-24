@@ -1,0 +1,181 @@
+I"�8<p>This chapter covers advanced topics, such as offline support and custom JS builds. Codings skills are recommended.</p>
+
+<ol id="markdown-toc">
+  <li><a href="#enabling-offline-support" id="markdown-toc-enabling-offline-support">Enabling offline support</a>    <ol>
+      <li><a href="#how-offline-storage-works" id="markdown-toc-how-offline-storage-works">How offline storage works</a></li>
+    </ol>
+  </li>
+  <li><a href="#adding-a-custom-social-media-icon" id="markdown-toc-adding-a-custom-social-media-icon">Adding a custom social media icon</a>    <ol>
+      <li><a href="#creating-the-icon-font" id="markdown-toc-creating-the-icon-font">Creating the icon font</a></li>
+      <li><a href="#adding-the-platforms-metadata" id="markdown-toc-adding-the-platforms-metadata">Adding the platform’s metadata</a></li>
+    </ol>
+  </li>
+  <li><a href="#how-css-is-organized-in-hydejack" id="markdown-toc-how-css-is-organized-in-hydejack">How CSS is organized in Hydejack</a></li>
+</ol>
+
+<h2 id="enabling-offline-support">Enabling offline support</h2>
+<p>Hydejack v8 introduces experimental “cache as you go” offline support. This is implemented via the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a>, a new browser standard that is now supported in the latest versions of all major browsers. However, it is a very powerful feature and should be used with a lot of care.</p>
+
+<p>Enabling this feature requires that your content meets the following criteria:</p>
+
+<ul>
+  <li>Content doesn’t change between deploys (e.g. manually adding things to <code class="language-plaintext highlighter-rouge">_site</code> etc.)</li>
+  <li>All assets in <code class="language-plaintext highlighter-rouge">assets</code> are immutable, i.e. they never change (when changing a file in assets, it needs to have a new name and links need to point to the new file).</li>
+  <li>The site is mostly self-contained, i.e. assets are served from the same domain (offline support will not download assets form external sites by default)</li>
+  <li>The site is served via HTTPS (this is a Service Worker requirement)</li>
+</ul>
+
+<p>To enable this feature, create a <code class="language-plaintext highlighter-rouge">sw.js</code> file in the root of your project and add the following content:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">---</span>
+<span class="o">---</span>
+<span class="nx">importScripts</span><span class="p">(</span><span class="dl">"</span><span class="s2">{{ '/assets/js/sw.js' | relative_url }}?t={{ site.time | date_to_xmlschema }}</span><span class="dl">"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>This will load the main service worker script from Hydejack’s assets. The <code class="language-plaintext highlighter-rouge">site.time</code> part is necessary to make the service worker “byte different” every time you create a new build of your site, which triggers an update.</p>
+
+<p>In your <code class="language-plaintext highlighter-rouge">config.yml</code> under the <code class="language-plaintext highlighter-rouge">hydejack</code> key, add the following:</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">offline</span><span class="pi">:</span>
+  <span class="na">enabled</span><span class="pi">:</span> <span class="no">true</span>
+  <span class="na">cache_version</span><span class="pi">:</span> <span class="m">1</span>
+</code></pre></div></div>
+
+<p>The current implementation does not cache resources from external domains. There is now way of knowing if external sites conform to the conditions mentioned above, hence caching can be problematic and result in unexpected behavior.</p>
+
+<p>For example, Google Analytics uses GET requests to send page views, each of which would be cached by the service worker without this policy. Frequently updating images, such as badges would never change.</p>
+
+<p><img src="https://badge.fury.io/rb/jekyll-theme-hydejack.svg" alt="Gem Version" /></p>
+
+<p>However, if you include resources that are hosted on another domain and don’t change, you can add the <code class="language-plaintext highlighter-rouge">sw-cache</code> query parameter to the URL, e.g.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://upload.wikimedia.org/wikipedia/commons/b/b1/57_Chevy_210.jpg?sw-cache
+</code></pre></div></div>
+
+<p>This will cause them to be cached like resources from the assets folder.</p>
+
+<p>If you want to serve a file from the <code class="language-plaintext highlighter-rouge">assets</code> folder but NOT cache it for offline use, add the <code class="language-plaintext highlighter-rouge">no-cache</code> query parameter instead:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/assets/lfs/download.bin?no-cache
+</code></pre></div></div>
+
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/57_Chevy_210.jpg?sw-cache" alt="57 Chevy" /></p>
+
+<h3 id="how-offline-storage-works">How offline storage works</h3>
+
+<p>Hydejack’s custom service worker implementation stores files for offline use on three different levels:</p>
+
+<dl>
+  <dt>Shell</dt>
+  <dd>The shell files are the core Hydejack files (CSS, JS) that only change between version updates.
+If you made changes to any of these after enabling offline support, you must force an update by bumping the <code class="language-plaintext highlighter-rouge">cache_version</code> number in the config file.</dd>
+  <dt>Assets</dt>
+  <dd><em>These are presumed to be immutable.</em> In other words, every file is cached indefinitely. E.g.: If you want to update an image after enabling offline support, add the image under a different name and change the link in the content. Alternatively, you can bump the <code class="language-plaintext highlighter-rouge">cache_version</code>, but this will remove all other cached files from the asset cache.</dd>
+  <dt>Content</dt>
+  <dd>The content cache exploits the fact that your content can’t change between builds, so that it can be stored for offline use until you upload a new build. For now, the entire content cache is discarded every time you publish new content (future versions could cache them based on last modified dates).</dd>
+</dl>
+
+<p>Other things to note are that the implementation will always cache the pages listed under <code class="language-plaintext highlighter-rouge">legal</code>, as well as the <code class="language-plaintext highlighter-rouge">404.html</code> page, which will be shown when the user is offline.</p>
+
+<h2 id="adding-a-custom-social-media-icon">Adding a custom social media icon</h2>
+<p>Hydejack includes a number of social media icons by default (in fact, everything that is provided by <a href="https://icomoon.io/">IcoMoon</a>), but since the landscape is always changing, it is likely that a platform that is important to you will be missing at some point.</p>
+
+<p class="note">You can add any platform by simply providing a complete URL. However, a fallback icon <span class="icon-link"></span> will be used.</p>
+
+<h3 id="creating-the-icon-font">Creating the icon font</h3>
+<p>In order to add a custom social media icon you have to use the <a href="https://icomoon.io/app/">IcoMoon App</a> (free) to create a custom icon webfont. However, it is important that the generated font include all icons already in use by Hydejack. For this purpose, find the <code class="language-plaintext highlighter-rouge">selection.json</code> in <a href="https://github.com/hydecorp/hydejack/blob/v6/assets/icomoon/selection.json"><code class="language-plaintext highlighter-rouge">assets/icomoon/selection.json</code></a> and upload it to the app via “Import Icons”.
+Then, use the app to add your icon(s).
+Consult the <a href="https://icomoon.io/#docs">IcoMoon docs</a> for additional help.</p>
+
+<p>Once you’ve created and downloaded the icon font form IconMoon, replace the <code class="language-plaintext highlighter-rouge">icomoon</code> folder in <code class="language-plaintext highlighter-rouge">assets</code> in its entirety. Keep in mind that future updates of Hydejack will override this folder.</p>
+
+<h3 id="adding-the-platforms-metadata">Adding the platform’s metadata</h3>
+<p>For the second step it is necessary to add the network’s metadata to <code class="language-plaintext highlighter-rouge">_data/social.yml</code>.
+An entry looks like:</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">deviantart</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">DeviantArt</span>
+  <span class="na">icon</span><span class="pi">:</span> <span class="s">icon-deviantart</span>
+  <span class="na">prepend</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://"</span>
+  <span class="na">append</span><span class="pi">:</span> <span class="s2">"</span><span class="s">.deviantart.com"</span>
+</code></pre></div></div>
+
+<dl>
+  <dt><code class="language-plaintext highlighter-rouge">name</code></dt>
+  <dd>The name of the network. Used for the title attribute and screen readers.</dd>
+  <dt><code class="language-plaintext highlighter-rouge">icon</code></dt>
+  <dd>The icon CSS class. Can be chosen during the IcoMoon creation process.</dd>
+  <dt><code class="language-plaintext highlighter-rouge">prepend</code></dt>
+  <dd>Optional. A string that is prepended to the username to form the link to the profile. If the final URL should be <code class="language-plaintext highlighter-rouge">https://&lt;username&gt;.deviantart.com</code>, this would be <code class="language-plaintext highlighter-rouge">https://</code></dd>
+  <dt><code class="language-plaintext highlighter-rouge">append</code></dt>
+  <dd>Optional. A string that is appended to the username to form the link to the profile. If the final URL should be <code class="language-plaintext highlighter-rouge">https://&lt;username&gt;.deviantart.com</code>, this would be <code class="language-plaintext highlighter-rouge">.deviantart.com</code>.</dd>
+</dl>
+
+<h2 id="how-css-is-organized-in-hydejack">How CSS is organized in Hydejack</h2>
+<p>Hydejack takes a quite unique approach to CSS, which is motivated by the ability to
+inline essential CSS rules in a <code class="language-plaintext highlighter-rouge">style</code> tag in the <code class="language-plaintext highlighter-rouge">&lt;head/&gt;</code> of a page (to increase the loading speed),
+while serving the rest in a separate file.</p>
+
+<p>The styles are written in SCSS and are located in the <code class="language-plaintext highlighter-rouge">_sass</code> folder, which looks like</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>├── hydejack
+│   ├── __inline__
+│   ├── __link__
+│   ├── _base.pre.scss
+│   ├── ...
+│   └── _social.pre.scss
+├── pooleparty
+│   ├── __inline__
+│   ├── __link__
+│   ├── _base.pre.scss
+│   ├── ...
+│   └── _type.pre.scss
+├── mixins.scss
+├── my-inline.scss
+├── my-style.scss
+├── syntax.scss
+└── variables.scss
+</code></pre></div></div>
+
+<p>The style rules are organized alongside components (or rather, topics) like “sidebar” and “footer”.
+Further, there are two separate frameworks, “pooleparty” and “hydejack”,
+which grew out of the original <a href="http://getpoole.com/">Poole</a> and <a href="http://hyde.getpoole.com/">Hyde</a> projects.
+Poole/party contains more general style rules, while Hyde/jack contains those that more are specific to the theme.
+However, this separation has blurred over time.</p>
+
+<p>Inside those folders, you will notice the <code class="language-plaintext highlighter-rouge">__inline__</code> and <code class="language-plaintext highlighter-rouge">__link__</code> folders.
+The unfriendly names are intentional, because their contents are generated by a script and shouldn’t be modified directly.
+The source files are located in the same folder and end with <code class="language-plaintext highlighter-rouge">.pre.scss</code>.
+They are fully valid SCSS files, but contain comments that mark which lines should be inlined and which should be fetched asynchronously.</p>
+
+<p>The rules are as follows:</p>
+<ul>
+  <li>Every line between <code class="language-plaintext highlighter-rouge">// &lt;&lt;&lt; inline </code> and <code class="language-plaintext highlighter-rouge">// &gt;&gt;&gt;</code> will be inlined</li>
+  <li>Every line between <code class="language-plaintext highlighter-rouge">// &lt;&lt;&lt; link </code> and <code class="language-plaintext highlighter-rouge">// &gt;&gt;&gt;</code> will be linked</li>
+  <li>Every line that isn’t contained in a block and ends with <code class="language-plaintext highlighter-rouge">// inline</code> will be inlined</li>
+  <li>Every line that isn’t contained in a block and ends with <code class="language-plaintext highlighter-rouge">// link</code> will be linked</li>
+  <li>Every line for which none of the above applies will be included in both.</li>
+</ul>
+
+<p>The actual splitting happen with the <code class="language-plaintext highlighter-rouge">.scripts/build-css.sh</code> script (requires node.js 8+).
+You can run the script once by using</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>npm run build:css
+</code></pre></div></div>
+
+<p>or rebuild the CSS on every file change</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>npm run watch:css
+</code></pre></div></div>
+
+<p>Note that <code class="language-plaintext highlighter-rouge">my-inline.scss</code> and <code class="language-plaintext highlighter-rouge">my-style.scss</code> are not affected by this.
+Also, since all files are valid SCSS, the splitting part is entirely optional.
+If you would like to build just one regular CSS file, add</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">hydejack</span><span class="pi">:</span>
+  <span class="na">no_inline_css</span><span class="pi">:</span> <span class="no">true</span>
+</code></pre></div></div>
+
+<p>to your config file.</p>
+
+:ET
