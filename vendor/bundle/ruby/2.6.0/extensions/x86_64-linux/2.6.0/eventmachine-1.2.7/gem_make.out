@@ -1,0 +1,36 @@
+current directory: /mnt/c/Users/zhanbo/Desktop/hydejack-starter-kit-9.1.2/vendor/bundle/ruby/2.6.0/gems/eventmachine-1.2.7/ext/fastfilereader
+/home/zhangboknight/.rvm/rubies/ruby-2.6.5/bin/ruby -I /home/zhangboknight/.rvm/rubies/ruby-2.6.5/lib/ruby/site_ruby/2.6.0 -r ./siteconf20210224-16419-12ppf3g.rb extconf.rb
+creating Makefile
+
+current directory: /mnt/c/Users/zhanbo/Desktop/hydejack-starter-kit-9.1.2/vendor/bundle/ruby/2.6.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make "DESTDIR=" clean
+make: Warning: File 'Makefile' has modification time 25169 s in the future
+make: warning:  Clock skew detected.  Your build may be incomplete.
+
+current directory: /mnt/c/Users/zhanbo/Desktop/hydejack-starter-kit-9.1.2/vendor/bundle/ruby/2.6.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make "DESTDIR="
+make: Warning: File 'Makefile' has modification time 25169 s in the future
+compiling mapper.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-int’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-self-assign’
+cc1plus: warning: unrecognized command line option ‘-Wno-parentheses-equality’
+cc1plus: warning: unrecognized command line option ‘-Wno-constant-logical-operand’
+cc1plus: warning: unrecognized command line option ‘-Wno-cast-function-type’
+compiling rubymain.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-int’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-self-assign’
+cc1plus: warning: unrecognized command line option ‘-Wno-parentheses-equality’
+cc1plus: warning: unrecognized command line option ‘-Wno-constant-logical-operand’
+cc1plus: warning: unrecognized command line option ‘-Wno-cast-function-type’
+linking shared-object fastfilereaderext.so
+make: warning:  Clock skew detected.  Your build may be incomplete.
+
+current directory: /mnt/c/Users/zhanbo/Desktop/hydejack-starter-kit-9.1.2/vendor/bundle/ruby/2.6.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make "DESTDIR=" install
+make: Warning: File 'Makefile' has modification time 25168 s in the future
+/usr/bin/install -m 0755 fastfilereaderext.so ./.gem.20210224-16419-ubdj0l
+make: warning:  Clock skew detected.  Your build may be incomplete.

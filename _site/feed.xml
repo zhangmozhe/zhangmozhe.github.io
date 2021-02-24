@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://zhangmozhe.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://zhangmozhe.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2021-02-24T10:24:57+08:00</updated><id>https://zhangmozhe.github.io/feed.xml</id><title type="html">Bo Zhang</title><subtitle>Bo Zhang - Microsoft Research Asia
+</subtitle><author><name>Bo Zhang</name><email>zhanbo@microsoft.com</email></author><entry><title type="html">Introducing Hydejack 9</title><link href="https://zhangmozhe.github.io/example/2020-07-03-introducing-hydejack-9/" rel="alternate" type="text/html" title="Introducing Hydejack 9" /><published>2020-07-03T00:00:00+08:00</published><updated>2021-02-24T17:19:22+08:00</updated><id>https://zhangmozhe.github.io/example/introducing-hydejack-9</id><content type="html" xml:base="https://zhangmozhe.github.io/example/2020-07-03-introducing-hydejack-9/">&lt;p class=&quot;lead&quot;&gt;Version 9 is the most complete version of Hydejack yet.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;#linking-in-style&quot;&gt;Modernized&lt;/a&gt; &lt;a href=&quot;#whats-in-the-cards&quot;&gt;design&lt;/a&gt;, &lt;a href=&quot;#ready-for-the-big-screen&quot;&gt;big headlines&lt;/a&gt;, big new features: &lt;a href=&quot;#built-in-search&quot;&gt;Built-In Search&lt;/a&gt;, &lt;a href=&quot;#sticky-table-of-contents&quot;&gt;Sticky Table of Contents&lt;/a&gt;, and &lt;a href=&quot;#auto-hiding-navbar&quot;&gt;Auto-Hiding Navbar&lt;/a&gt;. That &lt;a href=&quot;#and-much-more&quot;&gt;and more&lt;/a&gt; is Hydejack 9.&lt;/p&gt;
+
+&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#linking-in-style&quot; id=&quot;markdown-toc-linking-in-style&quot;&gt;Linking in Style&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#ready-for-the-big-screen&quot; id=&quot;markdown-toc-ready-for-the-big-screen&quot;&gt;Ready for the Big Screen&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#whats-in-the-cards&quot; id=&quot;markdown-toc-whats-in-the-cards&quot;&gt;What’s in the Cards?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#built-in-search&quot; id=&quot;markdown-toc-built-in-search&quot;&gt;Built-In Search&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#auto-hiding-navbar&quot; id=&quot;markdown-toc-auto-hiding-navbar&quot;&gt;Auto-Hiding Navbar&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#sticky-table-of-contents&quot; id=&quot;markdown-toc-sticky-table-of-contents&quot;&gt;Sticky Table of Contents&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#and-much-more&quot; id=&quot;markdown-toc-and-much-more&quot;&gt;…and much more&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#even-more-to-come&quot; id=&quot;markdown-toc-even-more-to-come&quot;&gt;Even More to Come&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#get-it-now&quot; id=&quot;markdown-toc-get-it-now&quot;&gt;Get It Now&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;linking-in-style&quot;&gt;Linking in Style&lt;/h2&gt;
+
+&lt;p&gt;Ever since the introduction of Dark Mode, link styles have been a bit of an issue. Specifically, finding an accent color that worked on both light and dark backgrounds was the problem. With Hydejack 9, the &lt;a href=&quot;#linking-in-style&quot;&gt;link style&lt;/a&gt; has been revamped so that legibility is no longer tied to the choice of accent_color, giving you much more freedom in creating a unique design flavor for your site.&lt;/p&gt;
+
+&lt;h2 id=&quot;ready-for-the-big-screen&quot;&gt;Ready for the Big Screen&lt;/h2&gt;
+
+&lt;p&gt;The theme on which Hydejack is based was designed for a different era of the web. Hydejack has inherited many of its limitations, but over time I’ve made adjustments, such as centering the content column for better reading ergonomics.&lt;/p&gt;
+
+&lt;p&gt;With version 9, Hydejack takes full advantage of large displays. Whether it’s design indulgences such as oversized headlines, or quality of life improvements such as a floating table of contents, Hydejack now finds use for all that extra screen real estate&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;whats-in-the-cards&quot;&gt;What’s in the Cards?&lt;/h2&gt;
+
+&lt;p&gt;Hydejack 9 now lets you use content cards for both projects and posts. 
+The cards have been redesigned with a new hover style and drop shadows and they retain their unique transition-to-next-page animations, which now also work on the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;blog&lt;/code&gt; layout. The new &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grid&lt;/code&gt; layout lets you do that.&lt;/p&gt;
+
+&lt;p&gt;Good images are key to making the most out of content cards. For that reason, a &lt;a href=&quot;/docs/basics/#adding-images&quot;&gt;chapter on images&lt;/a&gt; has been added to the documentation.&lt;/p&gt;
+
+&lt;h2 id=&quot;built-in-search&quot;&gt;Built-In Search&lt;/h2&gt;
+
+&lt;p&gt;Hydejack now has Built-In Search. It even works offline. I’ve been prototyping many approaches and eventually settled on a fully client-side, off-the-main thread solution that perfectly fits the use case of personal sites and shows surprisingly good results&lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;The new search UI is custom made for Hydejack and shows beautiful previews of your posts and pages, right on top of your regular content.&lt;/p&gt;
+
+&lt;p&gt;Together with the Auto-Hiding Navbar, your entire content library is now only a couple of keystrokes away.&lt;/p&gt;
+
+&lt;h2 id=&quot;auto-hiding-navbar&quot;&gt;Auto-Hiding Navbar&lt;/h2&gt;
+
+&lt;p&gt;A navbar that’s there when you need it, and disappears when you don’t. Simple as that.&lt;/p&gt;
+
+&lt;h2 id=&quot;sticky-table-of-contents&quot;&gt;Sticky Table of Contents&lt;/h2&gt;
+
+&lt;p&gt;Already a staple on so many sites on the web, this pattern is now also available in Hydejack. 
+What’s unique about it is that it simply picks up the table of contents already created by kramdown’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{:toc}&lt;/code&gt; tag and transparently upgrades it to a fully dynamic version.&lt;/p&gt;
+
+&lt;h2 id=&quot;and-much-more&quot;&gt;…and much more&lt;/h2&gt;
+
+&lt;p&gt;Other noteworthy changes include:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Support for Jekyll 4&lt;/li&gt;
+  &lt;li&gt;Choice between MathJax and KaTeX for math rendering&lt;/li&gt;
+  &lt;li&gt;Use of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll-include-cache&lt;/code&gt; for drastically improved page building speeds&lt;/li&gt;
+  &lt;li&gt;New variables configuration file — adjust content width, sidebar width, font size, etc…&lt;/li&gt;
+  &lt;li&gt;…and the option to disable grouping projects by year.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Read the the &lt;a href=&quot;/CHANGELOG/&quot; class=&quot;heading flip-title&quot;&gt;CHANGELOG&lt;/a&gt; for the full scope of features and improvements made in Hydejack 9.
+Maybe just glance at it to confirm that it is indeed a pretty long list.&lt;/p&gt;
+
+&lt;h2 id=&quot;even-more-to-come&quot;&gt;Even More to Come&lt;/h2&gt;
+
+&lt;p&gt;New features for 9.1 are already lined up. Code block headers and code line highlights for even better technical blogging, as well as download buttons on the resume page for PDF, vCard, and Resume JSON are just around the corner.&lt;/p&gt;
+
+&lt;h2 id=&quot;get-it-now&quot;&gt;Get It Now&lt;/h2&gt;
+&lt;p&gt;The Free Version of Hydejack is now availabe on &lt;a href=&quot;https://rubygems.org/gems/jekyll-theme-hydejack&quot;&gt;RubyGems&lt;/a&gt;
+and for the first time also on &lt;a href=&quot;https://github.com/hydecorp/hydejack/packages&quot;&gt;GitHub Packages&lt;/a&gt;. 
+The source code is available on &lt;a href=&quot;https://github.com/hydecorp/hydejack&quot;&gt;GitHub&lt;/a&gt; as always.&lt;/p&gt;
+
+&lt;p&gt;The PRO Version is scheduled to release on July 7th on Gumroad. Pre-Orders are open now:&lt;/p&gt;
+
+&lt;div class=&quot;gumroad-product-embed&quot; data-gumroad-product-id=&quot;nuOluY&quot;&gt;&lt;a href=&quot;https://gumroad.com/l/nuOluY&quot;&gt;Loading…&lt;/a&gt;&lt;/div&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;If you are a fan of the old two-column layout, or don’t like modern design tropes such as mega headlines, Hydejack lets you revert these changes on a case-by-case basis via configuration options. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot; role=&quot;doc-endnote&quot;&gt;
+
+      &lt;p&gt;Search was mainly tested for English and German. Please let me know about issues in other languages. 
+  While I’ve tried to find a multi-language solution, most showed drastically worse  results for the English base case.
+  If you’re technically inclined, you can adopt the code located in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_includes/js/search-worker.js&lt;/code&gt; to your needs. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>Bo Zhang</name><email>zhanbo@microsoft.com</email></author><category term="example" /><summary type="html">Version 9 is the most complete version of Hydejack yet.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://zhangmozhe.github.io/assets/img/blog/jeremy-bishop@0,5x.jpg" /><media:content medium="image" url="https://zhangmozhe.github.io/assets/img/blog/jeremy-bishop@0,5x.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Example Content III</title><link href="https://zhangmozhe.github.io/example/2018-06-01-example-content-iii/" rel="alternate" type="text/html" title="Example Content III" /><published>2018-06-01T00:00:00+08:00</published><updated>2021-02-24T17:19:22+08:00</updated><id>https://zhangmozhe.github.io/example/example-content-iii</id><content type="html" xml:base="https://zhangmozhe.github.io/example/2018-06-01-example-content-iii/">&lt;p&gt;Hydejack offers a few additional features to markup your markdown.
+Don’t worry, these are merely CSS classes added with kramdown’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{:...}&lt;/code&gt; syntax,
+so that your content remains compatible with other Jekyll themes.&lt;/p&gt;
+
+&lt;h2 id=&quot;large-tables&quot;&gt;Large Tables&lt;/h2&gt;
+
+&lt;table class=&quot;scroll-table&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Default aligned&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Left aligned&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Center aligned&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Right aligned&lt;/th&gt;
+      &lt;th&gt;Default aligned&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Left aligned&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Center aligned&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Right aligned&lt;/th&gt;
+      &lt;th&gt;Default aligned&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Left aligned&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Center aligned&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Right aligned&lt;/th&gt;
+      &lt;th&gt;Default aligned&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Left aligned&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Center aligned&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Right aligned&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;First body part&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Second cell&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Third cell&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;fourth cell&lt;/td&gt;
+      &lt;td&gt;First body part&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Second cell&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Third cell&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;fourth cell&lt;/td&gt;
+      &lt;td&gt;First body part&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Second cell&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Third cell&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;fourth cell&lt;/td&gt;
+      &lt;td&gt;First body part&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Second cell&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Third cell&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;fourth cell&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Second line&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;foo&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;strong&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;baz&lt;/td&gt;
+      &lt;td&gt;Second line&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;foo&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;strong&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;baz&lt;/td&gt;
+      &lt;td&gt;Second line&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;foo&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;strong&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;baz&lt;/td&gt;
+      &lt;td&gt;Second line&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;foo&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;strong&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;baz&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Third line&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;quux&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;baz&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;bar&lt;/td&gt;
+      &lt;td&gt;Third line&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;quux&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;baz&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;bar&lt;/td&gt;
+      &lt;td&gt;Third line&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;quux&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;baz&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;bar&lt;/td&gt;
+      &lt;td&gt;Third line&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;quux&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;baz&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;bar&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Second body&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt; &lt;/td&gt;
+      &lt;td&gt;Second body&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt; &lt;/td&gt;
+      &lt;td&gt;Second body&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt; &lt;/td&gt;
+      &lt;td&gt;Second body&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2 line&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt; &lt;/td&gt;
+      &lt;td&gt;2 line&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt; &lt;/td&gt;
+      &lt;td&gt;2 line&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt; &lt;/td&gt;
+      &lt;td&gt;2 line&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Footer row&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt; &lt;/td&gt;
+      &lt;td&gt;Footer row&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt; &lt;/td&gt;
+      &lt;td&gt;Footer row&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt; &lt;/td&gt;
+      &lt;td&gt;Footer row&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;code-blocks&quot;&gt;Code blocks&lt;/h2&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Example can be run directly in your JavaScript console&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Create a function that takes two arguments and returns the sum of those&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// arguments&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;adder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;return a + b&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Call the function&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;adder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// &amp;gt; 8&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;math&quot;&gt;Math&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum \(f(x) = x^2\).&lt;/p&gt;
+
+\[\begin{aligned}
+  \phi(x,y) &amp;amp;= \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right) \\[2em]
+            &amp;amp;= \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j)            \\[2em]
+            &amp;amp;= (x_1, \ldots, x_n)
+               \left(\begin{array}{ccc}
+                 \phi(e_1, e_1)  &amp;amp; \cdots &amp;amp; \phi(e_1, e_n) \\
+                 \vdots          &amp;amp; \ddots &amp;amp; \vdots         \\
+                 \phi(e_n, e_1)  &amp;amp; \cdots &amp;amp; \phi(e_n, e_n)
+               \end{array}\right)
+               \left(\begin{array}{c}
+                 y_1    \\
+                 \vdots \\
+                 y_n
+               \end{array}\right)
+\end{aligned}\]
+
+&lt;h2 id=&quot;message-boxes&quot;&gt;Message boxes&lt;/h2&gt;
+&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: You can add a message box.&lt;/p&gt;
+
+&lt;h2 id=&quot;large-text&quot;&gt;Large text&lt;/h2&gt;
+&lt;p class=&quot;lead&quot;&gt;You can add large text.&lt;/p&gt;
+
+&lt;h2 id=&quot;large-images&quot;&gt;Large images&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://placehold.it/800x100&quot; alt=&quot;Full-width image&quot; class=&quot;lead&quot; data-width=&quot;800&quot; data-height=&quot;100&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;captions-to-images&quot;&gt;Captions to images&lt;/h2&gt;
+&lt;p class=&quot;figure&quot;&gt;&lt;img src=&quot;https://placehold.it/800x100&quot; alt=&quot;Full-width image&quot; class=&quot;lead&quot; data-width=&quot;800&quot; data-height=&quot;100&quot; /&gt;
+A caption to an image.&lt;/p&gt;
+
+&lt;h2 id=&quot;large-quotes&quot;&gt;Large quotes&lt;/h2&gt;
+&lt;blockquote class=&quot;lead&quot;&gt;
+  &lt;p&gt;You can make a quote “pop out”.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;faded-text&quot;&gt;Faded text&lt;/h2&gt;
+&lt;p class=&quot;faded&quot;&gt;I’m faded, faded, faded.&lt;/p&gt;</content><author><name>Bo Zhang</name><email>zhanbo@microsoft.com</email></author><category term="example" /><summary type="html">Hydejack offers a few additional features to markup your markdown. Don’t worry, these are merely CSS classes added with kramdown’s {:...} syntax, so that your content remains compatible with other Jekyll themes.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://zhangmozhe.github.io/assets/img/blog/example-content-iii.jpg" /><media:content medium="image" url="https://zhangmozhe.github.io/assets/img/blog/example-content-iii.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Example Content II</title><link href="https://zhangmozhe.github.io/example/2017-11-23-example-content-ii/" rel="alternate" type="text/html" title="Example Content II" /><published>2017-11-23T00:00:00+08:00</published><updated>2021-02-24T17:19:22+08:00</updated><id>https://zhangmozhe.github.io/example/example-content-ii</id><content type="html" xml:base="https://zhangmozhe.github.io/example/2017-11-23-example-content-ii/">&lt;p&gt;There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.&lt;/p&gt;
+
+&lt;p&gt;There should be whitespace between paragraphs.&lt;/p&gt;
+
+&lt;p&gt;Text can be &lt;strong&gt;bold&lt;/strong&gt;, &lt;em&gt;italic&lt;/em&gt;, or &lt;del&gt;strikethrough&lt;/del&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;another-page&quot;&gt;Link to another page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#header-2&quot; id=&quot;markdown-toc-header-2&quot;&gt;Header 2&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#header-3&quot; id=&quot;markdown-toc-header-3&quot;&gt;Header 3&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#header-4&quot; id=&quot;markdown-toc-header-4&quot;&gt;Header 4&lt;/a&gt;            &lt;ul&gt;
+              &lt;li&gt;&lt;a href=&quot;#header-5&quot; id=&quot;markdown-toc-header-5&quot;&gt;Header 5&lt;/a&gt;                &lt;ul&gt;
+                  &lt;li&gt;&lt;a href=&quot;#header-6&quot; id=&quot;markdown-toc-header-6&quot;&gt;Header 6&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#theres-a-horizontal-rule-below-this&quot; id=&quot;markdown-toc-theres-a-horizontal-rule-below-this&quot;&gt;There’s a horizontal rule below this.&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#here-is-an-unordered-list&quot; id=&quot;markdown-toc-here-is-an-unordered-list&quot;&gt;Here is an unordered list:&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#and-an-ordered-list&quot; id=&quot;markdown-toc-and-an-ordered-list&quot;&gt;And an ordered list:&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#and-a-nested-list&quot; id=&quot;markdown-toc-and-a-nested-list&quot;&gt;And a nested list:&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#small-image&quot; id=&quot;markdown-toc-small-image&quot;&gt;Small image&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#large-image&quot; id=&quot;markdown-toc-large-image&quot;&gt;Large image&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#definition-lists&quot; id=&quot;markdown-toc-definition-lists&quot;&gt;Definition lists&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;header-2&quot;&gt;Header 2&lt;/h2&gt;
+
+&lt;p&gt;This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.&lt;/p&gt;
+
+&lt;h3 id=&quot;header-3&quot;&gt;Header 3&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;This is a blockquote following a header.&lt;/p&gt;
+
+  &lt;p&gt;When something is important enough, you do it even if the odds are not in your favor.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Javascript code with syntax highlighting.&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;dateformat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i18n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;./lang/&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Ruby code with syntax highlighting&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;GitHubPages&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Dependencies&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;gems&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;add_dependency&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;= &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;header-4&quot;&gt;Header 4&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;This is an unordered list following a header.&lt;/li&gt;
+  &lt;li&gt;This is an unordered list following a header.&lt;/li&gt;
+  &lt;li&gt;This is an unordered list following a header.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;header-5&quot;&gt;Header 5&lt;/h5&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;This is an ordered list following a header.&lt;/li&gt;
+  &lt;li&gt;This is an ordered list following a header.&lt;/li&gt;
+  &lt;li&gt;This is an ordered list following a header.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h6 id=&quot;header-6&quot;&gt;Header 6&lt;/h6&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;head1&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;head two&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;three&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;ok&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;good swedish fish&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;nice&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;out of stock&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;good and plenty&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;nice&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;ok&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;good &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;oreos&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;hmm&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;ok&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;good &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;zoute&lt;/code&gt; drop&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;yumm&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;theres-a-horizontal-rule-below-this&quot;&gt;There’s a horizontal rule below this.&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;here-is-an-unordered-list&quot;&gt;Here is an unordered list:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Item foo&lt;/li&gt;
+  &lt;li&gt;Item bar&lt;/li&gt;
+  &lt;li&gt;Item baz&lt;/li&gt;
+  &lt;li&gt;Item zip&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;and-an-ordered-list&quot;&gt;And an ordered list:&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Item one&lt;/li&gt;
+  &lt;li&gt;Item two&lt;/li&gt;
+  &lt;li&gt;Item three&lt;/li&gt;
+  &lt;li&gt;Item four&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;and-a-nested-list&quot;&gt;And a nested list:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;level 1 item
+    &lt;ul&gt;
+      &lt;li&gt;level 2 item&lt;/li&gt;
+      &lt;li&gt;level 2 item
+        &lt;ul&gt;
+          &lt;li&gt;level 3 item&lt;/li&gt;
+          &lt;li&gt;level 3 item&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;level 1 item
+    &lt;ul&gt;
+      &lt;li&gt;level 2 item&lt;/li&gt;
+      &lt;li&gt;level 2 item&lt;/li&gt;
+      &lt;li&gt;level 2 item&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;level 1 item
+    &lt;ul&gt;
+      &lt;li&gt;level 2 item&lt;/li&gt;
+      &lt;li&gt;level 2 item&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;level 1 item&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;small-image&quot;&gt;Small image&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://assets-cdn.github.com/images/icons/emoji/octocat.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;large-image&quot;&gt;Large image&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://guides.github.com/activities/hello-world/branching.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;definition-lists&quot;&gt;Definition lists&lt;/h3&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;Name&lt;/dt&gt;
+  &lt;dd&gt;Godzilla&lt;/dd&gt;
+  &lt;dt&gt;Born&lt;/dt&gt;
+  &lt;dd&gt;1952&lt;/dd&gt;
+  &lt;dt&gt;Birthplace&lt;/dt&gt;
+  &lt;dd&gt;Japan&lt;/dd&gt;
+  &lt;dt&gt;Color&lt;/dt&gt;
+  &lt;dd&gt;Green&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this. Or is it?
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;The final element.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Bo Zhang</name><email>zhanbo@microsoft.com</email></author><category term="example" /><summary type="html">There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://zhangmozhe.github.io/assets/img/blog/example-content-ii.jpg" /><media:content medium="image" url="https://zhangmozhe.github.io/assets/img/blog/example-content-ii.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Example Content</title><link href="https://zhangmozhe.github.io/example/2012-02-07-example-content/" rel="alternate" type="text/html" title="Example Content" /><published>2012-02-07T00:00:00+08:00</published><updated>2021-02-24T17:19:22+08:00</updated><id>https://zhangmozhe.github.io/example/example-content</id><content type="html" xml:base="https://zhangmozhe.github.io/example/2012-02-07-example-content/">&lt;p&gt;Cum sociis natoque penatibus et magnis &lt;a href=&quot;#&quot;&gt;dis parturient montes&lt;/a&gt;, nascetur ridiculus mus. &lt;em&gt;Aenean eu leo quam.&lt;/em&gt; Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Etiam porta &lt;strong&gt;sem malesuada magna&lt;/strong&gt; mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.&lt;/p&gt;
+
+&lt;h2 id=&quot;inline-html-elements&quot;&gt;Inline &lt;abbr title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/abbr&gt; elements&lt;/h2&gt;
+
+&lt;p&gt;&lt;abbr title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/abbr&gt; defines a long list of available inline tags, a complete list of which can be found on the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element&quot;&gt;Mozilla Developer Network&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;To bold text&lt;/strong&gt;, use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;**To bold text**&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;To italicize text&lt;/em&gt;, use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*To italicize text*&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Abbreviations, like &lt;abbr title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/abbr&gt; should be defined like this &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*[HTML]: HyperText Markup Language&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Citations, like &lt;cite&gt;— Mark otto&lt;/cite&gt;, should use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;cite&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;del&gt;Deleted&lt;/del&gt; text should use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~~deleted~~&lt;/code&gt; and &lt;ins&gt;inserted&lt;/ins&gt; text should use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;ins&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Superscript &lt;sup&gt;text&lt;/sup&gt; uses &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;sup&amp;gt;&lt;/code&gt; and subscript &lt;sub&gt;text&lt;/sub&gt; uses &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;sub&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Most of these elements are styled by browsers with few modifications on our part.&lt;/p&gt;
+
+&lt;h2 id=&quot;heading-2&quot;&gt;Heading 2&lt;/h2&gt;
+&lt;p&gt;Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.&lt;/p&gt;
+
+&lt;h3 id=&quot;heading-3&quot;&gt;Heading 3&lt;/h3&gt;
+&lt;p&gt;Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor.&lt;/p&gt;
+
+&lt;h4 id=&quot;heading-4&quot;&gt;Heading 4&lt;/h4&gt;
+&lt;p&gt;Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor.&lt;/p&gt;
+
+&lt;h5 id=&quot;heading-5&quot;&gt;Heading 5&lt;/h5&gt;
+&lt;p&gt;Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor.&lt;/p&gt;
+
+&lt;h6 id=&quot;heading-6&quot;&gt;Heading 6&lt;/h6&gt;
+&lt;p&gt;Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor.&lt;/p&gt;
+
+&lt;h2 id=&quot;code&quot;&gt;Code&lt;/h2&gt;
+
+&lt;p&gt;Cum sociis natoque penatibus et magnis dis &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;code element&lt;/code&gt; montes, nascetur ridiculus mus.&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Example can be run directly in your JavaScript console&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Create a function that takes two arguments and returns the sum of those&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// arguments&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;adder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;return a + b&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Call the function&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;adder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// &amp;gt; 8&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;lists&quot;&gt;Lists&lt;/h2&gt;
+
+&lt;p&gt;Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Praesent commodo cursus magna, vel scelerisque nisl consectetur et.&lt;/li&gt;
+  &lt;li&gt;Donec id elit non mi porta gravida at eget metus.&lt;/li&gt;
+  &lt;li&gt;Nulla vitae elit libero, a pharetra augue.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Vestibulum id ligula porta felis euismod semper.&lt;/li&gt;
+  &lt;li&gt;Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/li&gt;
+  &lt;li&gt;Maecenas sed diam eget risus varius blandit sit amet non magna.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.&lt;/p&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;HyperText Markup Language (&lt;abbr title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/abbr&gt;)&lt;/dt&gt;
+  &lt;dd&gt;The language used to describe and define the content of a Web page&lt;/dd&gt;
+  &lt;dt&gt;Cascading Style Sheets (&lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt;)&lt;/dt&gt;
+  &lt;dd&gt;Used to describe the appearance of Web content&lt;/dd&gt;
+  &lt;dt&gt;JavaScript (&lt;abbr title=&quot;JavaScript&quot;&gt;JS&lt;/abbr&gt;)&lt;/dt&gt;
+  &lt;dd&gt;The programming language used to build advanced Web sites and applications&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;p&gt;Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo.&lt;/p&gt;
+
+&lt;h2 id=&quot;images&quot;&gt;Images&lt;/h2&gt;
+
+&lt;p&gt;Quisque consequat sapien eget quam rhoncus, sit amet laoreet diam tempus. Aliquam aliquam metus erat, a pulvinar turpis suscipit at.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://placehold.it/800x400&quot; alt=&quot;800x400&quot; title=&quot;Large example image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://placehold.it/400x200&quot; alt=&quot;400x200&quot; title=&quot;Medium example image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://placehold.it/200x200&quot; alt=&quot;200x200&quot; title=&quot;Small example image&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;tables&quot;&gt;Tables&lt;/h2&gt;
+
+&lt;p&gt;Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Name&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Upvotes&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Downvotes&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Alice&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;10&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;11&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Bob&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;4&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Charlie&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;7&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;9&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Totals&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;21&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;23&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.&lt;/p&gt;</content><author><name>Bo Zhang</name><email>zhanbo@microsoft.com</email></author><category term="example" /><summary type="html">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</summary></entry></feed>
