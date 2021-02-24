@@ -1,13 +1,13 @@
-current directory: /mnt/c/Users/zhanbo/Desktop/hydejack-starter-kit-9.1.2/vendor/bundle/ruby/2.6.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
-/home/zhangboknight/.rvm/rubies/ruby-2.6.5/bin/ruby -I /home/zhangboknight/.rvm/rubies/ruby-2.6.5/lib/ruby/site_ruby/2.6.0 -r ./siteconf20210224-16419-uey60u.rb extconf.rb
+current directory: /mnt/c/Users/zhanbo/Desktop/zhangmozhe.github.io/vendor/bundle/ruby/2.6.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+/home/zhangboknight/.rvm/rubies/ruby-2.6.5/bin/ruby -I /home/zhangboknight/.rvm/rubies/ruby-2.6.5/lib/ruby/site_ruby/2.6.0 -r ./siteconf20210224-21046-1wina1m.rb extconf.rb
 creating Makefile
 
-current directory: /mnt/c/Users/zhanbo/Desktop/hydejack-starter-kit-9.1.2/vendor/bundle/ruby/2.6.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+current directory: /mnt/c/Users/zhanbo/Desktop/zhangmozhe.github.io/vendor/bundle/ruby/2.6.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
 make "DESTDIR=" clean
 make: Warning: File 'Makefile' has modification time 25169 s in the future
 make: warning:  Clock skew detected.  Your build may be incomplete.
 
-current directory: /mnt/c/Users/zhanbo/Desktop/hydejack-starter-kit-9.1.2/vendor/bundle/ruby/2.6.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+current directory: /mnt/c/Users/zhanbo/Desktop/zhangmozhe.github.io/vendor/bundle/ruby/2.6.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
 make "DESTDIR="
 make: Warning: File 'Makefile' has modification time 25169 s in the future
 compiling ruby_http_parser.c
@@ -51,8 +51,8 @@ compiling ryah_http_parser.c
 linking shared-object ruby_http_parser.so
 make: warning:  Clock skew detected.  Your build may be incomplete.
 
-current directory: /mnt/c/Users/zhanbo/Desktop/hydejack-starter-kit-9.1.2/vendor/bundle/ruby/2.6.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+current directory: /mnt/c/Users/zhanbo/Desktop/zhangmozhe.github.io/vendor/bundle/ruby/2.6.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
 make "DESTDIR=" install
-make: Warning: File 'Makefile' has modification time 25168 s in the future
-/usr/bin/install -m 0755 ruby_http_parser.so ./.gem.20210224-16419-wlgijz
+make: Warning: File 'Makefile' has modification time 25165 s in the future
+/usr/bin/install -m 0755 ruby_http_parser.so ./.gem.20210224-21046-1wvjghj
 make: warning:  Clock skew detected.  Your build may be incomplete.

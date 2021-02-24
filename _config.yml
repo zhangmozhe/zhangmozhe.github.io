@@ -3,7 +3,7 @@
 
 # Uncomment and set the URL of your site (with protocol, e.g. `https://`)
 # NOTE: You don't need to provide this property when hosting on GitHub Pages or Netlify.
-url: https://bo-zhang.me/
+url: https://bo-zhang.me
 
 # Uncomment and set the "base URL" of your site.
 # When your site is in a subdirectory, set to `/<name of directory>`,
@@ -43,7 +43,7 @@ author:
   name: Bo Zhang
   email: zhanbo@microsoft.com
   # # Used by `jekyll-seo-tag`:
-  twitter: zhangboknight
+  twitter: Bo Zhang
   # social:
   #   email: zhanbo@microsoft.com
   #   github: https://github.com/zhangmozhe/
@@ -348,11 +348,11 @@ plugins:
 # ---------------------------------------------------------------------------------------
 
 # Where you proof that you own this site (used by jekyll-seo-tag)
-# google_site_verification: <verification-id>
+google_site_verification: GAV2aGzK3IPPyS7eR6V-obaNIa0-dWlq2vbG4ceA6Xk
 # -- or --
 # webmaster_verifications:
-#   google:              <verification-id>
-#   bing:                <verification-id>
+#   google: GAV2aGzK3IPPyS7eR6V-obaNIa0-dWlq2vbG4ceA6Xk
+#   bing: <verification-id>
 #   alexa:               <verification-id>
 #   yandex:              <verification-id>
 
@@ -367,11 +367,12 @@ plugins:
 #   admins:              <id>
 
 # Used on index and about sites
-# social:
-#   name:                <firstname> <lastname>
-#   links:
-#     - https://twitter.com/<username>
-#     - https://github.com/<username>
+social:
+  name: Bo Zhang
+  links:
+    - https://www.microsoft.com/en-us/research/people/zhanbo/
+    - https://scholar.google.com/citations?user=PefHCMUAAAAJ&hl=en
+    - https://www.linkedin.com/in/bo-zhang-8b753792/
 
 # Plugin Configs
 # ---------------------------------------------------------------------------------------

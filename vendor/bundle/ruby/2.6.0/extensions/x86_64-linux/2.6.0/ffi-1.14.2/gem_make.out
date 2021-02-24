@@ -1,5 +1,5 @@
-current directory: /mnt/c/Users/zhanbo/Desktop/hydejack-starter-kit-9.1.2/vendor/bundle/ruby/2.6.0/gems/ffi-1.14.2/ext/ffi_c
-/home/zhangboknight/.rvm/rubies/ruby-2.6.5/bin/ruby -I /home/zhangboknight/.rvm/rubies/ruby-2.6.5/lib/ruby/site_ruby/2.6.0 -r ./siteconf20210224-16419-i6362j.rb extconf.rb
+current directory: /mnt/c/Users/zhanbo/Desktop/zhangmozhe.github.io/vendor/bundle/ruby/2.6.0/gems/ffi-1.14.2/ext/ffi_c
+/home/zhangboknight/.rvm/rubies/ruby-2.6.5/bin/ruby -I /home/zhangboknight/.rvm/rubies/ruby-2.6.5/lib/ruby/site_ruby/2.6.0 -r ./siteconf20210224-21046-11lehoz.rb extconf.rb
 /home/zhangboknight/.rvm/rubies/ruby-2.6.5/lib/ruby/2.6.0/mkmf.rb:1565: warning: Insecure world writable dir /mnt/c in PATH, mode 040777
 checking for ffi_prep_closure_loc() in -lffi... yes
 checking for ffi_prep_cif_var()... yes
@@ -8,12 +8,12 @@ checking for ffi_prep_raw_closure()... yes
 creating extconf.h
 creating Makefile
 
-current directory: /mnt/c/Users/zhanbo/Desktop/hydejack-starter-kit-9.1.2/vendor/bundle/ruby/2.6.0/gems/ffi-1.14.2/ext/ffi_c
+current directory: /mnt/c/Users/zhanbo/Desktop/zhangmozhe.github.io/vendor/bundle/ruby/2.6.0/gems/ffi-1.14.2/ext/ffi_c
 make "DESTDIR=" clean
 make: Warning: File 'Makefile' has modification time 25169 s in the future
 make: warning:  Clock skew detected.  Your build may be incomplete.
 
-current directory: /mnt/c/Users/zhanbo/Desktop/hydejack-starter-kit-9.1.2/vendor/bundle/ruby/2.6.0/gems/ffi-1.14.2/ext/ffi_c
+current directory: /mnt/c/Users/zhanbo/Desktop/zhangmozhe.github.io/vendor/bundle/ruby/2.6.0/gems/ffi-1.14.2/ext/ffi_c
 make "DESTDIR="
 make: Warning: File 'Makefile' has modification time 25169 s in the future
 compiling AbstractMemory.c
@@ -42,8 +42,8 @@ compiling ffi.c
 linking shared-object ffi_c.so
 make: warning:  Clock skew detected.  Your build may be incomplete.
 
-current directory: /mnt/c/Users/zhanbo/Desktop/hydejack-starter-kit-9.1.2/vendor/bundle/ruby/2.6.0/gems/ffi-1.14.2/ext/ffi_c
+current directory: /mnt/c/Users/zhanbo/Desktop/zhangmozhe.github.io/vendor/bundle/ruby/2.6.0/gems/ffi-1.14.2/ext/ffi_c
 make "DESTDIR=" install
-make: Warning: File 'Makefile' has modification time 25156 s in the future
-/usr/bin/install -m 0755 ffi_c.so ./.gem.20210224-16419-21odkv
+make: Warning: File 'Makefile' has modification time 25154 s in the future
+/usr/bin/install -m 0755 ffi_c.so ./.gem.20210224-21046-101gl35
 make: warning:  Clock skew detected.  Your build may be incomplete.
