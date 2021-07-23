@@ -1069,7 +1069,7 @@ Powered by Hydejack v9.1.2 <https://hydejack.com/>
         <link rel="preload" as="style"
             href="https://fonts.googleapis.com/css?family=Roboto+Slab:700%7CNoto+Sans:400,400i,700,700i&display=swap"
             id="_fontsPreload">
-        <script> setRel('_stylePreload'); setRel('_iconsPreload'); /**/setRel('_fontsPreload');/**/ </script> <noscript>
+        <script> setRel('_stylePreload'); setRel('_iconsPreload'); /**/setRel('_fontsPreload');/**/</script> <noscript>
             <link rel="stylesheet" href="/assets/css/hydejack-9.1.2.css">
             <link rel="stylesheet" href="/assets/icomoon/style.css">
             <link rel="stylesheet"
@@ -1078,9 +1078,9 @@ Powered by Hydejack v9.1.2 <https://hydejack.com/>
         <!--<![endif]-->
         <!-- Code used for embedding Gumroad on the Hydejack Site. Left here for reference, feel free to delete. -->
         <link rel="dns-prefetch" href="https://assets.gumroad.com">
-        <script> window.GET_CLAPS_API = 'https://worker.getclaps.dev' </script>
+        <script> window.GET_CLAPS_API = 'https://worker.getclaps.dev'</script>
         <script
-            type="module"> const ppiData = window._ppiData = fetch('https://hydejack-ppi.qwtel.workers.dev', { mode: 'cors' }).then(res => res.json()).catch(() => ({})); const promisify = f => x => new Promise(r => f(x).addEventListener('load', r)); const loadJS = promisify(window.loadJS); { let p; document.querySelector('hy-push-state').addEventListener('load', () => { const io = new IntersectionObserver(async (entries) => { if (entries.some(x => x.isIntersecting)) { p = p || loadJS('https://gumroad.com/js/gumroad-embed.js'); const [{ code }] = await Promise.all([ppiData, p]); document.querySelectorAll('.gumroad-product-embed').forEach(el => { if (!el.dataset.gumroadParams) { el.dataset.gumroadParams = 'offer_code=' + (code || 'qr0tw8m'); } }); if (!window.GumroadEmbed) { await new Promise(function check1(res) { if ('createGumroadEmbed' in window) res(window.createGumroadEmbed()); else setTimeout(() => check1(res), 200); }); } await new Promise(function check2(res) { if ('GumroadEmbed' in window) res(GumroadEmbed.reload()); else setTimeout(() => check2(res), 200); }); } }, { rootMargin: '1440px' }); document.querySelectorAll('.gumroad-product-embed').forEach(el => io.observe(el)); }); } { let p; document.querySelector('hy-push-state').addEventListener('load', () => { const io = new IntersectionObserver(async (entries) => { if (entries.some(x => x.isIntersecting)) { p = p || loadJS('https://gumroad.com/js/gumroad.js'); const [{ code }] = await Promise.all([ppiData, p]); if (code) { document.querySelectorAll('.gumroad-button').forEach(el => { if (!el.href.endsWith(code)) { el.href = el.href + '/' + (code || 'qr0tw8m'); } }); } if (!window.GumroadOverlay) { await new Promise(function check(res) { if ('createGumroadOverlay' in window) res(window.createGumroadOverlay()); else setTimeout(() => check(res), 200); }); } } }, { rootMargin: '300px' }); document.querySelectorAll('.gumroad-button').forEach(el => io.observe(el)); }); } </script>
+            type="module"> const ppiData = window._ppiData = fetch('https://hydejack-ppi.qwtel.workers.dev', { mode: 'cors' }).then(res => res.json()).catch(() => ({})); const promisify = f => x => new Promise(r => f(x).addEventListener('load', r)); const loadJS = promisify(window.loadJS); { let p; document.querySelector('hy-push-state').addEventListener('load', () => { const io = new IntersectionObserver(async (entries) => { if (entries.some(x => x.isIntersecting)) { p = p || loadJS('https://gumroad.com/js/gumroad-embed.js'); const [{ code }] = await Promise.all([ppiData, p]); document.querySelectorAll('.gumroad-product-embed').forEach(el => { if (!el.dataset.gumroadParams) { el.dataset.gumroadParams = 'offer_code=' + (code || 'qr0tw8m'); } }); if (!window.GumroadEmbed) { await new Promise(function check1(res) { if ('createGumroadEmbed' in window) res(window.createGumroadEmbed()); else setTimeout(() => check1(res), 200); }); } await new Promise(function check2(res) { if ('GumroadEmbed' in window) res(GumroadEmbed.reload()); else setTimeout(() => check2(res), 200); }); } }, { rootMargin: '1440px' }); document.querySelectorAll('.gumroad-product-embed').forEach(el => io.observe(el)); }); } { let p; document.querySelector('hy-push-state').addEventListener('load', () => { const io = new IntersectionObserver(async (entries) => { if (entries.some(x => x.isIntersecting)) { p = p || loadJS('https://gumroad.com/js/gumroad.js'); const [{ code }] = await Promise.all([ppiData, p]); if (code) { document.querySelectorAll('.gumroad-button').forEach(el => { if (!el.href.endsWith(code)) { el.href = el.href + '/' + (code || 'qr0tw8m'); } }); } if (!window.GumroadOverlay) { await new Promise(function check(res) { if ('createGumroadOverlay' in window) res(window.createGumroadOverlay()); else setTimeout(() => check(res), 200); }); } } }, { rootMargin: '300px' }); document.querySelectorAll('.gumroad-button').forEach(el => io.observe(el)); }); }</script>
         <script src="/assets/js/bib_script.js"></script>
 
     <body class="no-break-layout">
@@ -1180,7 +1180,7 @@ Powered by Hydejack v9.1.2 <https://hydejack.com/>
                                     title="Google Scholar" class="no-mark-external" target="_blank"> <span
                                         class="icon-link"></span> <span aria-hidden="true">Microsoft homepage
                                     </span><span class="sr-only">Bo Zhang's Microsoft homepage</span></a>
-                            <li> <a href="https://scholar.google.com/citations?user=PefHCMUAAAAJ&amp;hl=en"
+                            <li> <a href="https://scholar.google.com/citations?hl=en&user=PefHCMUAAAAJ&view_op=list_works&sortby=pubdate"
                                     title="Google Scholar" class="no-mark-external" target="_blank"> <span
                                         class="icon-googlescholar"></span> <span aria-hidden="true">Google Scholar
                                     </span><span class="sr-only">Bo Zhang's Google Scholar profile</span></a>
@@ -1201,9 +1201,10 @@ Powered by Hydejack v9.1.2 <https://hydejack.com/>
                             <p>Chulin Xie†*, Chuxin Wang†*, <strong>Bo Zhang</strong>, Hao Yang, Dong Chen, Fang Wen.
                                 “<strong>Style-based Point Generator with Adversarial Rendering for Point Cloud
                                     Completion</strong>”, 2021 IEEE Conference on Computer Vision and Pattern
-                                Recognition (CVPR 2021). [<a href="https://arxiv.org/abs/2012.02047">paper</a>][<a
-                                    href="####" onclick="toggle_visibility('sparenet');">bibtex</a>] <code
-                                    class="bibtex"
+                                Recognition (CVPR 2021). [<a href="https://alphapav.github.io/SpareNet/">project</a>][<a
+                                    href="https://arxiv.org/abs/2103.02535">paper</a>][<a
+                                    href="https://github.com/microsoft/SpareNet">code</a>][<a href="####"
+                                    onclick="toggle_visibility('sparenet');">bibtex</a>] <code class="bibtex"
                                     id="sparenet">@article{xie2021style,<br /> title={Style-based Point Generator with Adversarial Rendering for Point Cloud Completion},<br /> author={Xie, Chulin and Wang, Chuxin and Zhang, Bo and Yang, Hao and Chen, Dong and Wen, Fang},<br /> journal={arXiv preprint arXiv:2103.02535},<br /> year={2021}<br /> }</code>
                         <li>
                             <p>Xingran Zhou†, <strong>Bo Zhang</strong>, Ting Zhang, Pan Zhang, Jianmin Bao, Dong Chen,
@@ -1218,7 +1219,8 @@ Powered by Hydejack v9.1.2 <https://hydejack.com/>
                                 “<strong>Prototypical Pseudo Label Denoising and Target Structure Learning for Domain
                                     Adaptive Semantic Segmentation</strong>”, 2021 IEEE Conference on Computer Vision
                                 and Pattern Recognition (CVPR 2021). [<a
-                                    href="https://arxiv.org/abs/2101.10979">paper</a>][<a href="####"
+                                    href="https://arxiv.org/abs/2101.10979">paper</a>][<a
+                                    href="https://github.com/microsoft/ProDA">code</a>][<a href="####"
                                     onclick="toggle_visibility('proda');">bibtex</a>] <code class="bibtex"
                                     id="proda">@article{zhang2021prototypical,<br /> title={Prototypical Pseudo Label Denoising and Target Structure Learning for Domain Adaptive Semantic Segmentation},<br /> author={Zhang, Pan and Zhang, Bo and Zhang, Ting and Chen, Dong and Wang, Yong and Wen, Fang},<br /> journal={arXiv preprint arXiv:2101.10979},<br /> year={2021}<br /> }</code>
                         <li>
@@ -1310,8 +1312,8 @@ Powered by Hydejack v9.1.2 <https://hydejack.com/>
                         <li>
                             <p><strong>Bo Zhang</strong>, Pedro V. Sander, Amine Bermak. “<strong>Registration Based
                                     Retargeted Image Quality Assessment</strong>”, in 2017 IEEE International Conference
-                                on Acoustics, Speech and Signal Processing (ICASSP 2017). [<a
-                                    href="https://ieeexplore.ieee.org/document/7952358">paper</a>][<a
+                                on Acoustics, Speech and Signal Processing <b style="color: rgb(220,129,0)">(ICASSP 2017
+                                    Oral)</b>. [<a href="https://ieeexplore.ieee.org/document/7952358">paper</a>][<a
                                     href="https://github.com/zhangmozhe/retarget_IQA">code</a>][<a href="####"
                                     onclick="toggle_visibility('zhang2017registration');">bibtex</a>] <code
                                     class="bibtex"
@@ -1320,7 +1322,7 @@ Powered by Hydejack v9.1.2 <https://hydejack.com/>
                             <p><strong>Bo Zhang</strong>, Pedro V. Sander, Amine Bermak. “<strong>Gradient Magnitude
                                     Similarity Deviation On Multiple Scales For Color Image Quality
                                     Assessment</strong>”, in 2017 IEEE International Conference on Acoustics, Speech and
-                                Signal Processing (ICASSP 2017). [<a
+                                Signal Processing <b style="color: rgb(220,129,0)">(ICASSP 2017 Oral)</b>. [<a
                                     href="https://ieeexplore.ieee.org/document/7952357">paper</a>][<a href="####"
                                     onclick="toggle_visibility('zhang2017gradient');">bibtex</a>] <code class="bibtex"
                                     id="zhang2017gradient">@inproceedings{zhang2017gradient,<br /> title={Gradient magnitude similarity deviation on multiple scales for color image quality assessment},<br /> author={Zhang, Bo and Sander, Pedro V and Bermak, Amine},<br /> booktitle={2017 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},<br /> pages={1253--1257},<br /> year={2017},<br /> organization={IEEE}<br /> }</code>
@@ -1381,7 +1383,7 @@ Powered by Hydejack v9.1.2 <https://hydejack.com/>
                         (CUMCM)<br /> First prize, Undergraduate Physics Innovation Competition of Zhejiang
                         Province<br /> First prize, Undergraduate Calculus Competition of Zhejiang Province, China<br />
                         <script
-                            type="text/javascript"> function toggle_visibility(id) { var e = document.getElementById(id); if (e.style.display == 'block') e.style.display = 'none'; else e.style.display = 'block'; } </script>
+                            type="text/javascript"> function toggle_visibility(id) { var e = document.getElementById(id); if (e.style.display == 'block') e.style.display = 'none'; else e.style.display = 'block'; }</script>
                         <style type="text/css">
                             .body-social>ul {
                                 display: inline-block;
@@ -1445,13 +1447,13 @@ Powered by Hydejack v9.1.2 <https://hydejack.com/>
         </hy-push-state>
         <!--[if gt IE 10]><!---->
         <script
-            nomodule>!function () { var t, n = document.createElement("script"); !("noModule" in n) && "onbeforeload" in n && (t = !1, document.addEventListener("beforeload", function (e) { if (e.target === n) t = !0; else if (!e.target.hasAttribute("nomodule") || !t) return; e.preventDefault() }, !0), n.type = "module", n.src = ".", document.head.appendChild(n), n.remove()) }(); </script>
+            nomodule>!function () { var t, n = document.createElement("script"); !("noModule" in n) && "onbeforeload" in n && (t = !1, document.addEventListener("beforeload", function (e) { if (e.target === n) t = !0; else if (!e.target.hasAttribute("nomodule") || !t) return; e.preventDefault() }, !0), n.type = "module", n.src = ".", document.head.appendChild(n), n.remove()) }();</script>
         <script src="/assets/js/hydejack-9.1.2.js" type="module"></script>
         <script src="/assets/js/LEGACY-hydejack-9.1.2.js" nomodule defer></script>
         <script>!function (w, d) { w.ga = w.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date; /**/ ga('create', 'UA-190657022-1', 'auto'); /**/ var pushStateEl = d.getElementById('_pushState'); var timeoutId; pushStateEl.addEventListener('hy-push-state-load', function () { w.clearTimeout(timeoutId); timeoutId = w.setTimeout(function () { ga('set', 'page', w.location.pathname); ga('send', 'pageview'); }, 500); }); d.addEventListener('hy--cookies-ok', function () { w.ga(function (tracker) { w.ga("set", "anonymizeIp", undefined); localStorage && localStorage.setItem("ga--client-id", tracker.get("clientId")); }); }); w.loadJSDeferred('https://www.google-analytics.com/analytics.js'); }(window, document);</script>
         <!--<![endif]-->
         <!-- Code for integrating CloudFlare's email protection with Hydejack's single page app loading. -->
-        <script> document.getElementById('_pushState').addEventListener('hy-push-state-after', function (e) { function e(e) { (console.error ? console.error : console.log).call(console, e) } function t(e) { return l.innerHTML = '<a href="' + e.replace(/"/g, "&quot;") + '"></a>', l.childNodes[0].getAttribute("href") } function r(e, t) { var r = e.substr(t, 2); return parseInt(r, 16) } function n(e, n) { for (var o = "", c = r(e, n), a = n + 2; a < e.length; a += 2) { var l = r(e, a) ^ c; o += String.fromCharCode(l) } return t(o) } var o = "/cdn-cgi/l/email-protection#", c = ".__cf_email__", a = "data-cfemail", l = document.createElement("div"); !function () { for (var t = document.getElementsByTagName("a"), r = 0; r < t.length; r++) try { var c = t[r], a = c.href.indexOf(o); a > -1 && (c.href = "mailto:" + n(c.href, a + o.length)) } catch (t) { e(t) } }(), function () { for (var t = document.querySelectorAll(c), r = 0; r < t.length; r++) try { var o = t[r], l = n(o.getAttribute(a), 0), i = document.createTextNode(l); o.parentNode.replaceChild(i, o) } catch (t) { e(t) } }() }); </script>
+        <script> document.getElementById('_pushState').addEventListener('hy-push-state-after', function (e) { function e(e) { (console.error ? console.error : console.log).call(console, e) } function t(e) { return l.innerHTML = '<a href="' + e.replace(/"/g, "&quot;") + '"></a>', l.childNodes[0].getAttribute("href") } function r(e, t) { var r = e.substr(t, 2); return parseInt(r, 16) } function n(e, n) { for (var o = "", c = r(e, n), a = n + 2; a < e.length; a += 2) { var l = r(e, a) ^ c; o += String.fromCharCode(l) } return t(o) } var o = "/cdn-cgi/l/email-protection#", c = ".__cf_email__", a = "data-cfemail", l = document.createElement("div"); !function () { for (var t = document.getElementsByTagName("a"), r = 0; r < t.length; r++) try { var c = t[r], a = c.href.indexOf(o); a > -1 && (c.href = "mailto:" + n(c.href, a + o.length)) } catch (t) { e(t) } }(), function () { for (var t = document.querySelectorAll(c), r = 0; r < t.length; r++) try { var o = t[r], l = n(o.getAttribute(a), 0), i = document.createTextNode(l); o.parentNode.replaceChild(i, o) } catch (t) { e(t) } }() });</script>
         <div hidden>
             <h2 class="sr-only">Templates (for web app):</h2>
             <clap-config>
