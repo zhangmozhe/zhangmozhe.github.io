@@ -29,8 +29,28 @@ Powered by Hydejack v9.1.2 <https://hydejack.com/>
         <meta name="twitter:card" content="summary" />
         <meta property="twitter:title" content="Bo Zhang" />
         <meta name="google-site-verification" content="GAV2aGzK3IPPyS7eR6V-obaNIa0-dWlq2vbG4ceA6Xk" />
-        <script
-            type="application/ld+json"> {"dateModified":"2021-07-23T12:52:14+08:00","url":"https://bo-zhang.me/","name":"Bo Zhang - Microsoft Research Asia","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://bo-zhang.me/assets/img/profile.jpg"}},"@type":"WebSite","headline":"Bo Zhang","description":"Hi, I am currently a senior researcher of visual computing group at Microsoft research asia (MSRA). My research interest involves computational photography, image synthesis, low-level computer vision and smart imaging system.","sameAs":["https://www.microsoft.com/en-us/research/people/zhanbo/","https://scholar.google.com/citations?user=PefHCMUAAAAJ&hl=en","https://www.linkedin.com/in/bo-zhang-8b753792/"],"@context":"https://schema.org"}</script>
+        <script type="application/ld+json">
+            {
+                "dateModified": "2021-07-23T12:52:14+08:00",
+                "sameAs": ["https://www.microsoft.com/en-us/research/people/zhanbo/",
+                    "https://scholar.google.com/citations?user=PefHCMUAAAAJ&hl=en",
+                    "https://www.linkedin.com/in/bo-zhang-8b753792/"
+                ],
+                "url": "https://bo-zhang.me/",
+                "name": "Bo Zhang - Microsoft Research Asia",
+                "publisher": {
+                    "@type": "Organization",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://bo-zhang.me/assets/img/profile.jpg"
+                    }
+                },
+                "@type": "WebSite",
+                "description": "Hi, I am currently a senior researcher of visual computing group at Microsoft research asia (MSRA). My research interest involves computational photography, image synthesis, low-level computer vision and smart imaging system.",
+                "headline": "Bo Zhang",
+                "@context": "https://schema.org"
+            }
+        </script>
         <meta name="keywords"
             content="Bo,Zhang,Tony senior researcher,MSRA,HKUST,Microsoft research asia,computer vision,microsoft,deep learning,personal website,personal webpage,computational photography,image synthesis">
         <meta charset="utf-8">
@@ -52,7 +72,118 @@ Powered by Hydejack v9.1.2 <https://hydejack.com/>
         <link rel="dns-prefetch" href="https://fonts.gstatic.com">
         <link rel="dns-prefetch" href="https://www.google-analytics.com">
         <link rel="preload" href="/assets/img/swipe.svg" as="image" id="_hrefSwipeSVG">
-        <script>!function (r, c) { "use strict"; function a(e, t, n, o) { e.addEventListener ? e.addEventListener(t, n, o) : e.attachEvent ? e.attachEvent("on" + t, n) : e["on" + t] = n } r.loadJS = function (e, t) { var n = c.createElement("script"); n.src = e, t && a(n, "load", t, { once: !0 }); t = c.scripts[0]; return t.parentNode.insertBefore(n, t), n }, r._loaded = !1, r.loadJSDeferred = function (e, t) { var n = c.createElement("script"); function o() { r._loaded = !0, t && a(n, "load", t, { once: !0 }); var e = c.scripts[0]; e.parentNode.insertBefore(n, e) } return n.src = e, r._loaded ? o() : a(r, "load", o, { once: !0 }), n }, r.setRel = r.setRelStylesheet = function (e) { a(c.getElementById(e), "load", function () { this.rel = "stylesheet" }, { once: !0 }) } }(window, document); !function (a) { "use strict"; var b = function (b, c, d) { function e(a) { return h.body ? a() : void setTimeout(function () { e(a) }) } function f() { i.addEventListener && i.removeEventListener("load", f), i.media = d || "all" } var g, h = a.document, i = h.createElement("link"); if (c) g = c; else { var j = (h.body || h.getElementsByTagName("head")[0]).childNodes; g = j[j.length - 1] } var k = h.styleSheets; i.rel = "stylesheet", i.href = b, i.media = "only x", e(function () { g.parentNode.insertBefore(i, c ? g : g.nextSibling) }); var l = function (a) { for (var b = i.href, c = k.length; c--;)if (k[c].href === b) return a(); setTimeout(function () { l(a) }) }; return i.addEventListener && i.addEventListener("load", f), i.onloadcssdefined = l, l(f), i }; "undefined" != typeof exports ? exports.loadCSS = b : a.loadCSS = b }("undefined" != typeof global ? global : this); !function (a) { if (a.loadCSS) { var b = loadCSS.relpreload = {}; if (b.support = function () { try { return a.document.createElement("link").relList.supports("preload") } catch (b) { return !1 } }, b.poly = function () { for (var b = a.document.getElementsByTagName("link"), c = 0; c < b.length; c++) { var d = b[c]; "preload" === d.rel && "style" === d.getAttribute("as") && (a.loadCSS(d.href, d, d.getAttribute("media")), d.rel = null) } }, !b.support()) { b.poly(); var c = a.setInterval(b.poly, 300); a.addEventListener && a.addEventListener("load", function () { b.poly(), a.clearInterval(c) }), a.attachEvent && a.attachEvent("onload", function () { a.clearInterval(c) }) } } }(this); !function (w) { w._baseURL = '/'; w._publicPath = '/assets/js/'; w._noPushState = false; w._noDrawer = false; w._noNavbar = false; w._noToc = false; w._noSearch = false; w._search = { DATA_URL: '/assets/sitedata.json?no-cache', STORAGE_KEY: 'mini-search/', INDEX_KEY: 'index--2021-12-21T14:26:59+08:00', }; w._clapButton = false; }(window);</script>
+        <script>
+            ! function (r, c) {
+                "use strict";
+
+                function a(e, t, n, o) {
+                    e.addEventListener ? e.addEventListener(t, n, o) : e.attachEvent ? e.attachEvent("on" + t, n) : e[
+                        "on" + t] = n
+                }
+                r.loadJS = function (e, t) {
+                    var n = c.createElement("script");
+                    n.src = e, t && a(n, "load", t, {
+                        once: !0
+                    });
+                    t = c.scripts[0];
+                    return t.parentNode.insertBefore(n, t), n
+                }, r._loaded = !1, r.loadJSDeferred = function (e, t) {
+                    var n = c.createElement("script");
+
+                    function o() {
+                        r._loaded = !0, t && a(n, "load", t, {
+                            once: !0
+                        });
+                        var e = c.scripts[0];
+                        e.parentNode.insertBefore(n, e)
+                    }
+                    return n.src = e, r._loaded ? o() : a(r, "load", o, {
+                        once: !0
+                    }), n
+                }, r.setRel = r.setRelStylesheet = function (e) {
+                    a(c.getElementById(e), "load", function () {
+                        this.rel = "stylesheet"
+                    }, {
+                        once: !0
+                    })
+                }
+            }(window, document);
+            ! function (a) {
+                "use strict";
+                var b = function (b, c, d) {
+                    function e(a) {
+                        return h.body ? a() : void setTimeout(function () {
+                            e(a)
+                        })
+                    }
+
+                    function f() {
+                        i.addEventListener && i.removeEventListener("load", f), i.media = d || "all"
+                    }
+                    var g, h = a.document,
+                        i = h.createElement("link");
+                    if (c) g = c;
+                    else {
+                        var j = (h.body || h.getElementsByTagName("head")[0]).childNodes;
+                        g = j[j.length - 1]
+                    }
+                    var k = h.styleSheets;
+                    i.rel = "stylesheet", i.href = b, i.media = "only x", e(function () {
+                        g.parentNode.insertBefore(i, c ? g : g.nextSibling)
+                    });
+                    var l = function (a) {
+                        for (var b = i.href, c = k.length; c--;)
+                            if (k[c].href === b) return a();
+                        setTimeout(function () {
+                            l(a)
+                        })
+                    };
+                    return i.addEventListener && i.addEventListener("load", f), i.onloadcssdefined = l, l(f), i
+                };
+                "undefined" != typeof exports ? exports.loadCSS = b : a.loadCSS = b
+            }("undefined" != typeof global ? global : this);
+            ! function (a) {
+                if (a.loadCSS) {
+                    var b = loadCSS.relpreload = {};
+                    if (b.support = function () {
+                            try {
+                                return a.document.createElement("link").relList.supports("preload")
+                            } catch (b) {
+                                return !1
+                            }
+                        }, b.poly = function () {
+                            for (var b = a.document.getElementsByTagName("link"), c = 0; c < b.length; c++) {
+                                var d = b[c];
+                                "preload" === d.rel && "style" === d.getAttribute("as") && (a.loadCSS(d.href, d, d
+                                    .getAttribute("media")), d.rel = null)
+                            }
+                        }, !b.support()) {
+                        b.poly();
+                        var c = a.setInterval(b.poly, 300);
+                        a.addEventListener && a.addEventListener("load", function () {
+                            b.poly(), a.clearInterval(c)
+                        }), a.attachEvent && a.attachEvent("onload", function () {
+                            a.clearInterval(c)
+                        })
+                    }
+                }
+            }(this);
+            ! function (w) {
+                w._baseURL = '/';
+                w._publicPath = '/assets/js/';
+                w._noPushState = false;
+                w._noDrawer = false;
+                w._noNavbar = false;
+                w._noToc = false;
+                w._noSearch = false;
+                w._search = {
+                    DATA_URL: '/assets/sitedata.json?no-cache',
+                    STORAGE_KEY: 'mini-search/',
+                    INDEX_KEY: 'index--2022-03-16T17:25:17+08:00',
+                };
+                w._clapButton = false;
+            }(window);
+        </script>
         <script async src="/assets/bower_components/MathJax/es5/tex-mml-chtml.js" id="_MathJax"></script>
         <!--[if gt IE 8]><!---->
         <style id="_styleInline">
@@ -1069,7 +1200,11 @@ Powered by Hydejack v9.1.2 <https://hydejack.com/>
         <link rel="preload" as="style"
             href="https://fonts.googleapis.com/css?family=Roboto+Slab:700%7CNoto+Sans:400,400i,700,700i&display=swap"
             id="_fontsPreload">
-        <script> setRel('_stylePreload'); setRel('_iconsPreload'); /**/setRel('_fontsPreload');/**/ </script> <noscript>
+        <script>
+            setRel('_stylePreload');
+            setRel('_iconsPreload'); /**/
+            setRel('_fontsPreload'); /**/
+        </script> <noscript>
             <link rel="stylesheet" href="/assets/css/hydejack-9.1.2.css">
             <link rel="stylesheet" href="/assets/icomoon/style.css">
             <link rel="stylesheet"
@@ -1078,9 +1213,12 @@ Powered by Hydejack v9.1.2 <https://hydejack.com/>
         <!--<![endif]-->
         <!-- Code used for embedding Gumroad on the Hydejack Site. Left here for reference, feel free to delete. -->
         <link rel="dns-prefetch" href="https://assets.gumroad.com">
-        <script> window.GET_CLAPS_API = 'https://worker.getclaps.dev' </script>
-        <script
-            type="module"> const ppiData = window._ppiData = fetch('https://hydejack-ppi.qwtel.workers.dev', { mode: 'cors' }).then(res => res.json()).catch(() => ({})); const promisify = f => x => new Promise(r => f(x).addEventListener('load', r)); const loadJS = promisify(window.loadJS); { let p; document.querySelector('hy-push-state').addEventListener('load', () => { const io = new IntersectionObserver(async (entries) => { if (entries.some(x => x.isIntersecting)) { p = p || loadJS('https://gumroad.com/js/gumroad-embed.js'); const [{ code }] = await Promise.all([ppiData, p]); document.querySelectorAll('.gumroad-product-embed').forEach(el => { if (!el.dataset.gumroadParams) { el.dataset.gumroadParams = 'offer_code=' + (code || 'qr0tw8m'); } }); if (!window.GumroadEmbed) { await new Promise(function check1(res) { if ('createGumroadEmbed' in window) res(window.createGumroadEmbed()); else setTimeout(() => check1(res), 200); }); } await new Promise(function check2(res) { if ('GumroadEmbed' in window) res(GumroadEmbed.reload()); else setTimeout(() => check2(res), 200); }); } }, { rootMargin: '1440px' }); document.querySelectorAll('.gumroad-product-embed').forEach(el => io.observe(el)); }); } { let p; document.querySelector('hy-push-state').addEventListener('load', () => { const io = new IntersectionObserver(async (entries) => { if (entries.some(x => x.isIntersecting)) { p = p || loadJS('https://gumroad.com/js/gumroad.js'); const [{ code }] = await Promise.all([ppiData, p]); if (code) { document.querySelectorAll('.gumroad-button').forEach(el => { if (!el.href.endsWith(code)) { el.href = el.href + '/' + (code || 'qr0tw8m'); } }); } if (!window.GumroadOverlay) { await new Promise(function check(res) { if ('createGumroadOverlay' in window) res(window.createGumroadOverlay()); else setTimeout(() => check(res), 200); }); } } }, { rootMargin: '300px' }); document.querySelectorAll('.gumroad-button').forEach(el => io.observe(el)); }); } </script>
+        <script>
+            window.GET_CLAPS_API = 'https://worker.getclaps.dev'
+        </script>
+        <script type="module">
+            const ppiData = window._ppiData = fetch('https://hydejack-ppi.qwtel.workers.dev', { mode: 'cors'}).then(res => res.json()).catch(() => ({})); const promisify = f => x => new Promise(r => f(x).addEventListener('load', r)); const loadJS = promisify(window.loadJS); { let p; document.querySelector('hy-push-state').addEventListener('load', () => { const io = new IntersectionObserver(async (entries) => { if (entries.some(x => x.isIntersecting)) { p = p || loadJS('https://gumroad.com/js/gumroad-embed.js'); const [{ code }] = await Promise.all([ppiData, p]); document.querySelectorAll('.gumroad-product-embed').forEach(el => { if (!el.dataset.gumroadParams) { el.dataset.gumroadParams = 'offer_code=' + (code || 'qr0tw8m'); } }); if (!window.GumroadEmbed) { await new Promise(function check1(res) { if ('createGumroadEmbed' in window) res(window.createGumroadEmbed()); else setTimeout(() => check1(res), 200); }); } await new Promise(function check2(res) { if ('GumroadEmbed' in window) res(GumroadEmbed.reload()); else setTimeout(() => check2(res), 200); }); } }, { rootMargin: '1440px' }); document.querySelectorAll('.gumroad-product-embed').forEach(el => io.observe(el)); }); } { let p; document.querySelector('hy-push-state').addEventListener('load', () => { const io = new IntersectionObserver(async (entries) => { if (entries.some(x => x.isIntersecting)) { p = p || loadJS('https://gumroad.com/js/gumroad.js'); const [{ code }] = await Promise.all([ppiData, p]); if (code) { document.querySelectorAll('.gumroad-button').forEach(el => { if (!el.href.endsWith(code)) { el.href = el.href + '/' + (code || 'qr0tw8m'); } }); } if (!window.GumroadOverlay) { await new Promise(function check(res) { if ('createGumroadOverlay' in window) res(window.createGumroadOverlay()); else setTimeout(() => check(res), 200); }); } } }, { rootMargin: '300px' }); document.querySelectorAll('.gumroad-button').forEach(el => io.observe(el)); }); } 
+        </script>
         <script src="/assets/js/bib_script.js"></script>
 
     <body class="no-break-layout">
@@ -1164,326 +1302,606 @@ Powered by Hydejack v9.1.2 <https://hydejack.com/>
                             href="https://www.microsoft.com/en-us/research/group/visual-computing/">Visual Computing
                             Group</a> of <a
                             href="https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/">Microsoft
-                            Research Asia</a> (MSRA).
-                    <p>I received my Ph.D. degree with the Department of Electronic and Computer Engineering at Hong
-                        Kong University of Science and Technology (<a href="https://hkust.edu.hk/">HKUST</a>) in 2019.
-                        Prior to that, I received my Bachelor degree of Engineering at <a
-                            href="http://www.zju.edu.cn/english/">Zhejiang University</a> in 2013. I joined the
-                        Microsoft Research Asia in May 2019.
-                    <p>My research interest involves computational photography, image synthesis, low-level computer
-                        vision and smart imaging system.
-                    <p>We are seeking long-term internship candidates and looking for research collaboration. Please
-                        send email to me if you are interested in joining us.
-                    <div class="body-social sidebar-social">
-                        <ul>
-                            <li> <a href="https://www.microsoft.com/en-us/research/people/zhanbo/"
-                                    title="Google Scholar" class="no-mark-external" target="_blank"> <span
-                                        class="icon-link"></span> <span aria-hidden="true">Microsoft homepage
-                                    </span><span class="sr-only">Bo Zhang's Microsoft homepage</span></a>
-                            <li> <a href="https://scholar.google.com/citations?user=PefHCMUAAAAJ&amp;hl=en"
-                                    title="Google Scholar" class="no-mark-external" target="_blank"> <span
-                                        class="icon-googlescholar"></span> <span aria-hidden="true">Google Scholar
-                                    </span><span class="sr-only">Bo Zhang's Google Scholar profile</span></a>
-                            <li> <a href="https://twitter.com/zhangboknight" title="Twitter" class="no-mark-external"
-                                    target="_blank"> <span class="icon-twitter"></span> <span aria-hidden="true">Twitter
-                                    </span><span class="sr-only">Bo Zhang's Twitter</span></a>
-                            <li> <a href="https://www.linkedin.com/in/bo-zhang-8b753792/" title="LinkedIn"
-                                    class="no-mark-external" target="_blank"> <span class="icon-linkedin2"></span> <span
-                                        aria-hidden="true">LinkedIn </span><span class="sr-only">Bo Zhang's LinkedIn
-                                        profile</span></a>
-                        </ul>
-                    </div>
-                    <hr />
-                    <h2 class="h1" style="color: rgb(1,92,171)" id="publications">Publications</h2>
-                    <p>​ (†Intern at MSRA, *Equal Contribution)
-                    <ul>
-                        <li>
-                            <p>Bowen Zhang†, Shuyang Gu†, <strong>Bo Zhang</strong>, Jianmin Bao, Dong Chen, Fang Wen,
-                                Yong Wang, Baining Guo. “<strong>StyleSwin: Transformer-based GAN for High-resolution
-                                    Image Generation</strong>”, arXiv preprint, Dec 2021. [<a
-                                    href="https://arxiv.org/abs/2112.10762">paper</a>][<a
-                                    href="https://github.com/microsoft/StyleSwin/">code</a>][<a href="####"
-                                    onclick="toggle_visibility('styleswin');">bibtex</a>] <code class="bibtex"
-                                    id="styleswin">@article{zhang2021styleswin,<br /> title={StyleSwin: Transformer-based GAN for High-resolution Image Generation},<br /> author={Bowen Zhang and Shuyang Gu and Bo Zhang and Jianmin Bao and Dong Chen and Fang Wen and Yong Wang and Baining Guo},<br /> journal={arXiv preprint arXiv:2112.10762},<br /> year={2021}<br /> }</code>
-                        <li>
-                            <p>Shuyang Gu†, Dong Chen, Jianmin Bao, Fang Wen, <strong>Bo Zhang,</strong> Dongdong Chen,
-                                Lu Yuan, Baining Guo. “<strong>Vector Quantized Diffusion Model for Text-to-Image
-                                    Synthesis</strong>”, arXiv preprint, Nov 2021. [<a
-                                    href="https://arxiv.org/abs/2111.14822">paper</a>][<a
-                                    href="https://github.com/microsoft/VQ-Diffusion">code</a>][<a href="####"
-                                    onclick="toggle_visibility('vq_diffusion');">bibtex</a>] <code class="bibtex"
-                                    id="vq_diffusion">@article{gu2021vector,<br /> title={Vector Quantized Diffusion Model for Text-to-Image Synthesis},<br /> author={Gu, Shuyang and Chen, Dong and Bao, Jianmin and Wen, Fang and Zhang, Bo and Chen, Dongdong and Yuan, Lu and Guo, Baining},<br /> journal={arXiv preprint arXiv:2111.14822},<br /> year={2021}<br /> }</code>
-                        <li>
-                            <p>Pan Zhang†, <strong>Bo Zhang</strong>, Ting Zhang, Dong Chen, Fang Wen. “<strong>Robust
-                                    Mutual Learning for Semi-supervised Semantic Segmentation</strong>”, arXiv preprint,
-                                May 2021. [<a href="https://arxiv.org/abs/2106.00609v1">paper</a>][<a href="####"
-                                    onclick="toggle_visibility('neurips2021');">bibtex</a>] <code class="bibtex"
-                                    id="neurips2021">@article{zhang2021robust,<br /> title={Robust Mutual Learning for Semi-supervised Semantic Segmentation},<br /> author={Zhang, Pan and Zhang, Bo and Zhang, Ting and Chen, Dong and Wen, Fang},<br /> journal={arXiv preprint arXiv:2106.00609},<br /> year={2021}<br /> }</code>
-                        <li>
-                            <p>Xiaoyu Li, <strong>Bo Zhang</strong>, Jing Liao, Pedro V. Sander. “<strong>Let’s See
-                                    Clearly: Contaminant Artifact Removal for Moving Cameras</strong>”, 2021
-                                International Conference on Computer Vision (ICCV 2021). [<a
-                                    href="https://arxiv.org/abs/2104.08852">paper</a>][code coming soon][<a href="####"
-                                    onclick="toggle_visibility('iccv2021');">bibtex</a>] <code class="bibtex"
-                                    id="iccv2021">@article{li2021let,<br /> title={Let's See Clearly: Contaminant Artifact Removal for Moving Cameras},<br /> author={Li, Xiaoyu and Zhang, Bo and Liao, Jing and Sander, Pedro V},<br /> journal={arXiv preprint arXiv:2104.08852},<br /> year={2021}<br /> }</code>
-                        <li>
-                            <p>Chulin Xie†*, Chuxin Wang†*, <strong>Bo Zhang</strong>, Hao Yang, Dong Chen, Fang Wen.
-                                “<strong>Style-based Point Generator with Adversarial Rendering for Point Cloud
-                                    Completion</strong>”, 2021 IEEE Conference on Computer Vision and Pattern
-                                Recognition (CVPR 2021). [<a href="https://alphapav.github.io/SpareNet/">project</a>][<a
-                                    href="https://arxiv.org/abs/2103.02535">paper</a>][<a
-                                    href="https://github.com/microsoft/SpareNet">code</a>][<a href="####"
-                                    onclick="toggle_visibility('sparenet');">bibtex</a>] <code class="bibtex"
-                                    id="sparenet">@article{xie2021style,<br /> title={Style-based Point Generator with Adversarial Rendering for Point Cloud Completion},<br /> author={Xie, Chulin and Wang, Chuxin and Zhang, Bo and Yang, Hao and Chen, Dong and Wen, Fang},<br /> journal={arXiv preprint arXiv:2103.02535},<br /> year={2021}<br /> }</code>
-                        <li>
-                            <p>Xingran Zhou†, <strong>Bo Zhang</strong>, Ting Zhang, Pan Zhang, Jianmin Bao, Dong Chen,
-                                Zhongfei Zhang, Fang Wen. “<strong>Full-Resolution Correspondence Learning for Image
-                                    Translation</strong>”, 2021 IEEE Conference on Computer Vision and Pattern
-                                Recognition <b style="color: rgb(220,129,0)">(CVPR 2021 Oral, best paper candidate)</b>.
-                                [<a href="https://arxiv.org/abs/2012.02047">paper</a>][<a
-                                    href="https://github.com/microsoft/CoCosNet-v2">code</a>][<a href="####"
-                                    onclick="toggle_visibility('focosnet');">bibtex</a>] <code class="bibtex"
-                                    id="focosnet">@article{zhou2020full,<br /> title={Full-Resolution Correspondence Learning for Image Translation},<br /> author={Zhou, Xingran and Zhang, Bo and Zhang, Ting and Zhang, Pan and Bao, Jianmin and Chen, Dong and Zhang, Zhongfei and Wen, Fang},<br /> journal={arXiv preprint arXiv:2012.02047},<br /> year={2020}<br /> }</code>
-                        <li>
-                            <p>Pan Zhang†, <strong>Bo Zhang</strong>, Ting Zhang, Dong Chen, Yong Wang, Fang Wen.
-                                “<strong>Prototypical Pseudo Label Denoising and Target Structure Learning for Domain
-                                    Adaptive Semantic Segmentation</strong>”, 2021 IEEE Conference on Computer Vision
-                                and Pattern Recognition (CVPR 2021). [<a
-                                    href="https://arxiv.org/abs/2101.10979">paper</a>][<a
-                                    href="https://github.com/microsoft/ProDA/">code</a>][<a href="####"
-                                    onclick="toggle_visibility('proda');">bibtex</a>] <code class="bibtex"
-                                    id="proda">@article{zhang2021prototypical,<br /> title={Prototypical Pseudo Label Denoising and Target Structure Learning for Domain Adaptive Semantic Segmentation},<br /> author={Zhang, Pan and Zhang, Bo and Zhang, Ting and Chen, Dong and Wang, Yong and Wen, Fang},<br /> journal={arXiv preprint arXiv:2101.10979},<br /> year={2021}<br /> }</code>
-                        <li>
-                            <p>Xiaoyu Li, <strong>Bo Zhang</strong>, Jing Liao, Pedro V. Sander. “<strong>Deep
-                                    Sketch-guided Cartoon Video Inbetweening</strong>”, IEEE transactions on
-                                Visualization and Computer Graphics (TVCG 2021). [<a
-                                    href="https://arxiv.org/abs/2008.04149">paper</a>][<a
-                                    href="https://github.com/xiaoyu258/Inbetweening">code</a>][<a href="####"
-                                    onclick="toggle_visibility('inbetweening');">bibtex</a>] <code class="bibtex"
-                                    id="inbetweening">@article{li2021deep,<br /> title={Deep Sketch-guided Cartoon Video Inbetweening},<br /> author={Li, Xiaoyu and Zhang, Bo and Liao, Jing and Sander, Pedro},<br /> journal={IEEE Transactions on Visualization and Computer Graphics},<br /> year={2021},<br /> publisher={IEEE}<br /> }</code>
-                        <li>
-                            <p>Ziyu Wan†, <strong>Bo Zhang</strong>, Dongdong Chen, Pan Zhang, Dong Chen, Jing Liao,
-                                Fang Wen. “<strong>Old Photo Restoration via Deep Latent Space Translation</strong>”,
-                                arxiv preprint, Sep 2020. [<a href="https://arxiv.org/abs/2009.07047">paper</a>][<a
-                                    href="https://github.com/microsoft/Bringing-Old-Photos-Back-to-Life">code</a>](<em>the
-                                    algorithm now supports high-resolution restoration</em>.)[<a href="####"
-                                    onclick="toggle_visibility('old_photo_journal');">bibtex</a>] <code class="bibtex"
-                                    id="old_photo_journal">@article{wan2020old,<br /> title={Old Photo Restoration via Deep Latent Space Translation},<br /> author={Wan, Ziyu and Zhang, Bo and Chen, Dongdong and Zhang, Pan and Chen, Dong and Liao, Jing and Wen, Fang},<br /> journal={arXiv preprint arXiv:2009.07047},<br /> year={2020}<br /> }</code>
-                        <li>
-                            <p>Pan Zhang†, <strong>Bo Zhang</strong>, Dong Chen, Lu Yuan, Fang Wen.
-                                “<strong>Cross-domain Correspondence Learning for Exemplar-based Image
-                                    Translation</strong>”, 2020 IEEE Conference on Computer Vision and Pattern
-                                Recognition <b style="color: rgb(220,129,0)">(CVPR 2020 Oral)</b>. [<a
-                                    href="https://panzhang0212.github.io/CoCosNet/">project</a>][<a
-                                    href="https://panzhang0212.github.io/CoCosNet/">paper</a>][<a
-                                    href="https://github.com/microsoft/CoCosNet">code</a>][supplementary][<a
-                                    href="https://www.dropbox.com/s/g7dezxm2mhw6gqo/CoCosNet%20slides.pptx?dl=0">slides</a>][bibtex]
-                                <code class="bibtex"
-                                    id="cocosnet">@inproceedings{zhang2020cross,<br /> title={Cross-domain correspondence learning for exemplar-based image translation},<br /> author={Zhang, Pan and Zhang, Bo and Chen, Dong and Yuan, Lu and Wen, Fang},<br /> booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},<br /> pages={5143--5153},<br /> year={2020}<br /> }</code>
-                        <li>
-                            <p>Ziyu Wan†, <strong>Bo Zhang</strong>, Dongdong Chen, Pan Zhang, Dong Chen, Jing Liao,
-                                Fang Wen. “<strong>Bringing Old Photos Back to Life</strong>”, 2020 IEEE Conference on
-                                Computer Vision and Pattern Recognition <b style="color: rgb(220,129,0)">(CVPR 2020
-                                    Oral)</b>. [<a href="http://raywzy.com/Old_Photo/">project</a>][<a
-                                    href="https://arxiv.org/abs/2004.09484">paper</a>][<a
-                                    href="https://github.com/microsoft/Bringing-Old-Photos-Back-to-Life">code</a>][<a
-                                    href="https://drive.google.com/file/d/10cCTMu06yFHACkFlwkV4DFQ5Aqktueff/view">supplementary</a>](<i>Welcome
-                                    to try our <a
-                                        href="https://colab.research.google.com/drive/1NEm6AsybIiC5TwTU_4DqDkQO0nFRB-uA?usp=sharing">Colab
-                                        demo</a></i>)[<a href="####"
-                                    onclick="toggle_visibility('old_photo');">bibtex</a>] <code class="bibtex"
-                                    id="old_photo">@inproceedings{wan2020bringing,<br /> title={Bringing old photos back to life},<br /> author={Wan, Ziyu and Zhang, Bo and Chen, Dongdong and Zhang, Pan and Chen, Dong and Liao, Jing and Wen, Fang},<br /> booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pages={2747--2757},<br /> year={2020}<br /> }</code>
-                        <li>
-                            <p>Xiaoyu Li, <strong>Bo Zhang</strong>, Jing Liao, Pedro V. Sander. “<strong>Document Image
-                                    Rectification using a Patch-based CNN</strong>”, ACM Transactions on Graphics 38(6),
-                                168:1-168:11 (Siggraph Asia 2019). [<a
-                                    href="https://xiaoyu258.github.io/projects/docproj/">project</a>][<a
-                                    href="https://arxiv.org/abs/1909.09470">paper</a>][<a
-                                    href="https://github.com/xiaoyu258/DocProj">code</a>][<a href="####"
-                                    onclick="toggle_visibility('li2019document');">bibtex</a>] <code class="bibtex"
-                                    id="li2019document">@article{li2019document,<br /> title={Document rectification and illumination correction using a patch-based CNN},<br /> author={Li, Xiaoyu and Zhang, Bo and Liao, Jing and Sander, Pedro V},<br /> journal={ACM Transactions on Graphics (TOG)},<br /> volume={38},<br /> number={6},<br /> pages={1--11},<br /> year={2019},<br /> publisher={ACM New York, NY, USA}<br /> }</code>
-                        <li>
-                            <p><strong>Bo Zhang</strong>, Jing Liao, Pedro V. Sander, Amine Bermak. “<strong>Deep
-                                    Exemplar-based Video Colorization</strong>”, 2019 IEEE Conference on Computer Vision
-                                and Pattern Recognition (CVPR 2019). [<a
-                                    href="https://arxiv.org/abs/1906.09909">paper</a>][<a
-                                    href="https://www.microsoft.com/en-us/research/uploads/prod/2020/03/cvpr19_poster_Bo.pptx">slides</a>][<a
-                                    href="https://www.microsoft.com/en-us/research/uploads/prod/2020/03/cvpr19_poster_Bo.pdf">poster</a>][<a
-                                    href="https://github.com/zhangmozhe/video-colorization">code</a>][<a
-                                    href="https://www.youtube.com/watch?v=HXWR5h5vVYI">youtube video demo</a>][<a
-                                    href="####" onclick="toggle_visibility('zhang2019deep');">bibtex</a>] <code
-                                    class="bibtex"
-                                    id="zhang2019deep">@inproceedings{zhang2019deep,<br /> title={Deep exemplar-based video colorization},<br /> author={Zhang, Bo and He, Mingming and Liao, Jing and Sander, Pedro V and Yuan, Lu and Bermak, Amine and Chen, Dong},<br /> booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},<br /> pages={8052--8061},<br /> year={2019}<br /> }</code>
-                        <li>
-                            <p>Xiaoyu Li, <strong>Bo Zhang</strong>, Jing Liao, Pedro V. Sander. “<strong>Blind
-                                    Geometric Distortion Correction on Images Through Deep Learning</strong>”, 2019 IEEE
-                                Conference on Computer Vision and Pattern Recognition (CVPR 2019). [<a
-                                    href="https://xiaoyu258.github.io/projects/geoproj/">project</a>][<a
-                                    href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Li_Blind_Geometric_Distortion_Correction_on_Images_Through_Deep_Learning_CVPR_2019_paper.pdf">paper</a>][<a
-                                    href="https://github.com/xiaoyu258/GeoProj">code</a>][<a href="####"
-                                    onclick="toggle_visibility('li2019blind');">bibtex</a>] <code class="bibtex"
-                                    id="li2019blind">@inproceedings{li2019blind,<br /> title={Blind geometric distortion correction on images through deep learning},<br /> author={Li, Xiaoyu and Zhang, Bo and Sander, Pedro V and Liao, Jing},<br /> booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},<br /> pages={4855--4864},<br /> year={2019}<br /> }</code>
-                        <li>
-                            <p><strong>Bo Zhang</strong>, Pedro V. Sander, Chi-Ying Tsui and Amine Bermak.
-                                “<strong>Microshift: An Efficient Image Compression Algorithm for Hardware</strong>”,
-                                IEEE Transactions on Circuits and Systems for Video Technology (TCSVT), 2018. [<a
-                                    href="https://ieeexplore.ieee.org/document/8529272">paper</a>][<a
-                                    href="https://github.com/zhangmozhe/microshift_compression/blob/master/paper.pdf">arxiv</a>][<a
-                                    href="https://github.com/zhangmozhe/microshift_compression">code</a>][<a href="####"
-                                    onclick="toggle_visibility('zhang2018microshift');">bibtex</a>] <code class="bibtex"
-                                    id="zhang2018microshift">@article{zhang2018microshift,<br /> title={Microshift: An efficient image compression algorithm for hardware},<br /> author={Zhang, Bo and Sander, Pedro V and Tsui, Chi-Ying and Bermak, Amine},<br /> journal={IEEE Transactions on Circuits and Systems for Video Technology},<br /> volume={29},<br /> number={11},<br /> pages={3430--3443},<br /> year={2018},<br /> publisher={IEEE}<br /> }</code>
-                        <li>
-                            <p>Xiaopeng Zhong, <strong>Bo Zhang</strong>, Amine Bermak, Chi-Ying Tsui, Man-Kay Law.
-                                “<strong>A Low-Power Compression-Based CMOS Image Sensor With Microshift-Guided SAR
-                                    ADC</strong>”, IEEE Transactions on Circuits and Systems II (TCAS-II), 2018. [<a
-                                    href="https://ieeexplore.ieee.org/document/8418781">paper</a>][<a href="####"
-                                    onclick="toggle_visibility('zhong2018low');">bibtex</a>] <code class="bibtex"
-                                    id="zhong2018low">@article{zhong2018low,<br /> title={A low-power compression-based CMOS image sensor with microshift-guided SAR ADC},<br /> author={Zhong, Xiaopeng and Zhang, Bo and Bermak, Amine and Tsui, Chi-Ying and Law, Man-Kay},<br /> journal={IEEE Transactions on Circuits and Systems II: Express Briefs},<br /> volume={65},<br /> number={10},<br /> pages={1350--1354},<br /> year={2018},<br /> publisher={IEEE}<br /> }</code>
-                        <li>
-                            <p><strong>Bo Zhang</strong>, Pedro V. Sander, Amine Bermak. “<strong>Registration Based
-                                    Retargeted Image Quality Assessment</strong>”, in 2017 IEEE International Conference
-                                on Acoustics, Speech and Signal Processing (ICASSP 2017). [<a
-                                    href="https://ieeexplore.ieee.org/document/7952358">paper</a>][<a
-                                    href="https://github.com/zhangmozhe/retarget_IQA">code</a>][<a href="####"
-                                    onclick="toggle_visibility('zhang2017registration');">bibtex</a>] <code
-                                    class="bibtex"
-                                    id="zhang2017registration">@inproceedings{zhang2017registration,<br /> title={Registration based retargeted image quality assessment},<br /> author={Zhang, Bo and Sander, Pedro V and Bermak, Amine},<br /> booktitle={2017 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},<br /> pages={1258--1262},<br /> year={2017},<br /> organization={IEEE}<br /> }</code>
-                        <li>
-                            <p><strong>Bo Zhang</strong>, Pedro V. Sander, Amine Bermak. “<strong>Gradient Magnitude
-                                    Similarity Deviation On Multiple Scales For Color Image Quality
-                                    Assessment</strong>”, in 2017 IEEE International Conference on Acoustics, Speech and
-                                Signal Processing (ICASSP 2017). [<a
-                                    href="https://ieeexplore.ieee.org/document/7952357">paper</a>][<a href="####"
-                                    onclick="toggle_visibility('zhang2017gradient');">bibtex</a>] <code class="bibtex"
-                                    id="zhang2017gradient">@inproceedings{zhang2017gradient,<br /> title={Gradient magnitude similarity deviation on multiple scales for color image quality assessment},<br /> author={Zhang, Bo and Sander, Pedro V and Bermak, Amine},<br /> booktitle={2017 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},<br /> pages={1253--1257},<br /> year={2017},<br /> organization={IEEE}<br /> }</code>
-                        <li>
-                            <p><strong>Bo Zhang</strong>, Xiaopeng Zhong, Bo Wang, Pedro V. Sander, and Amine Bermak.
-                                “<strong>Wide Dynamic Range PSD algorithms and Their Implementation for Compressive
-                                    Imaging</strong>”, in 2016 IEEE International Symposium on Circuits and Systems
-                                (ISCAS 2016). [<a href="https://ieeexplore.ieee.org/document/7539156">paper</a>][<a
-                                    href="####" onclick="toggle_visibility('zhang2016wide');">bibtex</a>] <code
-                                    class="bibtex"
-                                    id="zhang2016wide">@inproceedings{zhang2016wide,<br /> title={Wide dynamic range PSD algorithms and their implementation for compressive imaging},<br /> author={Zhang, Bo and Zhong, Xiaopeng and Wang, Bo and Sander, Pedro V and Bermak, Amine},<br /> booktitle={2016 IEEE International Symposium on Circuits and Systems (ISCAS)},<br /> pages={2727--2730},<br /> year={2016},<br /> organization={IEEE}<br /> }</code>
-                        <li>
-                            <p>Xiaopeng Zhong, <strong>Bo Zhang</strong>, and Amine Bermak. “<strong>A Background
-                                    Subtraction based Column-parallel Analog-to-information Converter for
-                                    Motion-triggered Vision Sensor</strong>”, in 2016 IEEE International Symposium on
-                                Circuits and Systems (ISCAS 2016). [<a
-                                    href="https://ieeexplore.ieee.org/document/7527518/">paper</a>][<a href="####"
-                                    onclick="toggle_visibility('zhong2016background');">bibtex</a>] <code class="bibtex"
-                                    id="zhong2016background">@inproceedings{zhong2016background,<br /> title={A background subtraction based column-parallel analog-to-information converter for motion-triggered vision sensor},<br /> author={Zhong, Xiaopeng and Zhang, Bo and Bermak, Amine},<br /> booktitle={2016 IEEE International Symposium on Circuits and Systems (ISCAS)},<br /> pages={1426--1429},<br /> year={2016},<br /> organization={IEEE}<br /> }</code>
-                        <li>
-                            <p>Liu, Dong, Yongying Yang, Zhongtao Cheng, Hanlu Huang, <strong>Bo Zhang</strong>, Tong
-                                Ling, and Yibing Shen. “<strong>Retrieval and analysis of a polarized
-                                    high-spectral-resolution lidar for profiling aerosol optical properties</strong>”,
-                                Optics Express, 2013. [<a
-                                    href="https://www.osapublishing.org/DirectPDFAccess/ADB87C05-042E-616B-AD867FEAF8C63B00_253755/oe-21-11-13084.pdf?da=1&amp;id=253755&amp;seq=0&amp;mobile=no">paper</a>][<a
-                                    href="####" onclick="toggle_visibility('liu2013retrieval');">bibtex</a>] <code
-                                    class="bibtex"
-                                    id="liu2013retrieval">@article{liu2013retrieval,<br /> title={Retrieval and analysis of a polarized high-spectral-resolution lidar for profiling aerosol optical properties},<br /> author={Liu, Dong and Yang, Yongying and Cheng, Zhongtao and Huang, Hanlu and Zhang, Bo and Ling, Tong and Shen, Yibing},<br /> journal={Optics express},<br /> volume={21},<br /> number={11},<br /> pages={13084--13093},<br /> year={2013},<br /> publisher={Optical Society of America}<br /> }</code>
-                        <li>
-                            <p>Liu, Dong, Yongying Yang, Zhongtao Cheng, Hanlu Huang, <strong>Bo Zhang</strong>, and
-                                Yibing Shen. “<strong>Development of the ZJU polarized near-infrared high spectral
-                                    resolution lidar</strong>”, in International Symposium on Photoelectronic Detection
-                                and Imaging 2013. [<a
-                                    href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/8905/1/Development-of-the-ZJU-polarized-near-infrared-high-spectral-resolution/10.1117/12.2035435.full?SSO=1">paper</a>][<a
-                                    href="####" onclick="toggle_visibility('liu2013development');">bibtex</a>] <code
-                                    class="bibtex"
-                                    id="liu2013development">@inproceedings{liu2013development,<br /> title={Development of the ZJU polarized near-infrared high spectral resolution lidar},<br /> author={Liu, Dong and Yang, Yongying and Cheng, Zhongtao and Huang, Hanlu and Zhang, Bo and Shen, Yibing},<br /> booktitle={International Symposium on Photoelectronic Detection and Imaging 2013: Laser Sensing and Imaging and Applications},<br /> volume={8905},<br /> pages={89052W},<br /> year={2013},<br /> organization={International Society for Optics and Photonics}<br /> }</code>
-                    </ul>
-                    <hr />
-                    <h2 class="h1" style="color: rgb(1,92,171)" id="services">Academic Services</h2>
-                    <h3 class="h2">Conference Reviewer</h3>
-                    <p> IEEE Conference on Computer Vision and Pattern Recognition (CVPR)<br /> International Conference
-                        on Computer Vision (ICCV)<br /> ACM SIGGRAPH<br /> ACM SIGGRAPH Asia<br /> IEEE Winter
-                        Conference on Application of Computer Vision (WACV)
-                    <h3 class="h2">Journal Reviewer</h3>
-                    <p> International Journal on Computer Vision (IJCV)<br /> ACM Transactions on Graphics (TOG)<br />
-                        IEEE Transactions on Visualization and Computer Graphics (TVCG) <br /> IEEE Transactions on
-                        Circuits and Systems for Video Technology (TCSVT)<br /> IEEE Transactions on Multimedia
-                        (TMM)<br /> Computer Vision and Image Understanding (CVIU)<br /> The Visual Computer
-                        (TVCJ)<br /> Neural Computing<br /> Visual informatics<br />
-                    <h2 class="h1" style="color: rgb(1,92,171)" id="honors">Honors and Awards</h2>
-                    <p> Excellent award, Stars of Tomorrow Internship Program, Microsoft Research Asia (MSRA)<br />
-                        Graduate Research Scholarship of HKUST<br /> Outstanding Undergraduate of Zhejiang
-                        University<br /> Outstanding Undergraduate of Zhejiang Province, China<br /> Bronze medal,
-                        International RoboCup 2013 competition<br /> First prize, Optical Science Technology Competition
-                        of Zhejiang Province<br /> Meritorious Winner (First prize), International Mathematical Contest
-                        in Modeling (MCM)<br /> First prize, China Undergraduate Mathematical Contest in Modeling
-                        (CUMCM)<br /> First prize, Undergraduate Physics Innovation Competition of Zhejiang
-                        Province<br /> First prize, Undergraduate Calculus Competition of Zhejiang Province, China<br />
-                        <script
-                            type="text/javascript"> function toggle_visibility(id) { var e = document.getElementById(id); if (e.style.display == 'block') e.style.display = 'none'; else e.style.display = 'block'; } </script>
-                        <style type="text/css">
-                            .body-social>ul {
-                                display: inline-block;
-                                list-style-type: none;
-                                margin-bottom: 0;
-                                overflow: hidden;
-                                padding: 0;
-                            }
+                            Research Asia</a> (MSRA).<p>I received my Ph.D. degree with the Department of Electronic and
+                            Computer Engineering at Hong Kong University of Science and Technology (<a
+                                href="https://hkust.edu.hk/">HKUST</a>) in 2019. Prior to that, I received my Bachelor
+                            degree of Engineering at <a href="http://www.zju.edu.cn/english/">Zhejiang University</a> in
+                            2013. I joined the Microsoft Research Asia in May 2019.<p>My research interest involves
+                                image/3D generative modeling, computational photography, face modeling, low-level
+                                computer vision and smart imaging system.<p>We are seeking long-term internship
+                                    candidates and looking for research collaboration. Please send email to me if you
+                                    are interested in joining us.<div class="body-social sidebar-social">
+                                        <ul>
+                                            <li> <a href="https://www.microsoft.com/en-us/research/people/zhanbo/"
+                                                    title="Google Scholar" class="no-mark-external" target="_blank">
+                                                    <span class="icon-link"></span> <span aria-hidden="true">Microsoft
+                                                        homepage </span><span class="sr-only">Bo Zhang's Microsoft
+                                                        homepage</span></a>
+                                            <li> <a href="https://scholar.google.com/citations?user=PefHCMUAAAAJ&amp;hl=en"
+                                                    title="Google Scholar" class="no-mark-external" target="_blank">
+                                                    <span class="icon-googlescholar"></span> <span
+                                                        aria-hidden="true">Google Scholar </span><span
+                                                        class="sr-only">Bo Zhang's Google Scholar profile</span></a>
+                                            <li> <a href="https://twitter.com/zhangboknight" title="Twitter"
+                                                    class="no-mark-external" target="_blank"> <span
+                                                        class="icon-twitter"></span> <span aria-hidden="true">Twitter
+                                                    </span><span class="sr-only">Bo Zhang's Twitter</span></a>
+                                            <li> <a href="https://www.linkedin.com/in/bo-zhang-8b753792/"
+                                                    title="LinkedIn" class="no-mark-external" target="_blank"> <span
+                                                        class="icon-linkedin2"></span> <span aria-hidden="true">LinkedIn
+                                                    </span><span class="sr-only">Bo Zhang's LinkedIn profile</span></a>
+                                        </ul>
+                                    </div>
+                                    <hr />
+                                    <h2 class="h1" style="color: rgb(1,92,171)" id="publications">Publications</h2>
+                                    <p>​ (†Intern at MSRA, *Equal Contribution)<ul>
+                                            <li>
+                                                <p>Bowen Zhang†, Shuyang Gu†, <strong>Bo Zhang</strong>, Jianmin Bao,
+                                                    Dong Chen, Fang Wen, Yong Wang, Baining Guo. “<strong>StyleSwin:
+                                                        Transformer-based GAN for High-resolution Image
+                                                        Generation</strong>”, 2022 IEEE Conference on Computer Vision
+                                                    and Pattern Recognition (CVPR 2022). [<a
+                                                        href="https://arxiv.org/abs/2112.10762">paper</a>][<a
+                                                        href="https://github.com/microsoft/StyleSwin">code</a>][<a
+                                                        href="####"
+                                                        onclick="toggle_visibility('styleswin');">bibtex</a>] <code
+                                                        class="bibtex" id="styleswin">@article{zhang2021styleswin,<br />
+                                                        title={StyleSwin: Transformer-based GAN for High-resolution
+                                                        Image Generation},<br /> author={Bowen Zhang and Shuyang Gu and
+                                                        Bo Zhang and Jianmin Bao and Dong Chen and Fang Wen and Yong
+                                                        Wang and Baining Guo},<br /> journal={arXiv preprint
+                                                        arXiv:2112.10762},<br /> year={2021}<br /> }</code>
+                                            <li>
+                                                <p>Shuyang Gu†, Dong Chen, Jianmin Bao, Fang Wen, <strong>Bo
+                                                        Zhang</strong>, Dongdong Chen, Lu Yuan, Baining Guo.
+                                                    “<strong>Vector Quantized Diffusion Model for Text-to-Image
+                                                        Synthesis</strong>”, 2022 IEEE Conference on Computer Vision and
+                                                    Pattern Recognition (CVPR 2022). [<a
+                                                        href="https://arxiv.org/abs/2111.14822">paper</a>][<a
+                                                        href="https://github.com/microsoft/VQ-Diffusion">code</a>][<a
+                                                        href="####"
+                                                        onclick="toggle_visibility('vq_diffusion');">bibtex</a>] <code
+                                                        class="bibtex" id="vq_diffusion">@article{gu2021vector,<br />
+                                                        title={Vector Quantized Diffusion Model for Text-to-Image
+                                                        Synthesis},<br /> author={Gu, Shuyang and Chen, Dong and Bao,
+                                                        Jianmin and Wen, Fang and Zhang, Bo and Chen, Dongdong and Yuan,
+                                                        Lu and Guo, Baining},<br /> journal={arXiv preprint
+                                                        arXiv:2111.14822},<br /> year={2021}<br /> }</code>
+                                            <li>
+                                                <p>Ziyu Wan, <strong>Bo Zhang</strong>, Dongdong Chen, Jing Liao.
+                                                    “<strong>Bringing Old Films Back to Life</strong>”, 2022 IEEE
+                                                    Conference on Computer Vision and Pattern Recognition (CVPR 2022).
+                                                    [<a href="">paper</a>][code coming soon][<a href="####"
+                                                        onclick="toggle_visibility('old_film');">bibtex</a>]
+                                            <li>
+                                                <p>Pan Zhang†, <strong>Bo Zhang</strong>, Ting Zhang, Dong Chen, Fang
+                                                    Wen. “<strong>Robust Mutual Learning for Semi-supervised Semantic
+                                                        Segmentation</strong>”, arXiv preprint, May 2021. [<a
+                                                        href="https://arxiv.org/abs/2106.00609v1">paper</a>][<a
+                                                        href="####"
+                                                        onclick="toggle_visibility('neurips2021');">bibtex</a>] <code
+                                                        class="bibtex" id="neurips2021">@article{zhang2021robust,<br />
+                                                        title={Robust Mutual Learning for Semi-supervised Semantic
+                                                        Segmentation},<br /> author={Zhang, Pan and Zhang, Bo and Zhang,
+                                                        Ting and Chen, Dong and Wen, Fang},<br /> journal={arXiv
+                                                        preprint arXiv:2106.00609},<br /> year={2021}<br /> }</code>
+                                            <li>
+                                                <p>Xiaoyu Li, <strong>Bo Zhang</strong>, Jing Liao, Pedro V. Sander.
+                                                    “<strong>Let’s See Clearly: Contaminant Artifact Removal for Moving
+                                                        Cameras</strong>”, 2021 International Conference on Computer
+                                                    Vision (ICCV 2021). [<a
+                                                        href="https://arxiv.org/abs/2104.08852">paper</a>][code coming
+                                                    soon][<a href="####"
+                                                        onclick="toggle_visibility('iccv2021');">bibtex</a>] <code
+                                                        class="bibtex" id="iccv2021">@article{li2021let,<br />
+                                                        title={Let's See Clearly: Contaminant Artifact Removal for
+                                                        Moving Cameras},<br /> author={Li, Xiaoyu and Zhang, Bo and
+                                                        Liao, Jing and Sander, Pedro V},<br /> journal={arXiv preprint
+                                                        arXiv:2104.08852},<br /> year={2021}<br /> }</code>
+                                            <li>
+                                                <p>Chulin Xie†*, Chuxin Wang†*, <strong>Bo Zhang</strong>, Hao Yang,
+                                                    Dong Chen, Fang Wen. “<strong>Style-based Point Generator with
+                                                        Adversarial Rendering for Point Cloud Completion</strong>”, 2021
+                                                    IEEE Conference on Computer Vision and Pattern Recognition (CVPR
+                                                    2021). [<a
+                                                        href="https://alphapav.github.io/SpareNet/">project</a>][<a
+                                                        href="https://arxiv.org/abs/2103.02535">paper</a>][<a
+                                                        href="https://github.com/microsoft/SpareNet">code</a>][<a
+                                                        href="####" onclick="toggle_visibility('sparenet');">bibtex</a>]
+                                                    <code class="bibtex" id="sparenet">@article{xie2021style,<br />
+                                                        title={Style-based Point Generator with Adversarial Rendering
+                                                        for Point Cloud Completion},<br /> author={Xie, Chulin and Wang,
+                                                        Chuxin and Zhang, Bo and Yang, Hao and Chen, Dong and Wen,
+                                                        Fang},<br /> journal={arXiv preprint arXiv:2103.02535},<br />
+                                                        year={2021}<br /> }</code>
+                                            <li>
+                                                <p>Xingran Zhou†, <strong>Bo Zhang</strong>, Ting Zhang, Pan Zhang,
+                                                    Jianmin Bao, Dong Chen, Zhongfei Zhang, Fang Wen.
+                                                    “<strong>Full-Resolution Correspondence Learning for Image
+                                                        Translation</strong>”, 2021 IEEE Conference on Computer Vision
+                                                    and Pattern Recognition <b style="color: rgb(220,129,0)">(CVPR 2021
+                                                        Oral, best paper candidate)</b>. [<a
+                                                        href="https://arxiv.org/abs/2012.02047">paper</a>][<a
+                                                        href="https://github.com/microsoft/CoCosNet-v2">code</a>][<a
+                                                        href="####" onclick="toggle_visibility('focosnet');">bibtex</a>]
+                                                    <code class="bibtex" id="focosnet">@article{zhou2020full,<br />
+                                                        title={Full-Resolution Correspondence Learning for Image
+                                                        Translation},<br /> author={Zhou, Xingran and Zhang, Bo and
+                                                        Zhang, Ting and Zhang, Pan and Bao, Jianmin and Chen, Dong and
+                                                        Zhang, Zhongfei and Wen, Fang},<br /> journal={arXiv preprint
+                                                        arXiv:2012.02047},<br /> year={2020}<br /> }</code>
+                                            <li>
+                                                <p>Pan Zhang†, <strong>Bo Zhang</strong>, Ting Zhang, Dong Chen, Yong
+                                                    Wang, Fang Wen. “<strong>Prototypical Pseudo Label Denoising and
+                                                        Target Structure Learning for Domain Adaptive Semantic
+                                                        Segmentation</strong>”, 2021 IEEE Conference on Computer Vision
+                                                    and Pattern Recognition (CVPR 2021). [<a
+                                                        href="https://arxiv.org/abs/2101.10979">paper</a>][<a
+                                                        href="https://github.com/microsoft/ProDA/">code</a>][<a
+                                                        href="####" onclick="toggle_visibility('proda');">bibtex</a>]
+                                                    <code class="bibtex"
+                                                        id="proda">@article{zhang2021prototypical,<br />
+                                                        title={Prototypical Pseudo Label Denoising and Target Structure
+                                                        Learning for Domain Adaptive Semantic Segmentation},<br />
+                                                        author={Zhang, Pan and Zhang, Bo and Zhang, Ting and Chen, Dong
+                                                        and Wang, Yong and Wen, Fang},<br /> journal={arXiv preprint
+                                                        arXiv:2101.10979},<br /> year={2021}<br /> }</code>
+                                            <li>
+                                                <p>Xiaoyu Li, <strong>Bo Zhang</strong>, Jing Liao, Pedro V. Sander.
+                                                    “<strong>Deep Sketch-guided Cartoon Video Inbetweening</strong>”,
+                                                    IEEE transactions on Visualization and Computer Graphics (TVCG
+                                                    2021). [<a href="https://arxiv.org/abs/2008.04149">paper</a>][<a
+                                                        href="https://github.com/xiaoyu258/Inbetweening">code</a>][<a
+                                                        href="https://www.youtube.com/watch?v=qeNcjlAFqVo">Youtube</a>][<a
+                                                        href="####"
+                                                        onclick="toggle_visibility('inbetweening');">bibtex</a>] <code
+                                                        class="bibtex" id="inbetweening">@article{li2021deep,<br />
+                                                        title={Deep Sketch-guided Cartoon Video Inbetweening},<br />
+                                                        author={Li, Xiaoyu and Zhang, Bo and Liao, Jing and Sander,
+                                                        Pedro},<br /> journal={IEEE Transactions on Visualization and
+                                                        Computer Graphics},<br /> year={2021},<br />
+                                                        publisher={IEEE}<br /> }</code>
+                                            <li>
+                                                <p>Ziyu Wan†, <strong>Bo Zhang</strong>, Dongdong Chen, Pan Zhang, Dong
+                                                    Chen, Jing Liao, Fang Wen. “<strong>Old Photo Restoration via Deep
+                                                        Latent Space Translation</strong>”, arxiv preprint, Sep 2020.
+                                                    [<a href="https://arxiv.org/abs/2009.07047">paper</a>][<a
+                                                        href="https://github.com/microsoft/Bringing-Old-Photos-Back-to-Life">code</a>](<em>the
+                                                        algorithm now supports high-resolution restoration</em>.)[<a
+                                                        href="####"
+                                                        onclick="toggle_visibility('old_photo_journal');">bibtex</a>]
+                                                    <code class="bibtex"
+                                                        id="old_photo_journal">@article{wan2020old,<br /> title={Old
+                                                        Photo Restoration via Deep Latent Space Translation},<br />
+                                                        author={Wan, Ziyu and Zhang, Bo and Chen, Dongdong and Zhang,
+                                                        Pan and Chen, Dong and Liao, Jing and Wen, Fang},<br />
+                                                        journal={arXiv preprint arXiv:2009.07047},<br />
+                                                        year={2020}<br /> }</code>
+                                            <li>
+                                                <p>Pan Zhang†, <strong>Bo Zhang</strong>, Dong Chen, Lu Yuan, Fang Wen.
+                                                    “<strong>Cross-domain Correspondence Learning for Exemplar-based
+                                                        Image Translation</strong>”, 2020 IEEE Conference on Computer
+                                                    Vision and Pattern Recognition <b
+                                                        style="color: rgb(220,129,0)">(CVPR 2020 Oral)</b>. [<a
+                                                        href="https://panzhang0212.github.io/CoCosNet/">project</a>][<a
+                                                        href="https://panzhang0212.github.io/CoCosNet/">paper</a>][<a
+                                                        href="https://github.com/microsoft/CoCosNet">code</a>][supplementary][<a
+                                                        href="https://www.dropbox.com/s/g7dezxm2mhw6gqo/CoCosNet%20slides.pptx?dl=0">slides</a>][<a
+                                                        href="####" onclick="toggle_visibility('cocosnet');">bibtex</a>]
+                                                    <code class="bibtex"
+                                                        id="cocosnet">@inproceedings{zhang2020cross,<br />
+                                                        title={Cross-domain correspondence learning for exemplar-based
+                                                        image translation},<br /> author={Zhang, Pan and Zhang, Bo and
+                                                        Chen, Dong and Yuan, Lu and Wen, Fang},<br />
+                                                        booktitle={Proceedings of the IEEE/CVF Conference on Computer
+                                                        Vision and Pattern Recognition},<br /> pages={5143--5153},<br />
+                                                        year={2020}<br /> }</code>
+                                            <li>
+                                                <p>Ziyu Wan†, <strong>Bo Zhang</strong>, Dongdong Chen, Pan Zhang, Dong
+                                                    Chen, Jing Liao, Fang Wen. “<strong>Bringing Old Photos Back to
+                                                        Life</strong>”, 2020 IEEE Conference on Computer Vision and
+                                                    Pattern Recognition <b style="color: rgb(220,129,0)">(CVPR 2020
+                                                        Oral)</b>. [<a
+                                                        href="http://raywzy.com/Old_Photo/">project</a>][<a
+                                                        href="https://arxiv.org/abs/2004.09484">paper</a>][<a
+                                                        href="https://github.com/microsoft/Bringing-Old-Photos-Back-to-Life">code</a>][<a
+                                                        href="https://drive.google.com/file/d/10cCTMu06yFHACkFlwkV4DFQ5Aqktueff/view">supplementary</a>](<i>Welcome
+                                                        to try our <a
+                                                            href="https://colab.research.google.com/drive/1NEm6AsybIiC5TwTU_4DqDkQO0nFRB-uA?usp=sharing">Colab
+                                                            demo</a></i>)[<a href="####"
+                                                        onclick="toggle_visibility('old_photo');">bibtex</a>] <code
+                                                        class="bibtex"
+                                                        id="old_photo">@inproceedings{wan2020bringing,<br />
+                                                        title={Bringing old photos back to life},<br /> author={Wan,
+                                                        Ziyu and Zhang, Bo and Chen, Dongdong and Zhang, Pan and Chen,
+                                                        Dong and Liao, Jing and Wen, Fang},<br /> booktitle={Proceedings
+                                                        of the IEEE/CVF Conference on Computer Vision and Pattern
+                                                        Recognition}, pages={2747--2757},<br /> year={2020}<br />
+                                                        }</code>
+                                            <li>
+                                                <p>Xiaoyu Li, <strong>Bo Zhang</strong>, Jing Liao, Pedro V. Sander.
+                                                    “<strong>Document Image Rectification using a Patch-based
+                                                        CNN</strong>”, ACM Transactions on Graphics 38(6), 168:1-168:11
+                                                    (Siggraph Asia 2019). [<a
+                                                        href="https://xiaoyu258.github.io/projects/docproj/">project</a>][<a
+                                                        href="https://arxiv.org/abs/1909.09470">paper</a>][<a
+                                                        href="https://github.com/xiaoyu258/DocProj">code</a>][<a
+                                                        href="####"
+                                                        onclick="toggle_visibility('li2019document');">bibtex</a>] <code
+                                                        class="bibtex"
+                                                        id="li2019document">@article{li2019document,<br />
+                                                        title={Document rectification and illumination correction using
+                                                        a patch-based CNN},<br /> author={Li, Xiaoyu and Zhang, Bo and
+                                                        Liao, Jing and Sander, Pedro V},<br /> journal={ACM Transactions
+                                                        on Graphics (TOG)},<br /> volume={38},<br /> number={6},<br />
+                                                        pages={1--11},<br /> year={2019},<br /> publisher={ACM New York,
+                                                        NY, USA}<br /> }</code>
+                                            <li>
+                                                <p><strong>Bo Zhang</strong>, Jing Liao, Pedro V. Sander, Amine Bermak.
+                                                    “<strong>Deep Exemplar-based Video Colorization</strong>”, 2019 IEEE
+                                                    Conference on Computer Vision and Pattern Recognition (CVPR 2019).
+                                                    [<a href="https://arxiv.org/abs/1906.09909">paper</a>][<a
+                                                        href="https://www.microsoft.com/en-us/research/uploads/prod/2020/03/cvpr19_poster_Bo.pptx">slides</a>][<a
+                                                        href="https://www.microsoft.com/en-us/research/uploads/prod/2020/03/cvpr19_poster_Bo.pdf">poster</a>][<a
+                                                        href="https://github.com/zhangmozhe/video-colorization">code</a>][<a
+                                                        href="https://www.youtube.com/watch?v=HXWR5h5vVYI">youtube video
+                                                        demo</a>][<a href="####"
+                                                        onclick="toggle_visibility('zhang2019deep');">bibtex</a>] <code
+                                                        class="bibtex"
+                                                        id="zhang2019deep">@inproceedings{zhang2019deep,<br />
+                                                        title={Deep exemplar-based video colorization},<br />
+                                                        author={Zhang, Bo and He, Mingming and Liao, Jing and Sander,
+                                                        Pedro V and Yuan, Lu and Bermak, Amine and Chen, Dong},<br />
+                                                        booktitle={Proceedings of the IEEE/CVF Conference on Computer
+                                                        Vision and Pattern Recognition},<br /> pages={8052--8061},<br />
+                                                        year={2019}<br /> }</code>
+                                            <li>
+                                                <p>Xiaoyu Li, <strong>Bo Zhang</strong>, Jing Liao, Pedro V. Sander.
+                                                    “<strong>Blind Geometric Distortion Correction on Images Through
+                                                        Deep Learning</strong>”, 2019 IEEE Conference on Computer Vision
+                                                    and Pattern Recognition (CVPR 2019). [<a
+                                                        href="https://xiaoyu258.github.io/projects/geoproj/">project</a>][<a
+                                                        href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Li_Blind_Geometric_Distortion_Correction_on_Images_Through_Deep_Learning_CVPR_2019_paper.pdf">paper</a>][<a
+                                                        href="https://github.com/xiaoyu258/GeoProj">code</a>][<a
+                                                        href="####"
+                                                        onclick="toggle_visibility('li2019blind');">bibtex</a>] <code
+                                                        class="bibtex"
+                                                        id="li2019blind">@inproceedings{li2019blind,<br /> title={Blind
+                                                        geometric distortion correction on images through deep
+                                                        learning},<br /> author={Li, Xiaoyu and Zhang, Bo and Sander,
+                                                        Pedro V and Liao, Jing},<br /> booktitle={Proceedings of the
+                                                        IEEE/CVF Conference on Computer Vision and Pattern
+                                                        Recognition},<br /> pages={4855--4864},<br /> year={2019}<br />
+                                                        }</code>
+                                            <li>
+                                                <p><strong>Bo Zhang</strong>, Pedro V. Sander, Chi-Ying Tsui and Amine
+                                                    Bermak. “<strong>Microshift: An Efficient Image Compression
+                                                        Algorithm for Hardware</strong>”, IEEE Transactions on Circuits
+                                                    and Systems for Video Technology (TCSVT), 2018. [<a
+                                                        href="https://ieeexplore.ieee.org/document/8529272">paper</a>][<a
+                                                        href="https://github.com/zhangmozhe/microshift_compression/blob/master/paper.pdf">arxiv</a>][<a
+                                                        href="https://github.com/zhangmozhe/microshift_compression">code</a>][<a
+                                                        href="####"
+                                                        onclick="toggle_visibility('zhang2018microshift');">bibtex</a>]
+                                                    <code class="bibtex"
+                                                        id="zhang2018microshift">@article{zhang2018microshift,<br />
+                                                        title={Microshift: An efficient image compression algorithm for
+                                                        hardware},<br /> author={Zhang, Bo and Sander, Pedro V and Tsui,
+                                                        Chi-Ying and Bermak, Amine},<br /> journal={IEEE Transactions on
+                                                        Circuits and Systems for Video Technology},<br />
+                                                        volume={29},<br /> number={11},<br /> pages={3430--3443},<br />
+                                                        year={2018},<br /> publisher={IEEE}<br /> }</code>
+                                            <li>
+                                                <p>Xiaopeng Zhong, <strong>Bo Zhang</strong>, Amine Bermak, Chi-Ying
+                                                    Tsui, Man-Kay Law. “<strong>A Low-Power Compression-Based CMOS Image
+                                                        Sensor With Microshift-Guided SAR ADC</strong>”, IEEE
+                                                    Transactions on Circuits and Systems II (TCAS-II), 2018. [<a
+                                                        href="https://ieeexplore.ieee.org/document/8418781">paper</a>][<a
+                                                        href="####"
+                                                        onclick="toggle_visibility('zhong2018low');">bibtex</a>] <code
+                                                        class="bibtex" id="zhong2018low">@article{zhong2018low,<br />
+                                                        title={A low-power compression-based CMOS image sensor with
+                                                        microshift-guided SAR ADC},<br /> author={Zhong, Xiaopeng and
+                                                        Zhang, Bo and Bermak, Amine and Tsui, Chi-Ying and Law,
+                                                        Man-Kay},<br /> journal={IEEE Transactions on Circuits and
+                                                        Systems II: Express Briefs},<br /> volume={65},<br />
+                                                        number={10},<br /> pages={1350--1354},<br /> year={2018},<br />
+                                                        publisher={IEEE}<br /> }</code>
+                                            <li>
+                                                <p><strong>Bo Zhang</strong>, Pedro V. Sander, Amine Bermak.
+                                                    “<strong>Registration Based Retargeted Image Quality
+                                                        Assessment</strong>”, in 2017 IEEE International Conference on
+                                                    Acoustics, Speech and Signal Processing (ICASSP 2017). [<a
+                                                        href="https://ieeexplore.ieee.org/document/7952358">paper</a>][<a
+                                                        href="https://github.com/zhangmozhe/retarget_IQA">code</a>][<a
+                                                        href="####"
+                                                        onclick="toggle_visibility('zhang2017registration');">bibtex</a>]
+                                                    <code class="bibtex"
+                                                        id="zhang2017registration">@inproceedings{zhang2017registration,<br />
+                                                        title={Registration based retargeted image quality
+                                                        assessment},<br /> author={Zhang, Bo and Sander, Pedro V and
+                                                        Bermak, Amine},<br /> booktitle={2017 IEEE International
+                                                        Conference on Acoustics, Speech and Signal Processing
+                                                        (ICASSP)},<br /> pages={1258--1262},<br /> year={2017},<br />
+                                                        organization={IEEE}<br /> }</code>
+                                            <li>
+                                                <p><strong>Bo Zhang</strong>, Pedro V. Sander, Amine Bermak.
+                                                    “<strong>Gradient Magnitude Similarity Deviation On Multiple Scales
+                                                        For Color Image Quality Assessment</strong>”, in 2017 IEEE
+                                                    International Conference on Acoustics, Speech and Signal Processing
+                                                    (ICASSP 2017). [<a
+                                                        href="https://ieeexplore.ieee.org/document/7952357">paper</a>][<a
+                                                        href="####"
+                                                        onclick="toggle_visibility('zhang2017gradient');">bibtex</a>]
+                                                    <code class="bibtex"
+                                                        id="zhang2017gradient">@inproceedings{zhang2017gradient,<br />
+                                                        title={Gradient magnitude similarity deviation on multiple
+                                                        scales for color image quality assessment},<br /> author={Zhang,
+                                                        Bo and Sander, Pedro V and Bermak, Amine},<br /> booktitle={2017
+                                                        IEEE International Conference on Acoustics, Speech and Signal
+                                                        Processing (ICASSP)},<br /> pages={1253--1257},<br />
+                                                        year={2017},<br /> organization={IEEE}<br /> }</code>
+                                            <li>
+                                                <p><strong>Bo Zhang</strong>, Xiaopeng Zhong, Bo Wang, Pedro V. Sander,
+                                                    and Amine Bermak. “<strong>Wide Dynamic Range PSD algorithms and
+                                                        Their Implementation for Compressive Imaging</strong>”, in 2016
+                                                    IEEE International Symposium on Circuits and Systems (ISCAS 2016).
+                                                    [<a
+                                                        href="https://ieeexplore.ieee.org/document/7539156">paper</a>][<a
+                                                        href="####"
+                                                        onclick="toggle_visibility('zhang2016wide');">bibtex</a>] <code
+                                                        class="bibtex"
+                                                        id="zhang2016wide">@inproceedings{zhang2016wide,<br />
+                                                        title={Wide dynamic range PSD algorithms and their
+                                                        implementation for compressive imaging},<br /> author={Zhang, Bo
+                                                        and Zhong, Xiaopeng and Wang, Bo and Sander, Pedro V and Bermak,
+                                                        Amine},<br /> booktitle={2016 IEEE International Symposium on
+                                                        Circuits and Systems (ISCAS)},<br /> pages={2727--2730},<br />
+                                                        year={2016},<br /> organization={IEEE}<br /> }</code>
+                                            <li>
+                                                <p>Xiaopeng Zhong, <strong>Bo Zhang</strong>, and Amine Bermak.
+                                                    “<strong>A Background Subtraction based Column-parallel
+                                                        Analog-to-information Converter for Motion-triggered Vision
+                                                        Sensor</strong>”, in 2016 IEEE International Symposium on
+                                                    Circuits and Systems (ISCAS 2016). [<a
+                                                        href="https://ieeexplore.ieee.org/document/7527518/">paper</a>][<a
+                                                        href="####"
+                                                        onclick="toggle_visibility('zhong2016background');">bibtex</a>]
+                                                    <code class="bibtex"
+                                                        id="zhong2016background">@inproceedings{zhong2016background,<br />
+                                                        title={A background subtraction based column-parallel
+                                                        analog-to-information converter for motion-triggered vision
+                                                        sensor},<br /> author={Zhong, Xiaopeng and Zhang, Bo and Bermak,
+                                                        Amine},<br /> booktitle={2016 IEEE International Symposium on
+                                                        Circuits and Systems (ISCAS)},<br /> pages={1426--1429},<br />
+                                                        year={2016},<br /> organization={IEEE}<br /> }</code>
+                                            <li>
+                                                <p>Liu, Dong, Yongying Yang, Zhongtao Cheng, Hanlu Huang, <strong>Bo
+                                                        Zhang</strong>, Tong Ling, and Yibing Shen. “<strong>Retrieval
+                                                        and analysis of a polarized high-spectral-resolution lidar for
+                                                        profiling aerosol optical properties</strong>”, Optics Express,
+                                                    2013. [<a
+                                                        href="https://www.osapublishing.org/DirectPDFAccess/ADB87C05-042E-616B-AD867FEAF8C63B00_253755/oe-21-11-13084.pdf?da=1&amp;id=253755&amp;seq=0&amp;mobile=no">paper</a>][<a
+                                                        href="####"
+                                                        onclick="toggle_visibility('liu2013retrieval');">bibtex</a>]
+                                                    <code class="bibtex"
+                                                        id="liu2013retrieval">@article{liu2013retrieval,<br />
+                                                        title={Retrieval and analysis of a polarized
+                                                        high-spectral-resolution lidar for profiling aerosol optical
+                                                        properties},<br /> author={Liu, Dong and Yang, Yongying and
+                                                        Cheng, Zhongtao and Huang, Hanlu and Zhang, Bo and Ling, Tong
+                                                        and Shen, Yibing},<br /> journal={Optics express},<br />
+                                                        volume={21},<br /> number={11},<br />
+                                                        pages={13084--13093},<br /> year={2013},<br />
+                                                        publisher={Optical Society of America}<br /> }</code>
+                                            <li>
+                                                <p>Liu, Dong, Yongying Yang, Zhongtao Cheng, Hanlu Huang, <strong>Bo
+                                                        Zhang</strong>, and Yibing Shen. “<strong>Development of the ZJU
+                                                        polarized near-infrared high spectral resolution
+                                                        lidar</strong>”, in International Symposium on Photoelectronic
+                                                    Detection and Imaging 2013. [<a
+                                                        href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/8905/1/Development-of-the-ZJU-polarized-near-infrared-high-spectral-resolution/10.1117/12.2035435.full?SSO=1">paper</a>][<a
+                                                        href="####"
+                                                        onclick="toggle_visibility('liu2013development');">bibtex</a>]
+                                                    <code class="bibtex"
+                                                        id="liu2013development">@inproceedings{liu2013development,<br />
+                                                        title={Development of the ZJU polarized near-infrared high
+                                                        spectral resolution lidar},<br /> author={Liu, Dong and Yang,
+                                                        Yongying and Cheng, Zhongtao and Huang, Hanlu and Zhang, Bo and
+                                                        Shen, Yibing},<br /> booktitle={International Symposium on
+                                                        Photoelectronic Detection and Imaging 2013: Laser Sensing and
+                                                        Imaging and Applications},<br /> volume={8905},<br />
+                                                        pages={89052W},<br /> year={2013},<br />
+                                                        organization={International Society for Optics and
+                                                        Photonics}<br /> }</code>
+                                        </ul>
+                                        <hr />
+                                        <h2 class="h1" style="color: rgb(1,92,171)" id="services">Academic Services</h2>
+                                        <h3 class="h2">Conference Reviewer</h3>
+                                        <p> IEEE Conference on Computer Vision and Pattern Recognition (CVPR)<br />
+                                            International Conference on Computer Vision (ICCV)<br /> European Conference
+                                            on Computer Vision (ECCV)<br /> ACM SIGGRAPH<br /> ACM SIGGRAPH Asia<br />
+                                            IEEE Winter Conference on Application of Computer Vision (WACV)<h3
+                                                class="h2">Journal Reviewer</h3>
+                                            <p> International Journal on Computer Vision (IJCV)<br /> ACM Transactions
+                                                on Graphics (TOG)<br /> IEEE Transactions on Visualization and Computer
+                                                Graphics (TVCG) <br /> IEEE Transactions on Circuits and Systems for
+                                                Video Technology (TCSVT)<br /> IEEE Transactions on Multimedia
+                                                (TMM)<br /> Computer Vision and Image Understanding (CVIU)<br /> The
+                                                Visual Computer (TVCJ)<br /> Neural Computing<br /> Visual
+                                                informatics<br />
+                                                <h2 class="h1" style="color: rgb(1,92,171)" id="honors">Honors and
+                                                    Awards</h2>
+                                                <p> Excellent award, Stars of Tomorrow Internship Program, Microsoft
+                                                    Research Asia (MSRA)<br /> Graduate Research Scholarship of
+                                                    HKUST<br /> Outstanding Undergraduate of Zhejiang University<br />
+                                                    Outstanding Undergraduate of Zhejiang Province, China<br /> Bronze
+                                                    medal, International RoboCup 2013 competition<br /> First prize,
+                                                    Optical Science Technology Competition of Zhejiang Province<br />
+                                                    Meritorious Winner (First prize), International Mathematical Contest
+                                                    in Modeling (MCM)<br /> First prize, China Undergraduate
+                                                    Mathematical Contest in Modeling (CUMCM)<br /> First prize,
+                                                    Undergraduate Physics Innovation Competition of Zhejiang
+                                                    Province<br /> First prize, Undergraduate Calculus Competition of
+                                                    Zhejiang Province, China<br />
+                                                    <script type="text/javascript">
+                                                        function toggle_visibility(id) {
+                                                            var e = document.getElementById(id);
+                                                            if (e.style.display == 'block') e.style.display = 'none';
+                                                            else e.style.display = 'block';
+                                                        }
+                                                    </script>
+                                                    <style type="text/css">
+                                                        .body-social>ul {
+                                                            display: inline-block;
+                                                            list-style-type: none;
+                                                            margin-bottom: 0;
+                                                            overflow: hidden;
+                                                            padding: 0;
+                                                        }
 
-                            .body-social>ul>li {
-                                float: left;
-                                /* padding-left: 5px; */
-                                padding-right: 10px;
-                                /* display: inline-block; */
-                            }
+                                                        .body-social>ul>li {
+                                                            float: left;
+                                                            /* padding-left: 5px; */
+                                                            padding-right: 10px;
+                                                            /* display: inline-block; */
+                                                        }
 
-                            .body-social>ul>li>a {
-                                display: inline;
-                                text-align: center;
-                                font-size: 0.95rem;
-                                font-weight: 600;
-                                /*width: 3rem;*/
-                                /*height: 4rem;*/
-                                padding: 4px;
-                                /* line-height: 3rem; */
-                                text-decoration: none;
-                                border-width: 1px;
-                                border-style: solid;
-                                border-radius: 5px;
-                                transition: background-color 250ms, color 250ms, text-decoration-color 250ms, border-color 250ms;
-                                /* border-bottom: none; */
-                            }
+                                                        .body-social>ul>li>a {
+                                                            display: inline;
+                                                            text-align: center;
+                                                            font-size: 0.95rem;
+                                                            font-weight: 600;
+                                                            /*width: 3rem;*/
+                                                            /*height: 4rem;*/
+                                                            padding: 4px;
+                                                            /* line-height: 3rem; */
+                                                            text-decoration: none;
+                                                            border-width: 1px;
+                                                            border-style: solid;
+                                                            border-radius: 5px;
+                                                            transition: background-color 250ms, color 250ms, text-decoration-color 250ms, border-color 250ms;
+                                                            /* border-bottom: none; */
+                                                        }
 
-                            .body-social>ul>li>a:not(.btn):not(.no-hover) {
-                                border-color: var(--accent-color);
-                            }
+                                                        .body-social>ul>li>a:not(.btn):not(.no-hover) {
+                                                            border-color: var(--accent-color);
+                                                        }
 
-                            .body-social>ul>li>a:hover {
-                                color: white;
-                                background-color: var(--accent-color);
-                                border-radius: 5px;
-                                padding: 4px;
-                                transition: background-color 250ms, color 250ms, text-decoration-color 250ms, border-color 250ms;
-                            }
+                                                        .body-social>ul>li>a:hover {
+                                                            color: white;
+                                                            background-color: var(--accent-color);
+                                                            border-radius: 5px;
+                                                            padding: 4px;
+                                                            transition: background-color 250ms, color 250ms, text-decoration-color 250ms, border-color 250ms;
+                                                        }
 
-                            .bibtex {
-                                display: none;
-                            }
-                        </style>
+                                                        .bibtex {
+                                                            display: none;
+                                                        }
+                                                    </style>
                 </article>
                 <hr class="dingbat related mb6" />
                 <footer class="content" role="contentinfo">
                     <hr />
                     <p><small class="copyright">© 2021 Bo Zhang. All rights reserved. </small>
-                    <nav class="legal"><small> <a class="heading flip-title" href="/LICENSE/">LICENSE</a> </small></nav>
-                    <!-- <p><small>Powered by <a class="external" href="https://hydejack.com/">Hydejack</a> v<span -->
-                    <!-- id="_version">9.1.2</span></small> -->
-                    <hr class="sr-only" />
+                        <nav class="legal"><small> <a class="heading flip-title" href="/LICENSE/">LICENSE</a> </small>
+                        </nav>
+                        <!-- <p><small>Powered by <a class="external" href="https://hydejack.com/">Hydejack</a> v<span
+                                    id="_version">9.1.2</span></small>
+                            <hr class="sr-only" /> -->
                 </footer>
             </main>
         </hy-push-state>
         <!--[if gt IE 10]><!---->
-        <script
-            nomodule>!function () { var t, n = document.createElement("script"); !("noModule" in n) && "onbeforeload" in n && (t = !1, document.addEventListener("beforeload", function (e) { if (e.target === n) t = !0; else if (!e.target.hasAttribute("nomodule") || !t) return; e.preventDefault() }, !0), n.type = "module", n.src = ".", document.head.appendChild(n), n.remove()) }(); </script>
+        <script nomodule>
+            ! function () {
+                var t, n = document.createElement("script");
+                !("noModule" in n) && "onbeforeload" in n && (t = !1, document.addEventListener("beforeload", function (
+                    e) {
+                    if (e.target === n) t = !0;
+                    else if (!e.target.hasAttribute("nomodule") || !t) return;
+                    e.preventDefault()
+                }, !0), n.type = "module", n.src = ".", document.head.appendChild(n), n.remove())
+            }();
+        </script>
         <script src="/assets/js/hydejack-9.1.2.js" type="module"></script>
         <script src="/assets/js/LEGACY-hydejack-9.1.2.js" nomodule defer></script>
-        <script>!function (w, d) { w.ga = w.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date; /**/ ga('create', 'UA-190657022-1', 'auto'); /**/ var pushStateEl = d.getElementById('_pushState'); var timeoutId; pushStateEl.addEventListener('hy-push-state-load', function () { w.clearTimeout(timeoutId); timeoutId = w.setTimeout(function () { ga('set', 'page', w.location.pathname); ga('send', 'pageview'); }, 500); }); d.addEventListener('hy--cookies-ok', function () { w.ga(function (tracker) { w.ga("set", "anonymizeIp", undefined); localStorage && localStorage.setItem("ga--client-id", tracker.get("clientId")); }); }); w.loadJSDeferred('https://www.google-analytics.com/analytics.js'); }(window, document);</script>
+        <script>
+            ! function (w, d) {
+                w.ga = w.ga || function () {
+                    (ga.q = ga.q || []).push(arguments)
+                };
+                ga.l = +new Date; /**/
+                ga('create', 'UA-190657022-1', 'auto'); /**/
+                var pushStateEl = d.getElementById('_pushState');
+                var timeoutId;
+                pushStateEl.addEventListener('hy-push-state-load', function () {
+                    w.clearTimeout(timeoutId);
+                    timeoutId = w.setTimeout(function () {
+                        ga('set', 'page', w.location.pathname);
+                        ga('send', 'pageview');
+                    }, 500);
+                });
+                d.addEventListener('hy--cookies-ok', function () {
+                    w.ga(function (tracker) {
+                        w.ga("set", "anonymizeIp", undefined);
+                        localStorage && localStorage.setItem("ga--client-id", tracker.get("clientId"));
+                    });
+                });
+                w.loadJSDeferred('https://www.google-analytics.com/analytics.js');
+            }(window, document);
+        </script>
         <!--<![endif]-->
         <!-- Code for integrating CloudFlare's email protection with Hydejack's single page app loading. -->
-        <script> document.getElementById('_pushState').addEventListener('hy-push-state-after', function (e) { function e(e) { (console.error ? console.error : console.log).call(console, e) } function t(e) { return l.innerHTML = '<a href="' + e.replace(/"/g, "&quot;") + '"></a>', l.childNodes[0].getAttribute("href") } function r(e, t) { var r = e.substr(t, 2); return parseInt(r, 16) } function n(e, n) { for (var o = "", c = r(e, n), a = n + 2; a < e.length; a += 2) { var l = r(e, a) ^ c; o += String.fromCharCode(l) } return t(o) } var o = "/cdn-cgi/l/email-protection#", c = ".__cf_email__", a = "data-cfemail", l = document.createElement("div"); !function () { for (var t = document.getElementsByTagName("a"), r = 0; r < t.length; r++) try { var c = t[r], a = c.href.indexOf(o); a > -1 && (c.href = "mailto:" + n(c.href, a + o.length)) } catch (t) { e(t) } }(), function () { for (var t = document.querySelectorAll(c), r = 0; r < t.length; r++) try { var o = t[r], l = n(o.getAttribute(a), 0), i = document.createTextNode(l); o.parentNode.replaceChild(i, o) } catch (t) { e(t) } }() }); </script>
+        <script>
+            document.getElementById('_pushState').addEventListener('hy-push-state-after', function (e) {
+                function e(e) {
+                    (console.error ? console.error : console.log).call(console, e)
+                }
+
+                function t(e) {
+                    return l.innerHTML = '<a href="' + e.replace(/"/g, "&quot;") + '"></a>', l.childNodes[0]
+                        .getAttribute("href")
+                }
+
+                function r(e, t) {
+                    var r = e.substr(t, 2);
+                    return parseInt(r, 16)
+                }
+
+                function n(e, n) {
+                    for (var o = "", c = r(e, n), a = n + 2; a < e.length; a += 2) {
+                        var l = r(e, a) ^ c;
+                        o += String.fromCharCode(l)
+                    }
+                    return t(o)
+                }
+                var o = "/cdn-cgi/l/email-protection#",
+                    c = ".__cf_email__",
+                    a = "data-cfemail",
+                    l = document.createElement("div");
+                ! function () {
+                    for (var t = document.getElementsByTagName("a"), r = 0; r < t.length; r++) try {
+                        var c = t[r],
+                            a = c.href.indexOf(o);
+                        a > -1 && (c.href = "mailto:" + n(c.href, a + o.length))
+                    } catch (t) {
+                        e(t)
+                    }
+                }(),
+                function () {
+                    for (var t = document.querySelectorAll(c), r = 0; r < t.length; r++) try {
+                        var o = t[r],
+                            l = n(o.getAttribute(a), 0),
+                            i = document.createTextNode(l);
+                        o.parentNode.replaceChild(i, o)
+                    } catch (t) {
+                        e(t)
+                    }
+                }()
+            });
+        </script>
         <div hidden>
             <h2 class="sr-only">Templates (for web app):</h2>
             <clap-config>
